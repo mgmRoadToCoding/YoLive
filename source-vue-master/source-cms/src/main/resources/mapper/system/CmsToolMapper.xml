@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.source.system.mapper.CmsToolMapper">
+    
+    <resultMap type="CmsTool" id="CmsToolResult">
+        <result property="id"    column="id"    />
+        <result property="catId"    column="cat_id"    />
+        <result property="icon"    column="icon"    />
+        <result property="name"    column="name"    />
+        <result property="sort"    column="sort"    />
+        <result property="intro"    column="intro"    />
+        <result property="version"    column="version"    />
+        <result property="type"    column="type"    />
+        <result property="url"    column="url"    />
+        <result property="panType"    column="pan_type"    />
+        <result property="extractedCode"    column="extracted_code"    />
+        <result property="createBy"    column="create_by"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateBy"    column="update_by"    />
+        <result property="updateTime"    column="update_time"    />
+    </resultMap>
+
+    <!-- 带有分类名称的结果 -->
+    <resultMap id="CmsToolWithCnameResult" type="cn.source.system.domain.vo.CmsToolVo" extends="CmsToolResult">
+        <result property="catName" column="cat_name" />
+    </resultMap>
+
+    <sql id="selectCmsToolVo">
+        select id, cat_id, icon, name, sort, intro, version, type, url, pan_type, extracted_code, create_by, create_time, update_by, update_time from cms_tool
+    </sql>
+
+    <select id="selectCmsToolList" parameterType="CmsTool" resultMap="CmsToolWithCnameResult">
+        select
+            t.id,
+            t.cat_id,
+            t.icon,
+            t.name,
+            t.sort,
+            t.intro,
+            t.version,
+            t.type,
+            t.url,
+            t.pan_type,
+            t.extracted_code,
+            t.create_by,
+            t.create_time,
+            t.update_by,
+            t.update_time,
+            tc.name as cat_name
+        from
+            cms_tool t
+        left join
+            cms_tool_category tc
+        on
+            t.cat_id = tc.id
+        <where>
+            <if test="name != null  and name != ''"> and t.name like concat('%', #{name}, '%')</if>
+            <if test="catId != null"> and t.cat_id = #{catId}</if>
+            <if test="type != null"> and t.type = #{type}</if>
+        </where>
+    </select>
+    
+    <select id="selectCmsToolById" parameterType="Long" resultMap="CmsToolResult">
+        <include refid="selectCmsToolVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertCmsTool" parameterType="CmsTool" useGeneratedKeys="true" keyProperty="id">
+        insert into cms_tool
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="catId != null">cat_id,</if>
+            <if test="icon != null">icon,</if>
+            <if test="name != null and name != ''">name,</if>
+            <if test="sort != null">sort,</if>
+            <if test="intro != null">intro,</if>
+            <if test="version != null">version,</if>
+            <if test="type != null">type,</if>
+            <if test="url != null">url,</if>
+            <if test="panType != null">pan_type,</if>
+            <if test="extractedCode != null">extracted_code,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateBy != null">update_by,</if>
+            <if test="updateTime != null">update_time,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="catId != null">#{catId},</if>
+            <if test="icon != null">#{icon},</if>
+            <if test="name != null and name != ''">#{name},</if>
+            <if test="sort != null">#{sort},</if>
+            <if test="intro != null">#{intro},</if>
+            <if test="version != null">#{version},</if>
+            <if test="type != null">#{type},</if>
+            <if test="url != null">#{url},</if>
+            <if test="panType != null">#{panType},</if>
+            <if test="extractedCode != null">#{extractedCode},</if>
+            <if test="createBy != null">#{createBy},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateBy != null">#{updateBy},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+         </trim>
+    </insert>
+
+    <update id="updateCmsTool" parameterType="CmsTool">
+        update cms_tool
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="catId != null">cat_id = #{catId},</if>
+            <if test="icon != null">icon = #{icon},</if>
+            <if test="name != null and name != ''">name = #{name},</if>
+            <if test="sort != null">sort = #{sort},</if>
+            <if test="intro != null">intro = #{intro},</if>
+            <if test="version != null">version = #{version},</if>
+            <if test="type != null">type = #{type},</if>
+            <if test="url != null">url = #{url},</if>
+            <if test="panType != null">pan_type = #{panType},</if>
+            <if test="extractedCode != null">extracted_code = #{extractedCode},</if>
+            <if test="createBy != null">create_by = #{createBy},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateBy != null">update_by = #{updateBy},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteCmsToolById" parameterType="Long">
+        delete from cms_tool where id = #{id}
+    </delete>
+
+    <delete id="deleteCmsToolByIds" parameterType="String">
+        delete from cms_tool where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

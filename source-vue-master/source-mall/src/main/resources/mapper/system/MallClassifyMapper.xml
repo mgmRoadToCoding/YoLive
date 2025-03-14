@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.source.system.mapper.MallClassifyMapper">
+
+    <resultMap type="MallClassify" id="MallClassifyResult">
+        <result property="id"    column="id"    />
+        <result property="parentId"    column="parent_id"    />
+        <result property="ancestors"    column="ancestors"    />
+        <result property="classifyName"    column="classify_name"    />
+        <result property="classifyUrl"    column="classify_url"    />
+        <result property="sortNo"    column="sort_no"    />
+        <result property="normalDisable"    column="normal_disable"    />
+        <result property="createBy"    column="create_by"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateBy"    column="update_by"    />
+        <result property="updateTime"    column="update_time"    />
+        <result property="remark"    column="remark"    />
+    </resultMap>
+
+    <sql id="selectMallClassifyVo">
+        select id, parent_id, ancestors, classify_name, classify_url, sort_no, normal_disable, create_by, create_time, update_by, update_time, remark from mall_classify
+    </sql>
+
+    <select id="selectMallClassifyList" parameterType="MallClassify" resultMap="MallClassifyResult">
+        <include refid="selectMallClassifyVo"/>
+        <where>
+            <if test="classifyName != null  and classifyName != ''"> and classify_name like concat('%', #{classifyName}, '%')</if>
+            <if test="normalDisable != null  and normalDisable != ''"> and normal_disable = #{normalDisable}</if>
+            <if test="parentId != null"> and parent_Id = #{parentId}</if>
+        </where>
+        order by sort_no
+    </select>
+
+    <select id="selectMallClassifyById" parameterType="Long" resultMap="MallClassifyResult">
+        <include refid="selectMallClassifyVo"/>
+        where id = #{id}
+    </select>
+
+    <insert id="insertMallClassify" parameterType="MallClassify" useGeneratedKeys="true" keyProperty="id">
+        insert into mall_classify
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="parentId != null">parent_id,</if>
+            <if test="ancestors != null and ancestors != ''">ancestors,</if>
+            <if test="classifyName != null and classifyName != ''">classify_name,</if>
+            <if test="classifyUrl != null and classifyUrl != ''">classify_url,</if>
+            <if test="sortNo != null">sort_no,</if>
+            <if test="normalDisable != null">normal_disable,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateBy != null">update_by,</if>
+            <if test="updateTime != null">update_time,</if>
+            <if test="remark != null">remark,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="parentId != null">#{parentId},</if>
+            <if test="ancestors != null and ancestors != ''">#{ancestors},</if>
+            <if test="classifyName != null and classifyName != ''">#{classifyName},</if>
+            <if test="classifyUrl != null and classifyUrl != ''">#{classifyUrl},</if>
+            <if test="sortNo != null">#{sortNo},</if>
+            <if test="normalDisable != null">#{normalDisable},</if>
+            <if test="createBy != null">#{createBy},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateBy != null">#{updateBy},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+            <if test="remark != null">#{remark},</if>
+         </trim>
+    </insert>
+
+    <update id="updateMallClassify" parameterType="MallClassify">
+        update mall_classify
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="parentId != null">parent_id = #{parentId},</if>
+            <if test="ancestors != null and ancestors != ''">ancestors = #{ancestors},</if>
+            <if test="classifyName != null and classifyName != ''">classify_name = #{classifyName},</if>
+            <if test="classifyUrl != null and classifyUrl != ''">classify_url = #{classifyUrl},</if>
+            <if test="sortNo != null">sort_no = #{sortNo},</if>
+            <if test="normalDisable != null">normal_disable = #{normalDisable},</if>
+            <if test="createBy != null">create_by = #{createBy},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateBy != null">update_by = #{updateBy},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+            <if test="remark != null">remark = #{remark},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteMallClassifyById" parameterType="Long">
+        delete from mall_classify where id = #{id}
+    </delete>
+
+    <delete id="deleteMallClassifyByIds" parameterType="String">
+        delete from mall_classify where id in
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.source.system.mapper.MallGoodsSpecMapper">
+    
+    <resultMap type="MallGoodsSpec" id="MallGoodsSpecResult">
+        <result property="id"    column="id"    />
+        <result property="parentId"    column="parent_id"    />
+        <result property="specName"    column="spec_name"    />
+        <result property="specUrl"    column="spec_url"    />
+        <result property="specPrice"    column="spec_price"    />
+        <result property="specStock"    column="spec_stock"    />
+        <result property="sortNo"    column="sort_no"    />
+        <result property="normalDisable"    column="normal_disable"    />
+        <result property="createBy"    column="create_by"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateBy"    column="update_by"    />
+        <result property="updateTime"    column="update_time"    />
+        <result property="remark"    column="remark"    />
+    </resultMap>
+
+    <sql id="selectMallGoodsSpecVo">
+        select id, parent_id, spec_name, spec_url, spec_price, spec_stock, sort_no, normal_disable, create_by, create_time, update_by, update_time, remark from mall_goods_spec
+    </sql>
+
+    <select id="selectMallGoodsSpecList" parameterType="MallGoodsSpec" resultMap="MallGoodsSpecResult">
+        <include refid="selectMallGoodsSpecVo"/>
+        <where>  
+            <if test="specName != null  and specName != ''"> and spec_name like concat('%', #{specName}, '%')</if>
+            <if test="normalDisable != null  and normalDisable != ''"> and normal_disable = #{normalDisable}</if>
+        </where>
+    </select>
+    
+    <select id="selectMallGoodsSpecById" parameterType="Long" resultMap="MallGoodsSpecResult">
+        <include refid="selectMallGoodsSpecVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertMallGoodsSpec" parameterType="MallGoodsSpec" useGeneratedKeys="true" keyProperty="id">
+        insert into mall_goods_spec
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="parentId != null">parent_id,</if>
+            <if test="specName != null and specName != ''">spec_name,</if>
+            <if test="specUrl != null and specUrl != ''">spec_url,</if>
+            <if test="specPrice != null">spec_price,</if>
+            <if test="specStock != null">spec_stock,</if>
+            <if test="sortNo != null">sort_no,</if>
+            <if test="normalDisable != null and normalDisable != ''">normal_disable,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateBy != null">update_by,</if>
+            <if test="updateTime != null">update_time,</if>
+            <if test="remark != null">remark,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="parentId != null">#{parentId},</if>
+            <if test="specName != null and specName != ''">#{specName},</if>
+            <if test="specUrl != null and specUrl != ''">#{specUrl},</if>
+            <if test="specPrice != null">#{specPrice},</if>
+            <if test="specStock != null">#{specStock},</if>
+            <if test="sortNo != null">#{sortNo},</if>
+            <if test="normalDisable != null and normalDisable != ''">#{normalDisable},</if>
+            <if test="createBy != null">#{createBy},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateBy != null">#{updateBy},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+            <if test="remark != null">#{remark},</if>
+         </trim>
+    </insert>
+
+    <update id="updateMallGoodsSpec" parameterType="MallGoodsSpec">
+        update mall_goods_spec
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="parentId != null">parent_id = #{parentId},</if>
+            <if test="specName != null and specName != ''">spec_name = #{specName},</if>
+            <if test="specUrl != null and specUrl != ''">spec_url = #{specUrl},</if>
+            <if test="specPrice != null">spec_price = #{specPrice},</if>
+            <if test="specStock != null">spec_stock = #{specStock},</if>
+            <if test="sortNo != null">sort_no = #{sortNo},</if>
+            <if test="normalDisable != null and normalDisable != ''">normal_disable = #{normalDisable},</if>
+            <if test="createBy != null">create_by = #{createBy},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateBy != null">update_by = #{updateBy},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+            <if test="remark != null">remark = #{remark},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteMallGoodsSpecById" parameterType="Long">
+        delete from mall_goods_spec where id = #{id}
+    </delete>
+
+    <delete id="deleteMallGoodsSpecByIds" parameterType="String">
+        delete from mall_goods_spec where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>
