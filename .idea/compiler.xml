@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="source-generator" />
+        <module name="source-im" />
+        <module name="source-mall" />
+        <module name="source-admin" />
+        <module name="source-framework" />
+        <module name="source-cms" />
+        <module name="source-quartz" />
+        <module name="source-common" />
+        <module name="source-house" />
+        <module name="source-system" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

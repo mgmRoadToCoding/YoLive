@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/source-vue-master/source-admin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/source-vue-master/source-admin/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/source-vue-master/source-cms/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/source-vue-master/source-cms/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/source-vue-master/source-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/source-vue-master/source-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/source-vue-master/source-framework/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/source-vue-master/source-framework/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/source-vue-master/source-generator/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/source-vue-master/source-generator/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/source-vue-master/source-house/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/source-vue-master/source-house/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/source-vue-master/source-im/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/source-vue-master/source-im/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/source-vue-master/source-mall/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/source-vue-master/source-mall/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/source-vue-master/source-quartz/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/source-vue-master/source-quartz/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/source-vue-master/source-system/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/source-vue-master/source-system/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/source-vue-master/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/source-vue-master/src/main/resources" charset="UTF-8" />
+  </component>
+</project>
