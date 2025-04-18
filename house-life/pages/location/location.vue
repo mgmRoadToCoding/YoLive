@@ -1,26 +1,26 @@
 <template>
 	<view>
-		<u-navbar :is-back="false" title="选择城市" :border-bottom="false"></u-navbar>
+		<u-navbar :is-back="false" title="도시 선택" :border-bottom="false"></u-navbar>
 		<view class="selected" >
 			<view class="title">
-				已选 : 
+				선택됨 : 
 				<text style="color: #2979ff;margin-left: 12rpx;">
 					{{vuex_city==''?'请选择城市':vuex_city}}
 				</text>
 			</view>
 		</view>
 		<view class="location" @click="setLocation">
-			<view class="title">当前定位</view>
+			<view class="title">지금 위치</view>
 			<view class="body">
 				<view class="left">
 					<image src="../../static/navigate.png" mode="widthFix" class="img"></image>
 					{{locationCity}}
 				</view>
-				<view class="right">切换城市</view>
+				<view class="right">도시 바꾸</view>
 			</view>
 		</view>
 		<view class="hot" >
-			<view class="title">热门城市</view>
+			<view class="title">HOT 도시</view>
 			<view class="body">
 				<view class="tag" v-for="(item,index) in hotList" :key="index" @click="clickCity(item)">{{item}}</view>
 			</view>
@@ -33,7 +33,7 @@
 		data() {
 			return {
 				locationCity:'',
-				hotList:['杭州市','郑州市','北京市','上海市','广州市','深圳市']
+				hotList:['서울시','대구시','부산시','광주시','대전시','울산시']
 			}
 		},
 		onLoad() {

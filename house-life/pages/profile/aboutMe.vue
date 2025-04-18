@@ -5,7 +5,7 @@
 	<view class="titleZ text-center align-center">
 		<text class="text-bold" style="font-size: 28px;">关于我们</text>
 		<view class="contentZ">
-			<text class="text-xl">我们专注提供专业的软件产品和技术。为合作伙伴提供安全可靠的软件产品与解决方案，共同帮助终端用户实现业务创新、快速发展。</text>
+			<text class="text-xl">유학생을 위한 서비스를 제공합니다.</text>
 		</view>
 	</view>
   </view>

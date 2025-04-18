@@ -1,8 +1,8 @@
 // 全局配置文件
-// let baseUrl = 'http://192.168.0.108:8088';
-// let staticUrl = 'http://192.168.0.108:8088';
-let baseUrl = 'https://sourcebyte.vip';
-let staticUrl = 'https://sourcebyte.vip';
+let baseUrl = 'http://192.168.0.5:8088'; //所有接口请求的基础路径
+let staticUrl = 'http://192.168.0.5:8088'; //图片静态访问路径
+// let baseUrl = 'https://sourcebyte.vip';
+// let staticUrl = 'https://sourcebyte.vip';
 // 版本号 用于更新
 let version = 1;
 // vuex_version版本号 用于显示

@@ -10,6 +10,7 @@ function email(value) {
  */
 function mobile(value) {
 	return /^1[23456789]\d{9}$/.test(value)
+	// return /^01[0-9]{1}[0-9]{3,4}[0-9]{4}$|^01[0-9]{1}-[0-9]{3,4}-[0-9]{4}$/.test(value);
 }
 
 /**

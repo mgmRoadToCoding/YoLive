@@ -11,7 +11,7 @@
 :disabled="true" style="width: 380rpx;" @click="search"></u-search>
 				<!-- #endif -->
 				<!-- #ifndef MP-WEIXIN --> 
-				<u-search placeholder="你想住在哪儿" v-model="keyword" input-align="center"  :show-action="false" :clearabled="true"
+				<u-search placeholder="어디에 살고 있어요?" v-model="keyword" input-align="center"  :show-action="false" :clearabled="true"
 				:disabled="true" style="width: 580rpx;" @click="search"></u-search>
 				<!-- #endif -->
 			</view>
@@ -98,10 +98,10 @@
                 ],
 				noticeList: [],
 				navList:[
-				   {name:"整租",src:"/static/img/index/cover_2022/index_cover1.png",type:"0"},
-				   {name:"合租",src:"/static/img/index/cover_2022/index_cover2.png",type:"1"},
-				   {name:"避坑指南",src:"/static/img/index/cover_2022/index_cover3.png",url:"/pages/center/tips"},
-				   {name:"委托房源",src:"/static/img/index/cover_2022/index_cover4.png",type:"2"}
+				   {name:"방 구하기",src:"/static/img/index/cover_2022/index_cover1.png",type:"0"},
+				   {name:"XXX",src:"/static/img/index/cover_2022/index_cover2.png",type:"1"},
+				   {name:"학습경공",src:"/static/img/index/cover_2022/index_cover3.png",url:"/pages/study/index"}
+				   // {name:"xxx",src:"/static/img/index/cover_2022/index_cover4.png",type:"2"}
 				],
 				loadStatus: 'loadmore',
 				flowList: [],
@@ -419,3 +419,10 @@
 		}
 	}
 </style>
+<style scoped>
+/* 强制覆盖 flex 宽度 */
+.u-col.u-col-3 {
+  flex: 0 0 33% !important;
+}
+</style>
+

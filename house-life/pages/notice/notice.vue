@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<u-navbar :is-back="true" title="通知公告" :border-bottom="false"></u-navbar>
+		<u-navbar :is-back="true" title="공고" :border-bottom="false"></u-navbar>
 		<view class="wrap">
 			<scroll-view scroll-y style="height: 100%;width: 100%;">
 				<view class="page-box">

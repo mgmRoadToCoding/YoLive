@@ -1,14 +1,14 @@
 <template>
 	<view class="u-m-20">
-		<u-navbar :is-back="true" title="个人信息" :border-bottom="false"></u-navbar>
+		<u-navbar :is-back="true" title="개인정보" :border-bottom="false"></u-navbar>
 		<view>
 			<u-cell-group>
-				<u-cell-item title="头像" :arrow="true" hover-class="none" @click="updateAvatar">
+				<u-cell-item title="사진" :arrow="true" hover-class="none" @click="updateAvatar">
 					<u-avatar :src="pic" size="100"></u-avatar>
 				</u-cell-item>
 			</u-cell-group>
 			<u-cell-group>
-				<u-cell-item title="昵称" :arrow="true" hover-class="none" @click="updateName">
+				<u-cell-item title="닉네임" :arrow="true" hover-class="none" @click="updateName">
 					{{vuex_user.user.nickName}}
 				</u-cell-item>
 			</u-cell-group>

@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<u-navbar :is-back="false" title="我的" :border-bottom="false"></u-navbar>
+		<u-navbar :is-back="false" title="AboutMe" :border-bottom="false"></u-navbar>
 		<view class="u-flex user-box u-p-l-30 u-p-r-20 u-p-t-30 u-p-b-30">
 			<view class="u-flex" @click="profile">
 				<view class="u-m-r-20">
@@ -8,7 +8,7 @@
 				</view>
 				<view class="u-flex-1">
 					<view class="u-font-18 u-p-b-20">{{vuex_user.user.userName}}</view>
-					<view class="u-font-14 u-tips-color">昵称:{{vuex_user.user.nickName}}</view>
+					<view class="u-font-14 u-tips-color">닉네임:{{vuex_user.user.nickName}}</view>
 				</view>
 			</view>
 		</view>
@@ -33,15 +33,15 @@
 		<view class="u-m-t-20">
 			<u-cell-group>
 				<!-- <u-cell-item icon="integral" title="实名认证" @click="setting"></u-cell-item> -->
-				<u-cell-item icon="setting" title="个人中心" @click="setting"></u-cell-item>
+				<u-cell-item icon="setting" title="마이페이지" @click="setting"></u-cell-item>
 			</u-cell-group>
 		</view>
 		
 		<view class="u-m-t-20">
 			<u-cell-group>
-				<u-cell-item icon="level" :arrow="false" title="技术支持" value="18720989281"  @click="callPhoneNumber"></u-cell-item>
-				<u-cell-item icon="question-circle" title="常见问题" @click="problem"></u-cell-item>
-				<u-cell-item icon="star" title="关于我们" @click="aboutMe"></u-cell-item>
+				<u-cell-item icon="level" :arrow="false" title="Technical Support" value="01079218222"  @click="callPhoneNumber"></u-cell-item>
+				<u-cell-item icon="question-circle" title="FAQ" @click="problem"></u-cell-item>
+				<u-cell-item icon="star" title="About Us" @click="aboutMe"></u-cell-item>
 			</u-cell-group>
 		</view>
 	</view>
@@ -55,10 +55,10 @@
 				avatar:uni.getStorageSync('lifeData').vuex_user.user.avatar.includes(config.staticUrl)?uni.getStorageSync('lifeData').vuex_user.user.avatar:config.staticUrl+uni.getStorageSync('lifeData').vuex_user.user.avatar,
 				show:true,
 				navList:[
-				   {name:"浏览记录",icon:"checkmark-circle",url:"pages/center/history"},
-				   {name:"我的收藏",icon:"heart",url:"pages/center/heart"},
-				   {name:"我的委托",icon:"order",url:"pages/center/order"},
-				   {name:"问题反馈",icon:"info-circle"}
+				   {name:"열람 기록",icon:"checkmark-circle",url:"pages/center/history"},
+				   {name:"내 즐겨찾기",icon:"heart",url:"pages/center/heart"},
+				   {name:"내 의뢰",icon:"order",url:"pages/center/order"},
+				   {name:"문제 피드백",icon:"info-circle"}
 				],
 			}
 		},

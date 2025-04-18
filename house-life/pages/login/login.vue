@@ -4,24 +4,24 @@
 		<u-toast ref="uToast" />
 		<view class="img-a">
 			<view class="t-b">
-				您好，
+				Welcome,
 				<br />
-				欢迎使用 开源字节
+				YoLive사용해 주셔서 감사합니다.
 			</view>
 		</view>
 		<view class="login-view">
 			<view class="t-login">
 				<form class="cl">
 					<view class="t-a">
-						<text class="txt">手机号</text>
-						<input type="number" name="phone" placeholder="请输入您的手机号" maxlength="11" v-model="username" />
+						<text class="txt">휴대폰</text>
+						<input type="number" name="phone" placeholder="휴대폰 번호를 입력해주세요" maxlength="11" v-model="username" />
 					</view>
 					<view class="t-a">
-						<text class="txt">密码</text>
-						<input type="password" name="code" maxlength="18" placeholder="请输入您的密码" v-model="password" />
+						<text class="txt">비밀번호</text>
+						<input type="password" name="code" maxlength="18" placeholder="비밀번호를 입력해주세요" v-model="password" />
 					</view>
-					<button @tap="login()">登 录</button>
-					<view class="reg" @tap="reg()">短信登录</view>
+					<button @tap="login()">로그인</button>
+					<view class="reg" @tap="reg()">문자 로그인</view>
 				</form>
 			</view>
 		</view>
@@ -51,34 +51,11 @@ export default {
 		return {
 			// username: '',
 			// password: '',
-			username: '18720989281',
+			username: '18720989281', //
 			password: '123456',
 		}
 	},
-	// onLoad() {
-	// 	// 在页面中定义激励视频广告
-	// 	let videoAd = null
-	// 	// 在页面onLoad回调事件中创建激励视频广告实例
-	// 	if (wx.createRewardedVideoAd) {
-	// 	  videoAd = wx.createRewardedVideoAd({
-	// 	    adUnitId: 'adunit-8cd5789a01a51891'
-	// 	  })
-	// 	  videoAd.onLoad(() => {})
-	// 	  videoAd.onError((err) => {})
-	// 	  videoAd.onClose((res) => {})
-	// 	}
-	// 	// 用户触发广告后，显示激励视频广告
-	// 	if (videoAd) {
-	// 	  videoAd.show().catch(() => {
-	// 	    // 失败重试
-	// 	    videoAd.load()
-	// 	      .then(() => videoAd.show())
-	// 	      .catch(err => {
-	// 	        console.log('激励视频 广告显示失败')
-	// 	      })
-	// 	  })
-	// 	}
-	// },
+	
 	methods: {
 		login() {
 			if(!this.$u.test.mobile(this.username)){
@@ -99,6 +76,7 @@ export default {
 				username: this.username,
 				password: this.password
 			}).then(data => {
+				console.log(data); // 检查返回的登录数据格式
 				// 登录成功初始化token与用户信息
 				this.$u.vuex('vuex_token', data.token);
 				this.$u.vuex('vuex_user', data.loginUser);
@@ -125,11 +103,12 @@ export default {
 						this.$u.vuex('vuex_user', data.loginUser);
 						uni.switchTab({
 							url: '/pages/index/index'
-						})
+						});
 					});
 				});
 			}else{
 				this.$mytip.toast('登录失败')
+				uni.hideLoading(); // 失败时也隐藏
 			}
 		},
 		reg(){
