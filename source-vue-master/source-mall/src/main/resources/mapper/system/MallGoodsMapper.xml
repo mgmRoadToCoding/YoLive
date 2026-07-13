@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.source.system.mapper.MallGoodsMapper">
+
+    <resultMap type="MallGoods" id="MallGoodsResult">
+        <result property="id"    column="id"    />
+        <result property="goodsClassify"    column="goods_classify"    />
+        <result property="goodsName"    column="goods_name"    />
+        <result property="goodsFeature"    column="goods_feature"    />
+        <result property="newPrice"    column="new_price"    />
+        <result property="oldPrice"    column="old_price"    />
+        <result property="goodsStock"    column="goods_stock"    />
+        <result property="goodsFaceUrl"    column="goods_face_url"    />
+        <result property="goodsItemUrl"    column="goods_item_url"    />
+        <result property="articleContent"    column="article_content"    />
+        <result property="sortNo"    column="sort_no"    />
+        <result property="status"    column="status"    />
+        <result property="hotStatus"    column="hot_Status"    />
+        <result property="goodsView"    column="goods_View"    />
+        <result property="createBy"    column="create_by"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateBy"    column="update_by"    />
+        <result property="updateTime"    column="update_time"    />
+        <result property="remark"    column="remark"    />
+    </resultMap>
+
+    <resultMap id="MallGoodsMallGoodsSpecResult" type="MallGoods" extends="MallGoodsResult">
+        <collection property="mallGoodsSpecList" notNullColumn="sub_id" javaType="java.util.List" resultMap="MallGoodsSpecResult" />
+    </resultMap>
+
+    <resultMap type="MallGoodsSpec" id="MallGoodsSpecResult">
+        <result property="id"    column="sub_id"    />
+        <result property="parentId"    column="sub_parent_id"    />
+        <result property="specName"    column="sub_spec_name"    />
+        <result property="specUrl"    column="sub_spec_url"    />
+        <result property="specPrice"    column="sub_spec_price"    />
+        <result property="specStock"    column="sub_spec_stock"    />
+        <result property="sortNo"    column="sub_sort_no"    />
+        <result property="normalDisable"    column="sub_normal_disable"    />
+        <result property="createBy"    column="sub_create_by"    />
+        <result property="createTime"    column="sub_create_time"    />
+        <result property="updateBy"    column="sub_update_by"    />
+        <result property="updateTime"    column="sub_update_time"    />
+        <result property="remark"    column="sub_remark"    />
+    </resultMap>
+
+    <sql id="selectMallGoodsVo">
+        select id, goods_classify, goods_name, goods_feature, new_price, old_price, goods_stock, goods_face_url, goods_item_url, article_content, sort_no, status,hot_status, goods_View,create_by, create_time, update_by, update_time, remark from mall_goods
+    </sql>
+
+    <select id="selectMallGoodsList" parameterType="MallGoods" resultMap="MallGoodsResult">
+        <include refid="selectMallGoodsVo"/>
+        <where>
+            <if test="goodsClassify != null  and goodsClassify != ''"> and goods_classify = #{goodsClassify}</if>
+            <if test="goodsName != null  and goodsName != ''"> and goods_name like concat('%', #{goodsName}, '%')</if>
+        </where>
+    </select>
+
+    <select id="selectMallGoodsById" parameterType="Long" resultMap="MallGoodsMallGoodsSpecResult">
+        select a.id, a.goods_classify, a.goods_name, a.goods_feature, a.new_price, a.old_price, a.goods_stock, a.goods_face_url, a.goods_item_url, a.article_content, a.sort_no, a.status,a.hot_status,a.goods_View, a.create_by, a.create_time, a.update_by, a.update_time, a.remark,
+ b.id as sub_id, b.parent_id as sub_parent_id, b.spec_name as sub_spec_name, b.spec_url as sub_spec_url, b.spec_price as sub_spec_price, b.spec_stock as sub_spec_stock, b.sort_no as sub_sort_no, b.normal_disable as sub_normal_disable, b.create_by as sub_create_by, b.create_time as sub_create_time, b.update_by as sub_update_by, b.update_time as sub_update_time, b.remark as sub_remark
+        from mall_goods a
+        left join mall_goods_spec b on b.parent_id = a.id
+        where a.id = #{id}
+    </select>
+
+    <insert id="insertMallGoods" parameterType="MallGoods" useGeneratedKeys="true" keyProperty="id">
+        insert into mall_goods
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="goodsClassify != null and goodsClassify != ''">goods_classify,</if>
+            <if test="goodsName != null and goodsName != ''">goods_name,</if>
+            <if test="goodsFeature != null">goods_feature,</if>
+            <if test="newPrice != null">new_price,</if>
+            <if test="oldPrice != null">old_price,</if>
+            <if test="goodsStock != null">goods_stock,</if>
+            <if test="goodsFaceUrl != null and goodsFaceUrl != ''">goods_face_url,</if>
+            <if test="goodsItemUrl != null and goodsItemUrl != ''">goods_item_url,</if>
+            <if test="articleContent != null and articleContent != ''">article_content,</if>
+            <if test="sortNo != null">sort_no,</if>
+            <if test="status != null">status,</if>
+            <if test="hotStatus != null">hot_status,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateBy != null">update_by,</if>
+            <if test="updateTime != null">update_time,</if>
+            <if test="remark != null">remark,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="goodsClassify != null and goodsClassify != ''">#{goodsClassify},</if>
+            <if test="goodsName != null and goodsName != ''">#{goodsName},</if>
+            <if test="goodsFeature != null">#{goodsFeature},</if>
+            <if test="newPrice != null">#{newPrice},</if>
+            <if test="oldPrice != null">#{oldPrice},</if>
+            <if test="goodsStock != null">#{goodsStock},</if>
+            <if test="goodsFaceUrl != null and goodsFaceUrl != ''">#{goodsFaceUrl},</if>
+            <if test="goodsItemUrl != null and goodsItemUrl != ''">#{goodsItemUrl},</if>
+            <if test="articleContent != null and articleContent != ''">#{articleContent},</if>
+            <if test="sortNo != null">#{sortNo},</if>
+            <if test="status != null">#{status},</if>
+            <if test="hotStatus != null">#{hotStatus},</if>
+            <if test="createBy != null">#{createBy},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateBy != null">#{updateBy},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+            <if test="remark != null">#{remark},</if>
+        </trim>
+    </insert>
+
+    <update id="updateMallGoods" parameterType="MallGoods">
+        update mall_goods
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="goodsClassify != null and goodsClassify != ''">goods_classify = #{goodsClassify},</if>
+            <if test="goodsName != null and goodsName != ''">goods_name = #{goodsName},</if>
+            <if test="goodsFeature != null">goods_feature = #{goodsFeature},</if>
+            <if test="newPrice != null">new_price = #{newPrice},</if>
+            <if test="oldPrice != null">old_price = #{oldPrice},</if>
+            <if test="goodsStock != null">goods_stock = #{goodsStock},</if>
+            <if test="goodsFaceUrl != null and goodsFaceUrl != ''">goods_face_url = #{goodsFaceUrl},</if>
+            <if test="goodsItemUrl != null and goodsItemUrl != ''">goods_item_url = #{goodsItemUrl},</if>
+            <if test="articleContent != null and articleContent != ''">article_content = #{articleContent},</if>
+            <if test="sortNo != null">sort_no = #{sortNo},</if>
+            <if test="status != null">status = #{status},</if>
+            <if test="hotStatus != null">hot_Status = #{hotStatus},</if>
+            <if test="createBy != null">create_by = #{createBy},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateBy != null">update_by = #{updateBy},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+            <if test="remark != null">remark = #{remark},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteMallGoodsById" parameterType="Long">
+        delete from mall_goods where id = #{id}
+    </delete>
+
+    <delete id="deleteMallGoodsByIds" parameterType="String">
+        delete from mall_goods where id in
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <delete id="deleteMallGoodsSpecByParentIds" parameterType="String">
+        delete from mall_goods_spec where parent_id in
+        <foreach item="parentId" collection="array" open="(" separator="," close=")">
+            #{parentId}
+        </foreach>
+    </delete>
+
+    <delete id="deleteMallGoodsSpecByParentId" parameterType="Long">
+        delete from mall_goods_spec where parent_id = #{parentId}
+    </delete>
+
+    <insert id="batchMallGoodsSpec">
+        insert into mall_goods_spec( id, parent_id, spec_name, spec_url, spec_price, spec_stock, sort_no, normal_disable, create_by, create_time, update_by, update_time, remark) values
+        <foreach item="item" index="index" collection="list" separator=",">
+            ( #{item.id}, #{item.parentId}, #{item.specName}, #{item.specUrl}, #{item.specPrice}, #{item.specStock}, #{item.sortNo}, #{item.normalDisable}, #{item.createBy}, #{item.createTime}, #{item.updateBy}, #{item.updateTime}, #{item.remark})
+        </foreach>
+    </insert>
+
+    <update id="changeStatus" parameterType="MallGoods">
+        update mall_goods
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="status != null">status = #{status},</if>
+            <if test="hotStatus != null">hot_status = #{hotStatus},</if>
+            <if test="goodsView != null">goods_View = #{goodsView},</if>
+            <if test="updateBy != null">update_by = #{updateBy},</if>
+            <if test="updateTime != null">update_time = #{updateTime}</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+</mapper>

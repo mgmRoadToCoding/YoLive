@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.source.system.mapper.MallOrderMapper">
+
+    <resultMap type="MallOrder" id="MallOrderResult">
+        <result property="id"    column="id"    />
+        <result property="orderCode"    column="order_code"    />
+        <result property="orderCreateTime"    column="order_create_time"    />
+        <result property="payAmount"    column="pay_amount"    />
+        <result property="payMethod"    column="pay_method"    />
+        <result property="payTime"    column="pay_time"    />
+        <result property="payStatus"    column="pay_status"    />
+        <result property="disAmount"    column="dis_amount"    />
+        <result property="orderStatus"    column="order_status"    />
+        <result property="sortNo"    column="sort_no"    />
+        <result property="userId"    column="user_id"    />
+        <result property="receiver"    column="receiver"    />
+        <result property="receiverPhone"    column="receiver_Phone"    />
+        <result property="receiverAddress"    column="receiver_Address"    />
+        <result property="createBy"    column="create_by"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateBy"    column="update_by"    />
+        <result property="updateTime"    column="update_time"    />
+        <result property="remark"    column="remark"    />
+    </resultMap>
+
+    <sql id="selectMallOrderVo">
+        select id, order_code, order_create_time, pay_amount, pay_method, pay_time, pay_status, dis_amount, order_status, sort_no, user_id,
+        receiver, receiver_Phone, receiver_Address, create_by, create_time, update_by, update_time, remark from mall_order
+    </sql>
+
+    <select id="selectMallOrderList" parameterType="MallOrder" resultMap="MallOrderResult">
+        <include refid="selectMallOrderVo"/>
+        <where>
+            <if test="orderCode != null  and orderCode != ''"> and order_Code like concat('%', #{orderCode}, '%')</if>
+            <if test="orderStatus != null and orderStatus != ''"> and order_Status = #{orderStatus}</if>
+            <!-- 数据范围过滤 -->
+            ${params.dataScope}
+        </where>
+    </select>
+
+    <select id="selectMallOrderById" parameterType="Long" resultMap="MallOrderResult">
+        <include refid="selectMallOrderVo"/>
+        where id = #{id}
+    </select>
+
+    <insert id="insertMallOrder" parameterType="MallOrder" useGeneratedKeys="true" keyProperty="id">
+        insert into mall_order
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="orderCode != null and orderCode != ''">order_code,</if>
+            <if test="orderCreateTime != null">order_create_time,</if>
+            <if test="payAmount != null">pay_amount,</if>
+            <if test="payMethod != null and payMethod != ''">pay_method,</if>
+            <if test="payTime != null">pay_time,</if>
+            <if test="payStatus != null and payStatus != ''">pay_status,</if>
+            <if test="disAmount != null">dis_amount,</if>
+            <if test="orderStatus != null and orderStatus != ''">order_status,</if>
+            <if test="sortNo != null">sort_no,</if>
+            <if test="userId != null">user_id,</if>
+            <if test="receiver != null">receiver,</if>
+            <if test="receiverPhone != null">receiver_Phone,</if>
+            <if test="receiverAddress != null">receiver_Address,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateBy != null">update_by,</if>
+            <if test="updateTime != null">update_time,</if>
+            <if test="remark != null">remark,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="orderCode != null and orderCode != ''">#{orderCode},</if>
+            <if test="orderCreateTime != null">#{orderCreateTime},</if>
+            <if test="payAmount != null">#{payAmount},</if>
+            <if test="payMethod != null and payMethod != ''">#{payMethod},</if>
+            <if test="payTime != null">#{payTime},</if>
+            <if test="payStatus != null and payStatus != ''">#{payStatus},</if>
+            <if test="disAmount != null">#{disAmount},</if>
+            <if test="orderStatus != null and orderStatus != ''">#{orderStatus},</if>
+            <if test="sortNo != null">#{sortNo},</if>
+            <if test="userId != null">#{userId},</if>
+            <if test="receiver != null">#{receiver},</if>
+            <if test="receiverPhone != null">#{receiverPhone},</if>
+            <if test="receiverAddress != null">#{receiverAddress},</if>
+            <if test="createBy != null">#{createBy},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateBy != null">#{updateBy},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+            <if test="remark != null">#{remark},</if>
+         </trim>
+    </insert>
+
+    <insert id="insertMallOrderGoods">
+        insert into mall_order_goods(order_id, goods_id, title, `desc`, price, `value`, image) values
+        <foreach item="item" index="index" collection="list" separator=",">
+            ( #{item.orderId}, #{item.goodsId}, #{item.title}, #{item.desc}, #{item.price}, #{item.value}, #{item.image})
+        </foreach>
+    </insert>
+
+    <update id="updateMallOrder" parameterType="MallOrder">
+        update mall_order
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="orderCode != null and orderCode != ''">order_code = #{orderCode},</if>
+            <if test="orderCreateTime != null">order_create_time = #{orderCreateTime},</if>
+            <if test="payAmount != null">pay_amount = #{payAmount},</if>
+            <if test="payMethod != null and payMethod != ''">pay_method = #{payMethod},</if>
+            <if test="payTime != null">pay_time = #{payTime},</if>
+            <if test="payStatus != null and payStatus != ''">pay_status = #{payStatus},</if>
+            <if test="disAmount != null">dis_amount = #{disAmount},</if>
+            <if test="orderStatus != null and orderStatus != ''">order_status = #{orderStatus},</if>
+            <if test="sortNo != null">sort_no = #{sortNo},</if>
+            <if test="userId != null">user_id = #{userId},</if>
+            <if test="receiver != null">receiver = #{receiver},</if>
+            <if test="receiverPhone != null">receiver_Phone = #{receiverPhone},</if>
+            <if test="receiverAddress != null">receiver_Address = #{receiverAddress},</if>
+            <if test="createBy != null">create_by = #{createBy},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateBy != null">update_by = #{updateBy},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+            <if test="remark != null">remark = #{remark},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteMallOrderById" parameterType="Long">
+        delete from mall_order where id = #{id}
+    </delete>
+
+    <delete id="deleteMallOrderByIds" parameterType="String">
+        delete from mall_order where id in
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

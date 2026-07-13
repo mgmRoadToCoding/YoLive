@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.source.system.mapper.ImChatSessionMapper">
+
+    <resultMap id="ImChatSessionResult" type="cn.source.system.domain.ImChatSession">
+        <id     property="id"        column="id"/>
+        <result property="userId"    column="user_id"/>
+        <result property="title"     column="title"/>
+        <result property="type"      column="type"/>
+        <result property="responderId" column="responder_id"/>
+        <result property="handled"   column="handled"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="remark"    column="remark"/>
+    </resultMap>
+
+    <resultMap id="ChatSessionRowResult" type="cn.source.system.dto.ChatSessionRow">
+        <id     property="id"        column="id"/>
+        <result property="title"     column="title"/>
+        <result property="type"      column="type"/>
+        <result property="handled"   column="handled"/>
+        <result property="username"  column="username"/>
+        <result property="nickname"  column="user_name_text"/>
+        <result property="phoneNumber" column="phonenumber"/>
+        <result property="lastMessageTime" column="last_message_time"/>
+    </resultMap>
+
+    <insert id="insertImChatSession" parameterType="cn.source.system.domain.ImChatSession" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO im_chat_session (
+            user_id,
+            title,
+            type,
+            responder_id,
+            create_time,
+            update_time,
+            remark
+        ) VALUES (
+            #{userId},
+            #{title},
+            #{type},
+            #{responderId},
+            NOW(),
+            NULL,
+            #{remark}
+        )
+    </insert>
+
+    <select id="selectImChatSessionById" parameterType="long" resultMap="ImChatSessionResult">
+        select id, user_id, title, type, responder_id, handled, create_time, update_time, remark
+        from im_chat_session
+        where id = #{id}
+    </select>
+
+    <select id="selectImChatSessionList" parameterType="cn.source.system.domain.ImChatSession" resultMap="ImChatSessionResult">
+        select id, user_id, title, type, responder_id, handled, create_time, update_time, remark
+        from im_chat_session
+        <where>
+            <if test="userId != null">and user_id = #{userId}</if>
+            <if test="type != null">and type = #{type}</if>
+            <if test="responderId != null">and responder_id = #{responderId}</if>
+            <if test="title != null and title != ''">and title like concat('%', #{title}, '%')</if>
+        </where>
+        order by create_time desc, id desc
+    </select>
+
+    <!-- 查询会话列表并关联sys_user，返回ChatSessionRow -->
+    <select id="selectChatSessionRows" parameterType="cn.source.system.domain.ImChatSession" resultMap="ChatSessionRowResult">
+        select s.id,
+               s.title,
+               s.type,
+               s.handled,
+               u.user_name as username,
+               case when u.nick_name is not null and u.nick_name != '' then u.nick_name else u.user_name end as user_name_text,
+               u.phonenumber as phonenumber,
+               (select create_time from im_chat_message where session_id = s.id order by create_time desc, id desc limit 1) as last_message_time
+        from im_chat_session s
+        left join sys_user u on u.user_id = s.user_id
+        <where>
+            <if test="userId != null">and s.user_id = #{userId}</if>
+            <if test="type != null">and s.type = #{type}</if>
+            <if test="responderId != null">and s.responder_id = #{responderId}</if>
+            <if test="title != null and title != ''">and s.title like concat('%', #{title}, '%')</if>
+        </where>
+        order by s.handled asc, last_message_time desc, s.id desc
+    </select>
+
+    <!-- 更新人工会话处理状态：0=未处理，1=已处理 -->
+    <update id="updateHandledById">
+        update im_chat_session
+        set handled = #{handled}, update_time = NOW()
+        where id = #{id}
+    </update>
+
+    <!-- 删除会话 -->
+    <delete id="deleteImChatSessionById" parameterType="long">
+        DELETE FROM im_chat_session WHERE id = #{id}
+    </delete>
+
+
+</mapper>

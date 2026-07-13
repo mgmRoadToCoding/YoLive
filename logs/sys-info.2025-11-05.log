@@ -1,0 +1,87 @@
+00:09:16.902 [schedule-pool-1] INFO  sys-user - [run,55] - [192.168.0.12]内网IP[18720989281][Success][登录成功]
+00:33:26.586 [schedule-pool-3] INFO  sys-user - [run,55] - [192.168.0.12]内网IP[18720989281][Success][登录成功]
+00:53:55.159 [schedule-pool-2] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[18720989281][Success][登录成功]
+01:11:32.898 [schedule-pool-4] INFO  sys-user - [run,55] - [192.168.0.12]内网IP[18720989281][Success][登录成功]
+01:24:02.745 [schedule-pool-1] INFO  sys-user - [run,55] - [192.168.0.12]内网IP[18720989281][Success][登录成功]
+01:26:55.362 [schedule-pool-5] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[18720989281][Success][登录成功]
+01:46:05.850 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1762257785527 paused.
+01:46:05.953 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1762257785527 shutting down.
+01:46:05.954 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1762257785527 paused.
+01:46:05.956 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1762257785527 shutdown complete.
+01:46:05.957 [SpringApplicationShutdownHook] INFO  sys-user - [shutdownAsyncManager,31] - ====关闭后台任务任务线程池====
+01:46:05.975 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+01:46:05.988 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+16:48:22.701 [restartedMain] INFO  c.s.RuoYiApplication - [logStarting,55] - Starting RuoYiApplication using Java 1.8.0_442 on MGMMacBook-Pro.local with PID 26771 (/Users/mgm/Desktop/YoLive-main_Backend/source-vue-master/source-admin/target/classes started by mgm in /Users/mgm/Desktop/YoLive-main_Backend)
+16:48:22.708 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.0.Final
+16:48:22.711 [restartedMain] INFO  c.s.RuoYiApplication - [logStartupProfileInfo,674] - The following profiles are active: druid
+16:48:26.057 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-0.0.0.0-8088"]
+16:48:26.058 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+16:48:26.059 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.56]
+16:48:26.123 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+16:48:28.311 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+16:48:30.008 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+16:48:30.017 [restartedMain] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+16:48:30.018 [restartedMain] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+16:48:30.023 [restartedMain] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'RuoyiScheduler' with instanceId 'MGMMacBook-Pro.local1762328910010'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 20 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+16:48:30.024 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'RuoyiScheduler' initialized from an externally provided properties instance.
+16:48:30.024 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+16:48:30.026 [restartedMain] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@546ee8d
+16:48:32.383 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-0.0.0.0-8088"]
+16:48:32.797 [restartedMain] INFO  c.s.RuoYiApplication - [logStarted,61] - Started RuoYiApplication in 10.679 seconds (JVM running for 11.706)
+16:48:33.828 [Quartz Scheduler [RuoyiScheduler]] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1762328910010 started.
+16:48:59.790 [http-nio-0.0.0.0-8088-exec-2] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:49:01.569 [schedule-pool-1] INFO  sys-user - [run,55] - [192.168.0.12]内网IP[18720989281][Success][登录成功]
+17:02:27.152 [schedule-pool-1] INFO  sys-user - [run,55] - [192.168.0.12]内网IP[18720989281][Success][登录成功]
+17:02:32.074 [schedule-pool-2] INFO  sys-user - [run,55] - [192.168.0.12]内网IP[18720989281][Success][登录成功]
+17:22:25.725 [schedule-pool-1] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[18720989281][Success][登录成功]
+17:51:01.589 [schedule-pool-3] INFO  sys-user - [run,55] - [192.168.0.12]内网IP[18720989281][Success][登录成功]
+18:21:12.228 [schedule-pool-2] INFO  sys-user - [run,55] - [192.168.0.12]内网IP[18720989281][Success][登录成功]
+18:24:56.568 [schedule-pool-4] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[18720989281][Success][登录成功]
+19:56:49.155 [schedule-pool-1] INFO  sys-user - [run,55] - [192.168.0.12]内网IP[18720989281][Success][登录成功]
+21:14:59.991 [schedule-pool-5] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[18720989281][Success][登录成功]
+21:24:00.805 [http-nio-0.0.0.0-8088-exec-79] INFO  c.s.c.u.h.HttpUtils - [sendGet,63] - sendGet - https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=换你自己的&secret=换你自己的
+21:24:01.686 [http-nio-0.0.0.0-8088-exec-79] INFO  c.s.c.u.h.HttpUtils - [sendGet,76] - recv - {"errcode":40013,"errmsg":"invalid appid rid: 690b41e1-69136e9c-390170f2"}
+21:24:10.387 [schedule-pool-3] INFO  sys-user - [run,55] - [127.0.0.1]内网IP[admin][Error][验证码错误]
+21:24:14.232 [schedule-pool-6] INFO  sys-user - [run,55] - [127.0.0.1]内网IP[admin][Success][登录成功]
+22:39:54.514 [http-nio-0.0.0.0-8088-exec-44] INFO  c.s.c.u.h.HttpUtils - [sendGet,63] - sendGet - https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=换你自己的&secret=换你自己的
+22:39:55.169 [http-nio-0.0.0.0-8088-exec-44] INFO  c.s.c.u.h.HttpUtils - [sendGet,76] - recv - {"errcode":40013,"errmsg":"invalid appid rid: 690b53ab-6d04dc76-0867be22"}
+22:40:02.823 [schedule-pool-2] INFO  sys-user - [run,55] - [127.0.0.1]内网IP[admin][Success][登录成功]
+23:20:18.548 [schedule-pool-7] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[18720989281][Success][登录成功]
+23:23:43.356 [schedule-pool-4] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[18720989281][Success][登录成功]
+23:24:30.268 [schedule-pool-8] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[18720989281][Success][登录成功]
+23:35:49.133 [Thread-21] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1762328910010 paused.
+23:35:49.275 [Thread-21] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1762328910010 shutting down.
+23:35:49.277 [Thread-21] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1762328910010 paused.
+23:35:49.280 [Thread-21] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1762328910010 shutdown complete.
+23:35:49.280 [Thread-21] INFO  sys-user - [shutdownAsyncManager,31] - ====关闭后台任务任务线程池====
+23:35:49.291 [Thread-21] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+23:35:49.316 [Thread-21] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+23:35:53.042 [restartedMain] INFO  c.s.RuoYiApplication - [logStarting,55] - Starting RuoYiApplication using Java 1.8.0_442 on MGMMacBook-Pro.local with PID 26771 (/Users/mgm/Desktop/YoLive-main_Backend/source-vue-master/source-admin/target/classes started by mgm in /Users/mgm/Desktop/YoLive-main_Backend)
+23:35:53.044 [restartedMain] INFO  c.s.RuoYiApplication - [logStartupProfileInfo,674] - The following profiles are active: druid
+23:35:54.288 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+23:35:54.291 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.56]
+23:35:54.311 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+23:35:55.486 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-2} inited
+23:35:56.237 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+23:35:56.242 [restartedMain] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+23:35:56.242 [restartedMain] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+23:35:56.243 [restartedMain] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'RuoyiScheduler' with instanceId 'MGMMacBook-Pro.local1762353356239'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 20 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+23:35:56.243 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'RuoyiScheduler' initialized from an externally provided properties instance.
+23:35:56.243 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+23:35:56.243 [restartedMain] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@4a85726f
+23:35:57.956 [restartedMain] INFO  c.s.RuoYiApplication - [logStarted,61] - Started RuoYiApplication in 5.031 seconds (JVM running for 21082.465)
+23:35:59.010 [Quartz Scheduler [RuoyiScheduler]] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1762353356239 started.

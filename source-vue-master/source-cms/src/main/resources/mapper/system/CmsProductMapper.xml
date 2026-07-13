@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.source.system.mapper.CmsProductMapper">
+    
+    <resultMap type="CmsProduct" id="CmsProductResult">
+        <result property="id"    column="id"    />
+        <result property="productIndustry"    column="product_industry"    />
+        <result property="productTag"    column="product_tag"    />
+        <result property="productBigTitle"    column="product_big_title"    />
+        <result property="productSmallTitle"    column="product_small_title"    />
+        <result property="productIcon"    column="product_icon"    />
+        <result property="productThImg"    column="product_th_img"    />
+        <result property="productBgImg"    column="product_bg_img"    />
+        <result property="productDesc"    column="product_desc"    />
+        <result property="productContent"    column="product_content"    />
+        <result property="prodcutUrl"    column="prodcut_url"    />
+        <result property="isBuild"    column="is_build"    />
+        <result property="isOpen"    column="is_open"    />
+        <result property="isShow"    column="is_show"    />
+        <result property="isHot"    column="is_hot"    />
+        <result property="contact"    column="contact"    />
+        <result property="contactCode"    column="contact_code"    />
+        <result property="sortNo"    column="sort_no"    />
+        <result property="status"    column="status"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="createBy"    column="create_by"    />
+        <result property="updateTime"    column="update_time"    />
+        <result property="updateBy"    column="update_by"    />
+        <result property="remark"    column="remark"    />
+    </resultMap>
+
+    <sql id="selectCmsProductVo">
+        select id, product_industry, product_tag, product_big_title, product_small_title, product_icon, product_th_img, product_bg_img, product_desc, product_content, prodcut_url, is_build, is_open, is_show, is_hot, contact, contact_code, sort_no, status, create_time, create_by, update_time, update_by, remark from cms_product
+    </sql>
+
+    <select id="selectCmsProductList" parameterType="CmsProduct" resultMap="CmsProductResult">
+        <include refid="selectCmsProductVo"/>
+        <where>  
+            <if test="productIndustry != null  and productIndustry != ''"> and product_industry = #{productIndustry}</if>
+            <if test="productTag != null  and productTag != ''"> and product_tag = #{productTag}</if>
+            <if test="productBigTitle != null  and productBigTitle != ''"> and product_big_title = #{productBigTitle}</if>
+            <if test="productSmallTitle != null  and productSmallTitle != ''"> and product_small_title = #{productSmallTitle}</if>
+            <if test="productIcon != null  and productIcon != ''"> and product_icon = #{productIcon}</if>
+            <if test="productThImg != null  and productThImg != ''"> and product_th_img = #{productThImg}</if>
+            <if test="productBgImg != null  and productBgImg != ''"> and product_bg_img = #{productBgImg}</if>
+            <if test="productDesc != null  and productDesc != ''"> and product_desc = #{productDesc}</if>
+            <if test="productContent != null  and productContent != ''"> and product_content = #{productContent}</if>
+            <if test="prodcutUrl != null  and prodcutUrl != ''"> and prodcut_url = #{prodcutUrl}</if>
+            <if test="isBuild != null  and isBuild != ''"> and is_build = #{isBuild}</if>
+            <if test="isOpen != null  and isOpen != ''"> and is_open = #{isOpen}</if>
+            <if test="isShow != null  and isShow != ''"> and is_show = #{isShow}</if>
+            <if test="isHot != null  and isHot != ''"> and is_hot = #{isHot}</if>
+            <if test="contact != null  and contact != ''"> and contact = #{contact}</if>
+            <if test="contactCode != null  and contactCode != ''"> and contact_code = #{contactCode}</if>
+            <if test="sortNo != null "> and sort_no = #{sortNo}</if>
+            <if test="status != null  and status != ''"> and status = #{status}</if>
+        </where>
+    </select>
+    
+    <select id="selectCmsProductById" parameterType="Long" resultMap="CmsProductResult">
+        <include refid="selectCmsProductVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertCmsProduct" parameterType="CmsProduct" useGeneratedKeys="true" keyProperty="id">
+        insert into cms_product
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="productIndustry != null and productIndustry != ''">product_industry,</if>
+            <if test="productTag != null and productTag != ''">product_tag,</if>
+            <if test="productBigTitle != null and productBigTitle != ''">product_big_title,</if>
+            <if test="productSmallTitle != null and productSmallTitle != ''">product_small_title,</if>
+            <if test="productIcon != null">product_icon,</if>
+            <if test="productThImg != null">product_th_img,</if>
+            <if test="productBgImg != null">product_bg_img,</if>
+            <if test="productDesc != null">product_desc,</if>
+            <if test="productContent != null">product_content,</if>
+            <if test="prodcutUrl != null">prodcut_url,</if>
+            <if test="isBuild != null and isBuild != ''">is_build,</if>
+            <if test="isOpen != null and isOpen != ''">is_open,</if>
+            <if test="isShow != null and isShow != ''">is_show,</if>
+            <if test="isHot != null and isHot != ''">is_hot,</if>
+            <if test="contact != null">contact,</if>
+            <if test="contactCode != null">contact_code,</if>
+            <if test="sortNo != null">sort_no,</if>
+            <if test="status != null and status != ''">status,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="updateTime != null">update_time,</if>
+            <if test="updateBy != null">update_by,</if>
+            <if test="remark != null">remark,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="productIndustry != null and productIndustry != ''">#{productIndustry},</if>
+            <if test="productTag != null and productTag != ''">#{productTag},</if>
+            <if test="productBigTitle != null and productBigTitle != ''">#{productBigTitle},</if>
+            <if test="productSmallTitle != null and productSmallTitle != ''">#{productSmallTitle},</if>
+            <if test="productIcon != null">#{productIcon},</if>
+            <if test="productThImg != null">#{productThImg},</if>
+            <if test="productBgImg != null">#{productBgImg},</if>
+            <if test="productDesc != null">#{productDesc},</if>
+            <if test="productContent != null">#{productContent},</if>
+            <if test="prodcutUrl != null">#{prodcutUrl},</if>
+            <if test="isBuild != null and isBuild != ''">#{isBuild},</if>
+            <if test="isOpen != null and isOpen != ''">#{isOpen},</if>
+            <if test="isShow != null and isShow != ''">#{isShow},</if>
+            <if test="isHot != null and isHot != ''">#{isHot},</if>
+            <if test="contact != null">#{contact},</if>
+            <if test="contactCode != null">#{contactCode},</if>
+            <if test="sortNo != null">#{sortNo},</if>
+            <if test="status != null and status != ''">#{status},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="createBy != null">#{createBy},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+            <if test="updateBy != null">#{updateBy},</if>
+            <if test="remark != null">#{remark},</if>
+         </trim>
+    </insert>
+
+    <update id="updateCmsProduct" parameterType="CmsProduct">
+        update cms_product
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="productIndustry != null and productIndustry != ''">product_industry = #{productIndustry},</if>
+            <if test="productTag != null and productTag != ''">product_tag = #{productTag},</if>
+            <if test="productBigTitle != null and productBigTitle != ''">product_big_title = #{productBigTitle},</if>
+            <if test="productSmallTitle != null and productSmallTitle != ''">product_small_title = #{productSmallTitle},</if>
+            <if test="productIcon != null">product_icon = #{productIcon},</if>
+            <if test="productThImg != null">product_th_img = #{productThImg},</if>
+            <if test="productBgImg != null">product_bg_img = #{productBgImg},</if>
+            <if test="productDesc != null">product_desc = #{productDesc},</if>
+            <if test="productContent != null">product_content = #{productContent},</if>
+            <if test="prodcutUrl != null">prodcut_url = #{prodcutUrl},</if>
+            <if test="isBuild != null and isBuild != ''">is_build = #{isBuild},</if>
+            <if test="isOpen != null and isOpen != ''">is_open = #{isOpen},</if>
+            <if test="isShow != null and isShow != ''">is_show = #{isShow},</if>
+            <if test="isHot != null and isHot != ''">is_hot = #{isHot},</if>
+            <if test="contact != null">contact = #{contact},</if>
+            <if test="contactCode != null">contact_code = #{contactCode},</if>
+            <if test="sortNo != null">sort_no = #{sortNo},</if>
+            <if test="status != null and status != ''">status = #{status},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="createBy != null">create_by = #{createBy},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+            <if test="updateBy != null">update_by = #{updateBy},</if>
+            <if test="remark != null">remark = #{remark},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteCmsProductById" parameterType="Long">
+        delete from cms_product where id = #{id}
+    </delete>
+
+    <delete id="deleteCmsProductByIds" parameterType="String">
+        delete from cms_product where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

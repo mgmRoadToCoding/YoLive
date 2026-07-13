@@ -1,0 +1,38 @@
+13:29:09.985 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.0.Final
+13:29:09.987 [restartedMain] INFO  c.s.RuoYiApplication - [logStarting,55] - Starting RuoYiApplication using Java 1.8.0_492 on DESKTOP-4NIPDG5 with PID 7620 (C:\Users\mgm\Desktop\YoLive\YoLive-main_Backend\source-vue-master\source-admin\target\classes started by mgm in C:\Users\mgm\Desktop\YoLive\YoLive-main_Backend)
+13:29:09.994 [restartedMain] INFO  c.s.RuoYiApplication - [logStartupProfileInfo,674] - The following profiles are active: druid
+13:29:12.794 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-0.0.0.0-8088"]
+13:29:12.794 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+13:29:12.795 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.56]
+13:29:12.897 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+13:29:15.211 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+13:29:17.385 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+13:29:17.417 [restartedMain] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+13:29:17.418 [restartedMain] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+13:29:17.436 [restartedMain] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'RuoyiScheduler' with instanceId 'DESKTOP-4NIPDG51783920557386'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 20 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+13:29:17.436 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'RuoyiScheduler' initialized from an externally provided properties instance.
+13:29:17.436 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+13:29:17.438 [restartedMain] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@78a87f17
+13:29:19.985 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-0.0.0.0-8088"]
+13:29:20.555 [restartedMain] INFO  c.s.RuoYiApplication - [logStarted,61] - Started RuoYiApplication in 11.006 seconds (JVM running for 12.283)
+13:29:21.571 [Quartz Scheduler [RuoyiScheduler]] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler RuoyiScheduler_$_DESKTOP-4NIPDG51783920557386 started.
+13:29:50.418 [http-nio-0.0.0.0-8088-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:31:37.422 [schedule-pool-1] INFO  sys-user - [run,55] - [127.0.0.1]内网IP[13534235787][Error][用户不存在/密码错误]
+13:43:11.483 [http-nio-0.0.0.0-8088-exec-86] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@5d0be43a
+13:43:11.483 [http-nio-0.0.0.0-8088-exec-86] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+13:43:12.268 [http-nio-0.0.0.0-8088-exec-87] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@5d0be43a
+13:43:12.268 [http-nio-0.0.0.0-8088-exec-87] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 0
+13:43:12.269 [http-nio-0.0.0.0-8088-exec-87] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+14:19:39.880 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler RuoyiScheduler_$_DESKTOP-4NIPDG51783920557386 paused.

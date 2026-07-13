@@ -1,0 +1,138 @@
+// cover some element-ui styles
+
+.el-breadcrumb__inner,
+.el-breadcrumb__inner a {
+  font-weight: 400 !important;
+}
+
+.el-upload {
+  input[type="file"] {
+    display: none !important;
+  }
+}
+
+.el-upload__input {
+  display: none;
+}
+
+.cell {
+  .el-tag {
+    margin-right: 0px;
+  }
+}
+
+.small-padding {
+  .cell {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+.fixed-width {
+  .el-button--mini {
+    padding: 7px 10px;
+    width: 60px;
+  }
+}
+
+.status-col {
+  .cell {
+    padding: 0 10px;
+    text-align: center;
+
+    .el-tag {
+      margin-right: 0px;
+    }
+  }
+}
+
+// to fixed https://github.com/ElemeFE/element/issues/2461
+.el-dialog {
+  transform: none;
+  left: 0;
+  position: relative;
+  margin: 0 auto;
+}
+
+// refine element ui upload
+.upload-container {
+  .el-upload {
+    width: 100%;
+
+    .el-upload-dragger {
+      width: 100%;
+      height: 200px;
+    }
+  }
+}
+
+// dropdown
+.el-dropdown-menu {
+  a {
+    display: block;
+  }
+}
+
+// fix date-picker ui bug in filter-item
+.el-range-editor.el-input__inner {
+  display: inline-flex !important;
+}
+
+// to fix el-date-picker css style
+.el-range-separator {
+  box-sizing: content-box;
+}
+
+.el-menu--collapse
+  > div
+  > .el-submenu
+  > .el-submenu__title
+  .el-submenu__icon-arrow {
+  display: none;
+}
+
+.el-form-search {
+  float: right;
+  .el-form-search-item {
+    margin-bottom: 0px;
+    .el-input__inner {
+      width: 140px;
+    }
+  }
+}
+
+el-table .el-table__cell {
+  padding: 8px 0;
+}
+
+.el-table--medium .el-table__cell {
+  padding: 6px 0;
+}
+
+.el-table--small .el-table__cell {
+  padding: 3px 0;
+}
+
+.el-table--mini .el-table__cell {
+  padding: 1px 0;
+}
+
+.el-dialog__body {
+  padding: 20px 20px;
+}
+
+.el-input--mini .el-input__icon {
+  line-height: 32px;
+}
+
+/* 用来设置当前页面element全局table 选中某行时的背景色*/
+.el-table__body tr.current-row > td {
+  color: #2d3a4b;
+  background-color: #fbec88 !important;
+  font-weight: 600;
+}
+/* 用来设置当前页面element全局table 鼠标移入某行时的背景色*/
+.el-table--enable-row-hover .el-table__body tr:hover > td {
+  background-color: rgba(#fbec88, 0.6) !important;
+  color: #2d3a4b;
+}

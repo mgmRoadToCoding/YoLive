@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.source.system.mapper.CmsToolCategoryMapper">
+    
+    <resultMap type="CmsToolCategory" id="CmsToolCategoryResult">
+        <result property="id"    column="id"    />
+        <result property="parentId"    column="parent_id"    />
+        <result property="code"    column="code"    />
+        <result property="icon"    column="icon"    />
+        <result property="name"    column="name"    />
+        <result property="sort"    column="sort"    />
+        <result property="createBy"    column="create_by"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateBy"    column="update_by"    />
+        <result property="updateTime"    column="update_time"    />
+    </resultMap>
+    
+    <resultMap id="CmsToolCategoryExtendResult" type="cn.source.system.domain.vo.CmsCategoryToolVo" extends="CmsToolCategoryResult">
+        <collection property="children" ofType="CmsTool" notNullColumn="id">
+            <result property="id"    column="tid"    />
+            <result property="catId"    column="cat_id"    />
+            <result property="icon"    column="ticon"    />
+            <result property="name"    column="tname"    />
+            <result property="sort"    column="tsort"    />
+            <result property="intro"    column="intro"    />
+            <result property="version"    column="version"    />
+            <result property="type"    column="type"    />
+            <result property="url"    column="url"    />
+            <result property="panType"    column="pan_type"    />
+            <result property="extractedCode"    column="extracted_code"    />
+        </collection>
+    </resultMap>
+
+    <sql id="selectCmsToolCategoryVo">
+        select id, parent_id, code, icon, name, sort, create_by, create_time, update_by, update_time from cms_tool_category
+    </sql>
+
+    <select id="selectCmsToolCategoryList" parameterType="CmsToolCategory" resultMap="CmsToolCategoryResult">
+        <include refid="selectCmsToolCategoryVo"/>
+        <where>  
+            <if test="code != null  and code != ''"> and code like concat('%', #{code}, '%')</if>
+            <if test="icon != null  and icon != ''"> and icon = #{icon}</if>
+            <if test="name != null  and name != ''"> and name like concat('%', #{name}, '%')</if>
+            <if test="sort != null "> and sort = #{sort}</if>
+        </where>
+    </select>
+    
+    <select id="selectCmsToolCategoryById" parameterType="Long" resultMap="CmsToolCategoryResult">
+        <include refid="selectCmsToolCategoryVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertCmsToolCategory" parameterType="CmsToolCategory" useGeneratedKeys="true" keyProperty="id">
+        insert into cms_tool_category
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="parentId != null">parent_id,</if>
+            <if test="code != null and code != ''">code,</if>
+            <if test="icon != null and icon != ''">icon,</if>
+            <if test="name != null and name != ''">name,</if>
+            <if test="sort != null">sort,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateBy != null">update_by,</if>
+            <if test="updateTime != null">update_time,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="parentId != null">#{parentId},</if>
+            <if test="code != null and code != ''">#{code},</if>
+            <if test="icon != null and icon != ''">#{icon},</if>
+            <if test="name != null and name != ''">#{name},</if>
+            <if test="sort != null">#{sort},</if>
+            <if test="createBy != null">#{createBy},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateBy != null">#{updateBy},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+         </trim>
+    </insert>
+
+    <update id="updateCmsToolCategory" parameterType="CmsToolCategory">
+        update cms_tool_category
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="parentId != null">parent_id = #{parentId},</if>
+            <if test="code != null and code != ''">code = #{code},</if>
+            <if test="icon != null and icon != ''">icon = #{icon},</if>
+            <if test="name != null and name != ''">name = #{name},</if>
+            <if test="sort != null">sort = #{sort},</if>
+            <if test="createBy != null">create_by = #{createBy},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateBy != null">update_by = #{updateBy},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteCmsToolCategoryById" parameterType="Long">
+        delete from cms_tool_category where id = #{id}
+    </delete>
+
+    <delete id="deleteCmsToolCategoryByIds" parameterType="String">
+        delete from cms_tool_category where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <select id="selectCategoryToolList" resultMap="CmsToolCategoryExtendResult">
+        select
+            tc.id,
+            tc.parent_id,
+            tc.code,
+            tc.icon,
+            tc.name,
+            tc.sort,
+            tc.create_by,
+            tc.create_time,
+            tc.update_by,
+            tc.update_time,
+            t.id as tid,
+            t.cat_id,
+            t.icon as ticon,
+            t.name as tname,
+            t.sort as tsort,
+            t.intro,
+            t.version,
+            t.type,
+            t.url,
+            t.pan_type,
+            t.extracted_code
+        from
+            cms_tool_category tc
+        left join
+            cms_tool t
+        on
+            tc.id = t.cat_id
+        <where>
+            <if test="type != null">t.type = #{type}</if>
+        </where>
+        order by tc.sort, t.sort desc
+    </select>
+</mapper>

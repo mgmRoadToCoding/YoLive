@@ -1,0 +1,218 @@
+02:56:27.949 [restartedMain] INFO  c.s.RuoYiApplication - [logStarting,55] - Starting RuoYiApplication using Java 1.8.0_442 on MGMMacBook-Pro.local with PID 52057 (/Users/mgm/Desktop/YoLive-main/source-vue-master/source-admin/target/classes started by mgm in /Users/mgm/Desktop/YoLive-main)
+02:56:27.957 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.0.Final
+02:56:27.962 [restartedMain] INFO  c.s.RuoYiApplication - [logStartupProfileInfo,674] - The following profiles are active: druid
+02:56:31.082 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-0.0.0.0-8088"]
+02:56:31.084 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+02:56:31.085 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.56]
+02:56:31.146 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+02:56:33.633 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+02:56:35.349 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+02:56:35.357 [restartedMain] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+02:56:35.358 [restartedMain] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+02:56:35.362 [restartedMain] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'RuoyiScheduler' with instanceId 'MGMMacBook-Pro.local1744826195350'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 20 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+02:56:35.363 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'RuoyiScheduler' initialized from an externally provided properties instance.
+02:56:35.363 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+02:56:35.364 [restartedMain] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@6786f449
+02:56:37.744 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-0.0.0.0-8088"]
+02:56:38.099 [restartedMain] INFO  c.s.RuoYiApplication - [logStarted,61] - Started RuoYiApplication in 10.775 seconds (JVM running for 11.946)
+02:56:39.130 [Quartz Scheduler [RuoyiScheduler]] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1744826195350 started.
+02:56:49.743 [http-nio-0.0.0.0-8088-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+02:56:50.237 [schedule-pool-1] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[18720989281][Success][登录成功]
+02:56:50.806 [http-nio-0.0.0.0-8088-exec-5] INFO  c.s.c.u.RegionUtil - [<clinit>,48] - bean [org.lionsoul.ip2region.DbConfig@2b49a5da]
+02:56:50.807 [http-nio-0.0.0.0-8088-exec-5] INFO  c.s.c.u.RegionUtil - [<clinit>,49] - bean [org.lionsoul.ip2region.DbSearcher@4e1e792a]
+03:28:18.799 [schedule-pool-1] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[18720989281][Success][登录成功]
+04:17:52.214 [schedule-pool-2] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[18720989281][Success][登录成功]
+04:49:21.236 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1744826195350 paused.
+04:49:21.362 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1744826195350 shutting down.
+04:49:21.363 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1744826195350 paused.
+04:49:21.365 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1744826195350 shutdown complete.
+04:49:21.366 [SpringApplicationShutdownHook] INFO  sys-user - [shutdownAsyncManager,31] - ====关闭后台任务任务线程池====
+04:49:21.374 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+04:49:21.384 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+21:35:40.480 [restartedMain] INFO  c.s.RuoYiApplication - [logStarting,55] - Starting RuoYiApplication using Java 1.8.0_442 on MGMMacBook-Pro.local with PID 56938 (/Users/mgm/Desktop/YoLive-main/source-vue-master/source-admin/target/classes started by mgm in /Users/mgm/Desktop/YoLive-main)
+21:35:40.480 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.0.Final
+21:35:40.484 [restartedMain] INFO  c.s.RuoYiApplication - [logStartupProfileInfo,674] - The following profiles are active: druid
+21:35:43.056 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-0.0.0.0-8088"]
+21:35:43.057 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+21:35:43.057 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.56]
+21:35:43.121 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+21:35:45.230 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+21:35:46.744 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+21:35:46.753 [restartedMain] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+21:35:46.754 [restartedMain] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+21:35:46.758 [restartedMain] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'RuoyiScheduler' with instanceId 'MGMMacBook-Pro.local1744893346746'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 20 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+21:35:46.759 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'RuoyiScheduler' initialized from an externally provided properties instance.
+21:35:46.760 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+21:35:46.760 [restartedMain] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@3db2fc
+21:35:48.817 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-0.0.0.0-8088"]
+21:35:49.114 [restartedMain] INFO  c.s.RuoYiApplication - [logStarted,61] - Started RuoYiApplication in 9.123 seconds (JVM running for 10.359)
+21:35:50.151 [Quartz Scheduler [RuoyiScheduler]] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1744893346746 started.
+21:36:09.463 [http-nio-0.0.0.0-8088-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:36:13.174 [schedule-pool-1] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[18720989281][Success][登录成功]
+21:44:57.009 [schedule-pool-1] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[18720989281][Success][登录成功]
+21:45:28.762 [http-nio-0.0.0.0-8088-exec-38] INFO  c.s.c.u.RegionUtil - [<clinit>,48] - bean [org.lionsoul.ip2region.DbConfig@59fe077f]
+21:45:28.763 [http-nio-0.0.0.0-8088-exec-38] INFO  c.s.c.u.RegionUtil - [<clinit>,49] - bean [org.lionsoul.ip2region.DbSearcher@43bfd405]
+21:47:57.899 [schedule-pool-2] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[18720989281][Success][登录成功]
+23:14:25.172 [http-nio-0.0.0.0-8088-exec-42] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:14:25.209 [schedule-pool-1] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:14:27.758 [http-nio-0.0.0.0-8088-exec-44] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:14:27.772 [schedule-pool-3] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:14:28.884 [http-nio-0.0.0.0-8088-exec-43] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:14:28.899 [schedule-pool-2] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:14:36.126 [http-nio-0.0.0.0-8088-exec-46] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:14:36.140 [schedule-pool-4] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:14:51.453 [http-nio-0.0.0.0-8088-exec-48] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:14:51.467 [schedule-pool-1] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:15:44.866 [http-nio-0.0.0.0-8088-exec-49] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:15:44.879 [schedule-pool-5] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:15:52.283 [http-nio-0.0.0.0-8088-exec-51] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:15:52.296 [schedule-pool-3] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:15:52.513 [http-nio-0.0.0.0-8088-exec-53] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:15:52.527 [schedule-pool-6] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:15:52.688 [http-nio-0.0.0.0-8088-exec-54] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:15:52.701 [schedule-pool-2] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:17:04.367 [http-nio-0.0.0.0-8088-exec-55] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:17:04.382 [schedule-pool-7] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:17:06.290 [http-nio-0.0.0.0-8088-exec-58] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:17:06.304 [schedule-pool-4] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:17:06.510 [http-nio-0.0.0.0-8088-exec-59] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:17:06.524 [schedule-pool-8] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:17:06.683 [http-nio-0.0.0.0-8088-exec-60] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:17:06.696 [schedule-pool-1] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:19:13.050 [http-nio-0.0.0.0-8088-exec-62] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:19:13.065 [schedule-pool-9] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:19:15.209 [http-nio-0.0.0.0-8088-exec-64] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:19:15.223 [schedule-pool-5] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:19:15.379 [http-nio-0.0.0.0-8088-exec-66] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:19:15.392 [schedule-pool-10] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:21:10.884 [http-nio-0.0.0.0-8088-exec-68] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:21:10.898 [schedule-pool-3] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:21:12.240 [http-nio-0.0.0.0-8088-exec-70] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:21:12.253 [schedule-pool-11] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:21:12.382 [http-nio-0.0.0.0-8088-exec-67] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:21:12.395 [schedule-pool-6] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:21:13.131 [http-nio-0.0.0.0-8088-exec-69] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:21:13.144 [schedule-pool-12] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:21:13.284 [http-nio-0.0.0.0-8088-exec-72] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:21:13.297 [schedule-pool-2] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:24:12.363 [http-nio-0.0.0.0-8088-exec-71] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:24:12.381 [schedule-pool-13] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:24:14.789 [http-nio-0.0.0.0-8088-exec-76] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:24:14.802 [schedule-pool-7] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:24:15.500 [http-nio-0.0.0.0-8088-exec-77] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:24:15.512 [schedule-pool-14] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:24:15.684 [http-nio-0.0.0.0-8088-exec-75] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:24:15.695 [schedule-pool-4] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:25:46.437 [http-nio-0.0.0.0-8088-exec-78] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:25:46.453 [schedule-pool-15] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:28:45.287 [http-nio-0.0.0.0-8088-exec-80] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:28:45.303 [schedule-pool-8] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:28:47.946 [http-nio-0.0.0.0-8088-exec-82] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:28:47.961 [schedule-pool-16] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:28:48.611 [http-nio-0.0.0.0-8088-exec-83] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:28:48.624 [schedule-pool-1] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:28:48.713 [http-nio-0.0.0.0-8088-exec-84] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:28:48.727 [schedule-pool-17] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:28:51.213 [http-nio-0.0.0.0-8088-exec-87] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:28:51.227 [schedule-pool-9] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:28:51.369 [http-nio-0.0.0.0-8088-exec-86] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:28:51.381 [schedule-pool-18] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:28:51.517 [http-nio-0.0.0.0-8088-exec-90] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:28:51.530 [schedule-pool-5] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:28:51.678 [http-nio-0.0.0.0-8088-exec-88] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:28:51.691 [schedule-pool-19] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:28:51.835 [http-nio-0.0.0.0-8088-exec-92] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:28:51.848 [schedule-pool-10] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:28:52.002 [http-nio-0.0.0.0-8088-exec-89] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:28:52.015 [schedule-pool-20] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:28:52.151 [http-nio-0.0.0.0-8088-exec-93] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:28:52.162 [schedule-pool-3] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:30:33.407 [http-nio-0.0.0.0-8088-exec-95] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:30:33.421 [schedule-pool-21] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:30:34.177 [http-nio-0.0.0.0-8088-exec-94] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:30:34.192 [schedule-pool-11] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:30:34.314 [http-nio-0.0.0.0-8088-exec-97] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:30:34.328 [schedule-pool-22] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:33:53.289 [http-nio-0.0.0.0-8088-exec-98] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:33:53.304 [schedule-pool-6] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:33:55.824 [http-nio-0.0.0.0-8088-exec-100] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:33:55.839 [schedule-pool-23] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:33:56.560 [http-nio-0.0.0.0-8088-exec-2] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:33:56.573 [schedule-pool-12] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:33:56.674 [http-nio-0.0.0.0-8088-exec-3] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:33:56.687 [schedule-pool-24] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:33:57.365 [http-nio-0.0.0.0-8088-exec-1] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:33:57.379 [schedule-pool-2] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:33:57.594 [http-nio-0.0.0.0-8088-exec-4] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:33:57.606 [schedule-pool-25] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:35:45.907 [http-nio-0.0.0.0-8088-exec-8] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:35:45.921 [schedule-pool-13] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:35:47.441 [http-nio-0.0.0.0-8088-exec-6] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:35:47.453 [schedule-pool-26] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:35:47.596 [http-nio-0.0.0.0-8088-exec-9] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:35:47.609 [schedule-pool-7] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:35:47.756 [http-nio-0.0.0.0-8088-exec-7] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:35:47.769 [schedule-pool-27] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:35:48.264 [http-nio-0.0.0.0-8088-exec-10] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:35:48.277 [schedule-pool-14] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:35:48.443 [http-nio-0.0.0.0-8088-exec-11] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:35:48.457 [schedule-pool-28] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:35:52.240 [http-nio-0.0.0.0-8088-exec-13] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:35:52.254 [schedule-pool-4] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:35:52.716 [http-nio-0.0.0.0-8088-exec-14] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:35:52.730 [schedule-pool-29] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:35:52.874 [http-nio-0.0.0.0-8088-exec-15] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:35:52.887 [schedule-pool-15] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:35:53.019 [http-nio-0.0.0.0-8088-exec-16] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:35:53.032 [schedule-pool-30] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:35:53.181 [http-nio-0.0.0.0-8088-exec-17] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:35:53.191 [schedule-pool-8] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:36:25.793 [http-nio-0.0.0.0-8088-exec-18] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:36:25.807 [schedule-pool-31] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:36:25.909 [http-nio-0.0.0.0-8088-exec-20] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:36:25.923 [schedule-pool-16] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:40:17.390 [http-nio-0.0.0.0-8088-exec-22] INFO  c.s.c.u.h.HttpUtils - [sendPost,126] - sendPost - http://api.sms.cn/sms?ac=send&uid=换你自己的&pwd=换你自己的&template=换你自己的&mobile=01079218222&content={"code":"3660"}
+23:40:20.952 [http-nio-0.0.0.0-8088-exec-22] INFO  c.s.c.u.h.HttpUtils - [sendPost,145] - recv - {"stat":"101","message":"验证失败"}
+23:40:20.954 [http-nio-0.0.0.0-8088-exec-22] INFO  c.s.c.u.s.DySmsUtil - [sendSms,27] - 短信接口返回的数据----------------{"stat":"101","message":"验证失败"}
+23:41:15.422 [http-nio-0.0.0.0-8088-exec-25] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:41:15.438 [schedule-pool-32] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:41:16.205 [http-nio-0.0.0.0-8088-exec-26] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:41:16.219 [schedule-pool-1] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:42:46.859 [http-nio-0.0.0.0-8088-exec-30] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:42:46.873 [schedule-pool-33] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:42:47.882 [http-nio-0.0.0.0-8088-exec-28] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:42:47.896 [schedule-pool-17] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:42:48.039 [http-nio-0.0.0.0-8088-exec-27] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:42:48.052 [schedule-pool-34] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:42:48.657 [http-nio-0.0.0.0-8088-exec-29] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:42:48.668 [schedule-pool-9] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:42:48.856 [http-nio-0.0.0.0-8088-exec-31] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:42:48.870 [schedule-pool-35] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:42:51.322 [http-nio-0.0.0.0-8088-exec-35] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:42:51.336 [schedule-pool-18] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:42:54.059 [http-nio-0.0.0.0-8088-exec-33] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:42:54.073 [schedule-pool-36] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:43:52.393 [http-nio-0.0.0.0-8088-exec-34] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:43:52.407 [schedule-pool-5] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:44:15.639 [http-nio-0.0.0.0-8088-exec-38] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:44:15.653 [schedule-pool-37] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:44:22.190 [http-nio-0.0.0.0-8088-exec-41] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:44:22.203 [schedule-pool-19] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:44:30.931 [http-nio-0.0.0.0-8088-exec-44] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:44:30.946 [schedule-pool-38] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]
+23:44:36.893 [http-nio-0.0.0.0-8088-exec-45] INFO  c.s.f.w.s.UserDetailsServiceImpl - [loadUserByUsername,39] - 登录用户：01079218222 不存在.
+23:44:36.906 [schedule-pool-10] INFO  sys-user - [run,55] - [192.168.0.5]内网IP[01079218222][Error][登录用户：01079218222 不存在]

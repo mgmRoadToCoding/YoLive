@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.source.system.mapper.ImChatMessageMapper">
+
+    <resultMap id="ImChatMessageResult" type="ImChatMessage">
+        <id     property="id"          column="id"/>
+        <result property="sessionId"   column="session_id"/>
+        <result property="userId"      column="user_id"/>
+        <result property="role"        column="role"/>
+        <result property="content"     column="content"/>
+        <result property="createTime"  column="create_time"/>
+        <result property="remark"      column="remark"/>
+    </resultMap>
+
+    <insert id="insertImChatMessage" parameterType="ImChatMessage">
+        insert into im_chat_message (session_id, user_id, role, content, create_time)
+        values (#{sessionId}, #{userId}, #{role}, #{content}, sysdate())
+    </insert>
+
+    <select id="selectBySessionId" parameterType="string" resultMap="ImChatMessageResult">
+        select id, session_id, user_id, role, content, create_time, remark
+        from im_chat_message
+        where session_id = #{sessionId}
+        order by create_time asc, id asc
+    </select>
+
+    <select id="selectImChatMessageList" resultMap="ImChatMessageResult">
+        select id, session_id, user_id, role, content, create_time, remark
+        from im_chat_message
+        <where>
+            <if test="userId != null">and user_id = #{userId}</if>
+            <if test="sessionId != null and sessionId != ''">and session_id = #{sessionId}</if>
+            <if test="role != null and role != ''">and role = #{role}</if>
+            <if test="keyword != null and keyword != ''">and content like concat('%', #{keyword}, '%')</if>
+        </where>
+        order by create_time desc, id desc
+    </select>
+
+    <select id="selectImChatMessageById" parameterType="long" resultMap="ImChatMessageResult">
+        select id, session_id, user_id, role, content, create_time, remark
+        from im_chat_message
+        where id = #{id}
+    </select>
+
+    <select id="countBySessionId" parameterType="string" resultType="int">
+        select count(1) from im_chat_message where session_id = #{sessionId}
+    </select>
+
+    <select id="selectLastBySessionId" parameterType="string" resultMap="ImChatMessageResult">
+        select id, session_id, user_id, role, content, create_time, remark
+        from im_chat_message
+        where session_id = #{sessionId}
+        order by create_time desc, id desc
+        limit 1
+    </select>
+
+    <!-- 删除指定会话下的所有消息 -->
+    <delete id="deleteBySessionId" parameterType="string">
+        DELETE FROM im_chat_message WHERE session_id = #{sessionId}
+    </delete>
+
+
+</mapper>

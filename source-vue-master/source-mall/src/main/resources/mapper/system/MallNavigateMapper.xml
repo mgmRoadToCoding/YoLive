@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.source.system.mapper.MallNavigateMapper">
+
+    <resultMap type="MallNavigate" id="MallNavigateResult">
+        <result property="id"    column="id"    />
+        <result property="navigateName"    column="navigate_name"    />
+        <result property="navigateAddress"    column="navigate_address"    />
+        <result property="navigateUrl"    column="navigate_url"    />
+        <result property="sortNo"    column="sort_no"    />
+        <result property="normalDisable"    column="normal_disable"    />
+        <result property="createBy"    column="create_by"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateBy"    column="update_by"    />
+        <result property="updateTime"    column="update_time"    />
+        <result property="remark"    column="remark"    />
+    </resultMap>
+
+    <sql id="selectMallNavigateVo">
+        select id, navigate_name, navigate_address, navigate_url, sort_no, normal_disable, create_by, create_time, update_by, update_time, remark from mall_navigate
+    </sql>
+
+    <select id="selectMallNavigateList" parameterType="MallNavigate" resultMap="MallNavigateResult">
+        <include refid="selectMallNavigateVo"/>
+        <where>
+            <if test="navigateName != null  and navigateName != ''"> and navigate_name like concat('%', #{navigateName}, '%')</if>
+            <if test="navigateAddress != null  and navigateAddress != ''"> and navigate_address like concat('%', #{navigateAddress}, '%')</if>
+        </where>
+    </select>
+
+    <select id="selectMallNavigateById" parameterType="Long" resultMap="MallNavigateResult">
+        <include refid="selectMallNavigateVo"/>
+        where id = #{id}
+    </select>
+
+    <insert id="insertMallNavigate" parameterType="MallNavigate" useGeneratedKeys="true" keyProperty="id">
+        insert into mall_navigate
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="navigateName != null and navigateName != ''">navigate_name,</if>
+            <if test="navigateAddress != null and navigateAddress != ''">navigate_address,</if>
+            <if test="navigateUrl != null and navigateUrl != ''">navigate_url,</if>
+            <if test="sortNo != null">sort_no,</if>
+            <if test="normalDisable != null">normal_disable,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateBy != null">update_by,</if>
+            <if test="updateTime != null">update_time,</if>
+            <if test="remark != null">remark,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="navigateName != null and navigateName != ''">#{navigateName},</if>
+            <if test="navigateAddress != null and navigateAddress != ''">#{navigateAddress},</if>
+            <if test="navigateUrl != null and navigateUrl != ''">#{navigateUrl},</if>
+            <if test="sortNo != null">#{sortNo},</if>
+            <if test="normalDisable != null">#{normalDisable},</if>
+            <if test="createBy != null">#{createBy},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateBy != null">#{updateBy},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+            <if test="remark != null">#{remark},</if>
+         </trim>
+    </insert>
+
+    <update id="updateMallNavigate" parameterType="MallNavigate">
+        update mall_navigate
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="navigateName != null and navigateName != ''">navigate_name = #{navigateName},</if>
+            <if test="navigateAddress != null and navigateAddress != ''">navigate_address = #{navigateAddress},</if>
+            <if test="navigateUrl != null and navigateUrl != ''">navigate_url = #{navigateUrl},</if>
+            <if test="sortNo != null">sort_no = #{sortNo},</if>
+            <if test="normalDisable != null">normal_disable = #{normalDisable},</if>
+            <if test="createBy != null">create_by = #{createBy},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateBy != null">update_by = #{updateBy},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+            <if test="remark != null">remark = #{remark},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteMallNavigateById" parameterType="Long">
+        delete from mall_navigate where id = #{id}
+    </delete>
+
+    <delete id="deleteMallNavigateByIds" parameterType="String">
+        delete from mall_navigate where id in
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

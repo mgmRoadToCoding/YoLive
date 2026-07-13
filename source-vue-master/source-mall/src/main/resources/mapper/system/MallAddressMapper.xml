@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.source.system.mapper.MallAddressMapper">
+
+    <resultMap type="MallAddress" id="MallAddressResult">
+        <result property="id"    column="id"    />
+        <result property="userId"    column="user_id"    />
+        <result property="userName"    column="user_name"    />
+        <result property="phone"    column="phone"    />
+        <result property="address"    column="address"    />
+        <result property="isDefault"    column="is_default"    />
+        <result property="normalDisable"    column="normal_disable"    />
+        <result property="sortNo"    column="sort_no"    />
+        <result property="createBy"    column="create_by"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateBy"    column="update_by"    />
+        <result property="updateTime"    column="update_time"    />
+        <result property="remark"    column="remark"    />
+    </resultMap>
+
+    <sql id="selectMallAddressVo">
+        select id, user_id, user_name, phone, address, is_default, normal_disable, sort_no, create_by, create_time, update_by, update_time, remark from mall_address
+    </sql>
+
+    <select id="selectMallAddressList" parameterType="MallAddress" resultMap="MallAddressResult">
+        <include refid="selectMallAddressVo"/>
+        <where>
+            <if test="userName != null  and userName != ''"> and user_name like concat('%', #{userName}, '%')</if>
+            <if test="phone != null  and phone != ''"> and phone like concat('%', #{phone}, '%')</if>
+            <!-- 数据范围过滤 -->
+            ${params.dataScope}
+        </where>
+    </select>
+
+    <select id="selectApiMallAddressList" parameterType="MallAddress" resultMap="MallAddressResult">
+        <include refid="selectMallAddressVo"/>
+        <where>
+            <if test="userId != null  and userId != ''"> and user_Id = #{userId}</if>
+            <if test="isDefault != null  and isDefault != ''"> and is_default = #{isDefault}</if>
+        </where>
+    </select>
+
+    <select id="selectMallAddressById" parameterType="Long" resultMap="MallAddressResult">
+        <include refid="selectMallAddressVo"/>
+        where id = #{id}
+    </select>
+
+    <insert id="insertMallAddress" parameterType="MallAddress" useGeneratedKeys="true" keyProperty="id">
+        insert into mall_address
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="userId != null">user_id,</if>
+            <if test="userName != null and userName != ''">user_name,</if>
+            <if test="phone != null and phone != ''">phone,</if>
+            <if test="address != null and address != ''">address,</if>
+            <if test="isDefault != null and isDefault != ''">is_default,</if>
+            <if test="normalDisable != null and normalDisable != ''">normal_disable,</if>
+            <if test="sortNo != null">sort_no,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateBy != null">update_by,</if>
+            <if test="updateTime != null">update_time,</if>
+            <if test="remark != null">remark,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="userId != null">#{userId},</if>
+            <if test="userName != null and userName != ''">#{userName},</if>
+            <if test="phone != null and phone != ''">#{phone},</if>
+            <if test="address != null and address != ''">#{address},</if>
+            <if test="isDefault != null and isDefault != ''">#{isDefault},</if>
+            <if test="normalDisable != null and normalDisable != ''">#{normalDisable},</if>
+            <if test="sortNo != null">#{sortNo},</if>
+            <if test="createBy != null">#{createBy},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateBy != null">#{updateBy},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+            <if test="remark != null">#{remark},</if>
+         </trim>
+    </insert>
+
+    <update id="updateMallAddress" parameterType="MallAddress">
+        update mall_address
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="userId != null">user_id = #{userId},</if>
+            <if test="userName != null and userName != ''">user_name = #{userName},</if>
+            <if test="phone != null and phone != ''">phone = #{phone},</if>
+            <if test="address != null and address != ''">address = #{address},</if>
+            <if test="isDefault != null and isDefault != ''">is_default = #{isDefault},</if>
+            <if test="normalDisable != null and normalDisable != ''">normal_disable = #{normalDisable},</if>
+            <if test="sortNo != null">sort_no = #{sortNo},</if>
+            <if test="createBy != null">create_by = #{createBy},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateBy != null">update_by = #{updateBy},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+            <if test="remark != null">remark = #{remark},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <update id="updateAddressDefault" parameterType="MallAddress">
+        update mall_address
+        set is_default = 0
+        where user_id = #{userId} and id != #{id}
+    </update>
+
+    <delete id="deleteMallAddressById" parameterType="Long">
+        delete from mall_address where id = #{id}
+    </delete>
+
+    <delete id="deleteMallAddressByIds" parameterType="String">
+        delete from mall_address where id in
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

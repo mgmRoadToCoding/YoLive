@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.source.system.mapper.CmsForumPostMapper">
+
+    <resultMap id="CmsForumPostResult" type="cn.source.system.domain.CmsForumPost">
+        <id property="id" column="id" />
+        <result property="title" column="title" />
+        <result property="content" column="content" />
+        <result property="images" column="images" />
+        <result property="userId" column="user_id" />
+        <result property="status" column="status" />
+        <result property="isDeleted" column="is_deleted" />
+        <result property="auditReason" column="audit_reason" />
+        <result property="createTime" column="create_time" />
+        <result property="updateTime" column="update_time" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, title, content, images, user_id, status, is_deleted, audit_reason, create_time, update_time
+    </sql>
+
+    <insert id="insertCmsForumPost" parameterType="cn.source.system.domain.CmsForumPost" useGeneratedKeys="true" keyProperty="id">
+        insert into cms_forum_post (title, content, images, user_id, status, is_deleted, audit_reason, create_time, update_time)
+        values (#{title}, #{content}, #{images}, #{userId}, #{status}, 0, #{auditReason}, #{createTime}, #{updateTime})
+    </insert>
+
+    <update id="updateCmsForumPostStatus" parameterType="cn.source.system.domain.CmsForumPost">
+        update cms_forum_post
+        set status = #{status}, audit_reason = #{auditReason}, update_time = #{updateTime}
+        where id = #{id}
+    </update>
+
+    <update id="softDeleteCmsForumPostById" parameterType="long">
+        update cms_forum_post set is_deleted = 1, update_time = now() where id = #{id}
+    </update>
+
+    <select id="selectCmsForumPostById" resultMap="CmsForumPostResult" parameterType="long">
+        select <include refid="Base_Column_List"/> from cms_forum_post where id = #{id}
+    </select>
+
+    <select id="selectCmsForumPostList" resultMap="CmsForumPostResult" parameterType="cn.source.system.domain.CmsForumPost">
+        select <include refid="Base_Column_List"/> from cms_forum_post
+        <where>
+            is_deleted = 0
+            <if test="status != null"> and status = #{status} </if>
+            <if test="userId != null"> and user_id = #{userId} </if>
+            <if test="title != null and title != ''"> and title like concat('%', #{title}, '%') </if>
+        </where>
+        order by create_time desc
+    </select>
+
+    <select id="selectPendingList" resultMap="CmsForumPostResult">
+        select <include refid="Base_Column_List"/> from cms_forum_post
+        where is_deleted = 0 and status = 0
+        order by create_time asc
+    </select>
+
+</mapper>

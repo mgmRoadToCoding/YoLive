@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.source.system.mapper.MallAdvertMapper">
+
+    <resultMap type="MallAdvert" id="MallAdvertResult">
+        <result property="id"    column="id"    />
+        <result property="advertType"    column="advert_type"    />
+        <result property="advertName"    column="advert_name"    />
+        <result property="advertAddress"    column="advert_address"    />
+        <result property="advertUrl"    column="advert_url"    />
+        <result property="sortNo"    column="sort_no"    />
+        <result property="normalDisable"    column="normal_disable"    />
+        <result property="createBy"    column="create_by"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateBy"    column="update_by"    />
+        <result property="updateTime"    column="update_time"    />
+        <result property="remark"    column="remark"    />
+    </resultMap>
+
+    <sql id="selectMallAdvertVo">
+        select id, advert_type, advert_name, advert_address, advert_url, sort_no, normal_disable, create_by, create_time, update_by, update_time, remark from mall_advert
+    </sql>
+
+    <select id="selectMallAdvertList" parameterType="MallAdvert" resultMap="MallAdvertResult">
+        <include refid="selectMallAdvertVo"/>
+        <where>
+            <if test="advertType != null "> and advert_type = #{advertType}</if>
+            <if test="advertName != null  and advertName != ''"> and advert_name like concat('%', #{advertName}, '%')</if>
+        </where>
+    </select>
+
+    <select id="selectMallAdvertById" parameterType="Long" resultMap="MallAdvertResult">
+        <include refid="selectMallAdvertVo"/>
+        where id = #{id}
+    </select>
+
+    <insert id="insertMallAdvert" parameterType="MallAdvert" useGeneratedKeys="true" keyProperty="id">
+        insert into mall_advert
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="advertType != null">advert_type,</if>
+            <if test="advertName != null and advertName != ''">advert_name,</if>
+            <if test="advertAddress != null and advertAddress != ''">advert_address,</if>
+            <if test="advertUrl != null and advertUrl != ''">advert_url,</if>
+            <if test="sortNo != null">sort_no,</if>
+            <if test="normalDisable != null">normal_disable,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateBy != null">update_by,</if>
+            <if test="updateTime != null">update_time,</if>
+            <if test="remark != null">remark,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="advertType != null">#{advertType},</if>
+            <if test="advertName != null and advertName != ''">#{advertName},</if>
+            <if test="advertAddress != null and advertAddress != ''">#{advertAddress},</if>
+            <if test="advertUrl != null and advertUrl != ''">#{advertUrl},</if>
+            <if test="sortNo != null">#{sortNo},</if>
+            <if test="normalDisable != null">#{normalDisable},</if>
+            <if test="createBy != null">#{createBy},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateBy != null">#{updateBy},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+            <if test="remark != null">#{remark},</if>
+         </trim>
+    </insert>
+
+    <update id="updateMallAdvert" parameterType="MallAdvert">
+        update mall_advert
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="advertType != null">advert_type = #{advertType},</if>
+            <if test="advertName != null and advertName != ''">advert_name = #{advertName},</if>
+            <if test="advertAddress != null and advertAddress != ''">advert_address = #{advertAddress},</if>
+            <if test="advertUrl != null and advertUrl != ''">advert_url = #{advertUrl},</if>
+            <if test="sortNo != null">sort_no = #{sortNo},</if>
+            <if test="normalDisable != null">normal_disable = #{normalDisable},</if>
+            <if test="createBy != null">create_by = #{createBy},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateBy != null">update_by = #{updateBy},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+            <if test="remark != null">remark = #{remark},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteMallAdvertById" parameterType="Long">
+        delete from mall_advert where id = #{id}
+    </delete>
+
+    <delete id="deleteMallAdvertByIds" parameterType="String">
+        delete from mall_advert where id in
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

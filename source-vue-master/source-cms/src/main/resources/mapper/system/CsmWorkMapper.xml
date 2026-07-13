@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.source.system.mapper.CsmWorkMapper">
+
+    <resultMap type="CsmWork" id="CsmWorkResult">
+        <result property="id" column="id"/>
+        <result property="productName" column="product_name"/>
+        <result property="workNo" column="work_no"/>
+        <result property="wrokType" column="wrok_type"/>
+        <result property="workDesc" column="work_desc"/>
+        <result property="workAttach" column="work_attach"/>
+        <result property="workPrioity" column="work_prioity"/>
+        <result property="planDate" column="plan_date"/>
+        <result property="principal" column="principal"/>
+        <result property="handleResult" column="handle_result"/>
+        <result property="handleDate" column="handle_date"/>
+        <result property="handler" column="handler"/>
+        <result property="createTime" column="create_time"/>
+        <result property="createBy" column="create_by"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="updateBy" column="update_by"/>
+        <result property="remark" column="remark"/>
+        <result property="serialNo" column="serial_no"/>
+    </resultMap>
+
+    <sql id="selectCsmWorkVo">
+        select id,
+               product_name,
+               work_no,
+               wrok_type,
+               work_desc,
+               work_attach,
+               work_prioity,
+               plan_date,
+               principal,
+               handle_result,
+               handle_date,
+               handler,
+               create_time,
+               create_by,
+               update_time,
+               update_by,
+               remark,
+               serial_no
+        from csm_work
+    </sql>
+
+    <select id="selectCsmWorkList" parameterType="CsmWork" resultMap="CsmWorkResult">
+        <include refid="selectCsmWorkVo"/>
+        <where>
+            <if test="productName != null  and productName != ''">and product_name like concat('%', #{productName},
+                '%')
+            </if>
+            <if test="workNo != null  and workNo != ''">and work_no like concat('%', #{workNo}, '%')</if>
+            <if test="wrokType != null  and wrokType != ''">and wrok_type = #{wrokType}</if>
+            <if test="workDesc != null  and workDesc != ''">and work_desc = #{workDesc}</if>
+            <if test="workAttach != null  and workAttach != ''">and work_attach = #{workAttach}</if>
+            <if test="workPrioity != null  and workPrioity != ''">and work_prioity = #{workPrioity}</if>
+            <if test="planDate != null ">and plan_date = #{planDate}</if>
+            <if test="principal != null  and principal != ''">and principal = #{principal}</if>
+            <if test="handleResult != null  and handleResult == '待处理'">and ifnull(handle_result,'待处理') = '待处理'</if>
+            <if test="handleResult != null  and handleResult == '已处理'">and handle_result = #{handleResult}</if>
+            <if test="handleDate != null ">and handle_date = #{handleDate}</if>
+            <if test="handler != null  and handler != ''">and handler = #{handler}</if>
+        </where>
+    </select>
+
+    <select id="selectCsmWorkById" parameterType="Long" resultMap="CsmWorkResult">
+        <include refid="selectCsmWorkVo"/>
+        where id = #{id}
+    </select>
+
+    <insert id="insertCsmWork" parameterType="CsmWork" useGeneratedKeys="true" keyProperty="id">
+        insert into csm_work
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="productName != null and productName != ''">product_name,</if>
+            <if test="workNo != null and workNo != ''">work_no,</if>
+            <if test="wrokType != null and wrokType != ''">wrok_type,</if>
+            <if test="workDesc != null and workDesc != ''">work_desc,</if>
+            <if test="workAttach != null">work_attach,</if>
+            <if test="workPrioity != null and workPrioity != ''">work_prioity,</if>
+            <if test="planDate != null">plan_date,</if>
+            <if test="principal != null and principal != ''">principal,</if>
+            <if test="handleResult != null">handle_result,</if>
+            <if test="handleDate != null">handle_date,</if>
+            <if test="handler != null">handler,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="updateTime != null">update_time,</if>
+            <if test="updateBy != null">update_by,</if>
+            <if test="remark != null">remark,</if>
+            <if test="serialNo != null">serial_No,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="productName != null and productName != ''">#{productName},</if>
+            <if test="workNo != null and workNo != ''">#{workNo},</if>
+            <if test="wrokType != null and wrokType != ''">#{wrokType},</if>
+            <if test="workDesc != null and workDesc != ''">#{workDesc},</if>
+            <if test="workAttach != null">#{workAttach},</if>
+            <if test="workPrioity != null and workPrioity != ''">#{workPrioity},</if>
+            <if test="planDate != null">#{planDate},</if>
+            <if test="principal != null and principal != ''">#{principal},</if>
+            <if test="handleResult != null">#{handleResult},</if>
+            <if test="handleDate != null">#{handleDate},</if>
+            <if test="handler != null">#{handler},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="createBy != null">#{createBy},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+            <if test="updateBy != null">#{updateBy},</if>
+            <if test="remark != null">#{remark},</if>
+            <if test="serialNo != null">#{serialNo},</if>
+        </trim>
+    </insert>
+
+    <update id="updateCsmWork" parameterType="CsmWork">
+        update csm_work
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="productName != null and productName != ''">product_name = #{productName},</if>
+            <if test="workNo != null and workNo != ''">work_no = #{workNo},</if>
+            <if test="wrokType != null and wrokType != ''">wrok_type = #{wrokType},</if>
+            <if test="workDesc != null and workDesc != ''">work_desc = #{workDesc},</if>
+            <if test="workAttach != null">work_attach = #{workAttach},</if>
+            <if test="workPrioity != null and workPrioity != ''">work_prioity = #{workPrioity},</if>
+            <if test="planDate != null">plan_date = #{planDate},</if>
+            <if test="principal != null and principal != ''">principal = #{principal},</if>
+            <if test="handleResult != null">handle_result = #{handleResult},</if>
+            <if test="handleDate != null">handle_date = #{handleDate},</if>
+            <if test="handler != null">handler = #{handler},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="createBy != null">create_by = #{createBy},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+            <if test="updateBy != null">update_by = #{updateBy},</if>
+            <if test="remark != null">remark = #{remark},</if>
+            <if test="serialNo != null">serial_No = #{serialNo},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteCsmWorkById" parameterType="Long">
+        delete
+        from csm_work
+        where id = #{id}
+    </delete>
+
+    <delete id="deleteCsmWorkByIds" parameterType="String">
+        delete from csm_work where id in
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <select id="selectSerialNo" resultType="Integer">
+        select ifnull(max(serial_no), 0) + 1 as serial_no
+        from csm_work
+    </select>
+
+    <delete id="feedWork">
+        update csm_work set handle_Result=#{handleResult},handle_Date=#{handleDate},handler=#{handler} where id in
+        <foreach item="id" collection="ids" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+</mapper>

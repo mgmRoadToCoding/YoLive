@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.source.system.mapper.CmsFaqMapper">
+
+    <resultMap id="CmsFaqResult" type="cn.source.system.domain.CmsFaq">
+        <id property="id" column="id" />
+        <result property="faqIcon" column="faq_icon" />
+        <result property="faqName" column="faq_name" />
+        <result property="faqLink" column="faq_link" />
+        <result property="sort" column="sort" />
+        <result property="createTime" column="create_time" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, faq_icon, faq_name, faq_link, sort, create_time
+    </sql>
+
+    <select id="selectCmsFaqList" resultMap="CmsFaqResult">
+        select <include refid="Base_Column_List"/>
+        from cms_faq
+        order by sort asc
+    </select>
+
+    <insert id="insertCmsFaq" parameterType="cn.source.system.domain.CmsFaq" useGeneratedKeys="true" keyProperty="id">
+        insert into cms_faq (faq_icon, faq_name, faq_link, sort, create_time)
+        values (#{faqIcon}, #{faqName}, #{faqLink}, #{sort}, #{createTime})
+    </insert>
+
+    <delete id="deleteCmsFaqById" parameterType="long">
+        delete from cms_faq where id = #{id}
+    </delete>
+
+</mapper>

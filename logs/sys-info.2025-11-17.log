@@ -1,0 +1,1248 @@
+15:32:40.563 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.0.Final
+15:32:40.572 [restartedMain] INFO  c.s.RuoYiApplication - [logStarting,55] - Starting RuoYiApplication using Java 1.8.0_442 on MGMMacBook-Pro.local with PID 26869 (/Users/mgm/Desktop/YoLive-main_Backend/source-vue-master/source-admin/target/classes started by mgm in /Users/mgm/Desktop/YoLive-main_Backend)
+15:32:40.576 [restartedMain] INFO  c.s.RuoYiApplication - [logStartupProfileInfo,674] - The following profiles are active: druid
+15:32:44.748 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-0.0.0.0-8088"]
+15:32:44.749 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+15:32:44.750 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.56]
+15:32:44.829 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+15:32:47.190 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+15:32:48.684 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+15:32:48.692 [restartedMain] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+15:32:48.692 [restartedMain] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+15:32:48.696 [restartedMain] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'RuoyiScheduler' with instanceId 'MGMMacBook-Pro.local1763361168685'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 20 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+15:32:48.697 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'RuoyiScheduler' initialized from an externally provided properties instance.
+15:32:48.698 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+15:32:48.698 [restartedMain] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@6a3a70d6
+15:32:51.819 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-0.0.0.0-8088"]
+15:32:52.348 [restartedMain] INFO  c.s.RuoYiApplication - [logStarted,61] - Started RuoYiApplication in 12.476 seconds (JVM running for 13.692)
+15:32:53.400 [Quartz Scheduler [RuoyiScheduler]] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763361168685 started.
+15:33:19.009 [http-nio-0.0.0.0-8088-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:35:24.491 [schedule-pool-1] INFO  sys-user - [run,55] - [172.20.47.29]内网IP[18720989281][Success][登录成功]
+15:35:31.724 [schedule-pool-1] INFO  sys-user - [run,55] - [172.20.47.29]内网IP[18720989281][Success][登录成功]
+15:35:49.663 [http-nio-0.0.0.0-8088-exec-54] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@68bdbe56
+15:35:49.663 [http-nio-0.0.0.0-8088-exec-54] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+15:35:50.835 [http-nio-0.0.0.0-8088-exec-55] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@68bdbe56
+15:35:50.836 [http-nio-0.0.0.0-8088-exec-55] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 0
+15:35:50.836 [http-nio-0.0.0.0-8088-exec-55] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+15:38:26.829 [http-nio-0.0.0.0-8088-exec-67] INFO  c.s.c.u.h.HttpUtils - [sendGet,63] - sendGet - https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=换你自己的&secret=换你自己的
+15:38:27.930 [http-nio-0.0.0.0-8088-exec-67] INFO  c.s.c.u.h.HttpUtils - [sendGet,76] - recv - {"errcode":40013,"errmsg":"invalid appid rid: 691ac2e3-73b2993b-5de7ac8e"}
+15:38:35.352 [schedule-pool-2] INFO  sys-user - [run,55] - [127.0.0.1]内网IP[admin][Success][登录成功]
+15:38:41.592 [http-nio-0.0.0.0-8088-exec-74] INFO  c.s.s.w.WebSocketAdminServer - [onOpen,91] - [管理端WS] 建立连接 - 1
+15:38:44.800 [http-nio-0.0.0.0-8088-exec-77] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@7e1a0f73
+15:38:44.800 [http-nio-0.0.0.0-8088-exec-77] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+15:38:52.250 [http-nio-0.0.0.0-8088-exec-78] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=2, message={"sessionId":"11","content":"你好"}
+15:38:52.325 [http-nio-0.0.0.0-8088-exec-78] INFO  c.s.s.w.WebSocketServer - [onMessage,300] - [AI客服WS] 已转发人工消息到管理端：sessionId=11
+15:39:02.194 [http-nio-0.0.0.0-8088-exec-81] INFO  c.s.s.w.WebSocketAdminServer - [onMessage,122] - [管理端WS] 收到消息：sessionId=1, message={"event":"adminMessage","sessionId":11,"content":"你好","role":"admin"} 
+15:39:02.234 [http-nio-0.0.0.0-8088-exec-81] INFO  c.s.s.w.WebSocketAdminServer - [onMessage,174] - [管理端WS] 已尝试转发到用户10，成功连接数=1
+15:39:02.271 [http-nio-0.0.0.0-8088-exec-81] INFO  c.s.s.w.WebSocketAdminServer - [onMessage,184] - [管理端WS] 已更新会话处理状态为1 id=11
+15:39:02.279 [http-nio-0.0.0.0-8088-exec-81] INFO  c.s.s.w.WebSocketAdminServer - [onMessage,199] - [管理端WS] 已持久化管理端回复消息 sessionId=11
+15:39:09.883 [http-nio-0.0.0.0-8088-exec-83] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=2, message={"sessionId":"11","content":"有什么问题吗"}
+15:39:09.916 [http-nio-0.0.0.0-8088-exec-83] INFO  c.s.s.w.WebSocketServer - [onMessage,300] - [AI客服WS] 已转发人工消息到管理端：sessionId=11
+15:39:17.730 [http-nio-0.0.0.0-8088-exec-85] INFO  c.s.s.w.WebSocketAdminServer - [onMessage,122] - [管理端WS] 收到消息：sessionId=1, message={"event":"adminMessage","sessionId":11,"content":"你有什么问题吗","role":"admin"} 
+15:39:17.744 [http-nio-0.0.0.0-8088-exec-85] INFO  c.s.s.w.WebSocketAdminServer - [onMessage,174] - [管理端WS] 已尝试转发到用户10，成功连接数=1
+15:39:17.750 [http-nio-0.0.0.0-8088-exec-85] INFO  c.s.s.w.WebSocketAdminServer - [onMessage,184] - [管理端WS] 已更新会话处理状态为1 id=11
+15:39:17.760 [http-nio-0.0.0.0-8088-exec-85] INFO  c.s.s.w.WebSocketAdminServer - [onMessage,199] - [管理端WS] 已持久化管理端回复消息 sessionId=11
+15:39:19.701 [http-nio-0.0.0.0-8088-exec-87] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@7e1a0f73
+15:39:19.703 [http-nio-0.0.0.0-8088-exec-87] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 2
+15:39:19.704 [http-nio-0.0.0.0-8088-exec-87] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+15:41:45.149 [http-nio-0.0.0.0-8088-exec-72] INFO  c.s.s.w.WebSocketAdminServer - [onClose,96] - [管理端WS] 关闭连接 - 1
+15:41:45.151 [http-nio-0.0.0.0-8088-exec-72] INFO  c.s.s.w.WebSocketAdminServer - [onError,109] - [管理端WS] 连接异常 - 1
+15:41:45.158 [http-nio-0.0.0.0-8088-exec-72] INFO  c.s.s.w.WebSocketAdminServer - [onError,110] - [管理端WS] 异常信息 - {}
+java.io.EOFException: null
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1328)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1215)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:75)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:183)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:162)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:157)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:59)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+15:41:48.064 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763361168685 paused.
+15:41:48.135 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763361168685 shutting down.
+15:41:48.136 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763361168685 paused.
+15:41:48.137 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763361168685 shutdown complete.
+15:41:48.140 [SpringApplicationShutdownHook] INFO  sys-user - [shutdownAsyncManager,31] - ====关闭后台任务任务线程池====
+15:41:48.150 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+15:41:48.164 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+15:59:16.199 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.0.Final
+15:59:16.212 [restartedMain] INFO  c.s.RuoYiApplication - [logStarting,55] - Starting RuoYiApplication using Java 1.8.0_442 on MGMMacBook-Pro.local with PID 27553 (/Users/mgm/Desktop/YoLive-main_Backend/source-vue-master/source-admin/target/classes started by mgm in /Users/mgm/Desktop/YoLive-main_Backend)
+15:59:16.213 [restartedMain] INFO  c.s.RuoYiApplication - [logStartupProfileInfo,674] - The following profiles are active: druid
+15:59:19.246 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-0.0.0.0-8088"]
+15:59:19.249 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+15:59:19.250 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.56]
+15:59:19.323 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+15:59:21.713 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+15:59:23.061 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+15:59:23.071 [restartedMain] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+15:59:23.071 [restartedMain] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+15:59:23.075 [restartedMain] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'RuoyiScheduler' with instanceId 'MGMMacBook-Pro.local1763362763063'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 20 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+15:59:23.076 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'RuoyiScheduler' initialized from an externally provided properties instance.
+15:59:23.076 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+15:59:23.077 [restartedMain] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@705aaa1b
+15:59:25.613 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-0.0.0.0-8088"]
+15:59:25.952 [restartedMain] INFO  c.s.RuoYiApplication - [logStarted,61] - Started RuoYiApplication in 10.253 seconds (JVM running for 11.478)
+15:59:27.002 [Quartz Scheduler [RuoyiScheduler]] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763362763063 started.
+16:04:21.059 [http-nio-0.0.0.0-8088-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:06:38.222 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763362763063 paused.
+16:06:38.454 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763362763063 shutting down.
+16:06:38.455 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763362763063 paused.
+16:06:38.458 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763362763063 shutdown complete.
+16:06:38.459 [SpringApplicationShutdownHook] INFO  sys-user - [shutdownAsyncManager,31] - ====关闭后台任务任务线程池====
+16:06:38.485 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+16:06:38.523 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+16:06:43.975 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.0.Final
+16:06:44.205 [restartedMain] INFO  c.s.RuoYiApplication - [logStarting,55] - Starting RuoYiApplication using Java 1.8.0_442 on MGMMacBook-Pro.local with PID 27995 (/Users/mgm/Desktop/YoLive-main_Backend/source-vue-master/source-admin/target/classes started by mgm in /Users/mgm/Desktop/YoLive-main_Backend)
+16:06:44.212 [restartedMain] INFO  c.s.RuoYiApplication - [logStartupProfileInfo,674] - The following profiles are active: druid
+16:06:48.971 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-0.0.0.0-8088"]
+16:06:48.973 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+16:06:48.973 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.56]
+16:06:49.053 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+16:06:51.466 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+16:06:53.005 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+16:06:53.016 [restartedMain] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+16:06:53.016 [restartedMain] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+16:06:53.025 [restartedMain] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'RuoyiScheduler' with instanceId 'MGMMacBook-Pro.local1763363213007'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 20 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+16:06:53.026 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'RuoyiScheduler' initialized from an externally provided properties instance.
+16:06:53.027 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+16:06:53.028 [restartedMain] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@31b9de2a
+16:06:55.911 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-0.0.0.0-8088"]
+16:06:56.252 [restartedMain] INFO  c.s.RuoYiApplication - [logStarted,61] - Started RuoYiApplication in 13.211 seconds (JVM running for 14.68)
+16:06:57.339 [Quartz Scheduler [RuoyiScheduler]] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763363213007 started.
+16:07:01.134 [http-nio-0.0.0.0-8088-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:10:19.384 [schedule-pool-1] INFO  c.s.c.u.RegionUtil - [<clinit>,48] - bean [org.lionsoul.ip2region.DbConfig@ae18a40]
+16:10:19.386 [schedule-pool-1] INFO  c.s.c.u.RegionUtil - [<clinit>,49] - bean [org.lionsoul.ip2region.DbSearcher@74d50d40]
+16:10:19.397 [schedule-pool-1] INFO  sys-user - [run,55] - [165.229.143.135]0 0[18720989281][Success][登录成功]
+16:15:20.259 [http-nio-0.0.0.0-8088-exec-57] INFO  c.s.c.u.h.HttpUtils - [sendGet,63] - sendGet - https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=换你自己的&secret=换你自己的
+16:15:21.048 [http-nio-0.0.0.0-8088-exec-57] INFO  c.s.c.u.h.HttpUtils - [sendGet,76] - recv - {"errcode":40013,"errmsg":"invalid appid rid: 691acb89-72bd0942-2170d14b"}
+16:15:28.519 [schedule-pool-1] INFO  sys-user - [run,55] - [127.0.0.1]内网IP[admin][Success][登录成功]
+16:15:32.515 [http-nio-0.0.0.0-8088-exec-64] INFO  c.s.s.w.WebSocketAdminServer - [onOpen,91] - [管理端WS] 建立连接 - 0
+16:16:01.986 [http-nio-0.0.0.0-8088-exec-82] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@2e864fa9
+16:16:01.987 [http-nio-0.0.0.0-8088-exec-82] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+16:16:03.583 [http-nio-0.0.0.0-8088-exec-88] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@2e864fa9
+16:16:03.584 [http-nio-0.0.0.0-8088-exec-88] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 1
+16:16:03.585 [http-nio-0.0.0.0-8088-exec-88] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+16:16:37.085 [http-nio-0.0.0.0-8088-exec-1] INFO  c.s.s.w.WebSocketAdminServer - [onClose,96] - [管理端WS] 关闭连接 - 0
+16:16:37.776 [http-nio-0.0.0.0-8088-exec-5] INFO  c.s.s.w.WebSocketAdminServer - [onOpen,91] - [管理端WS] 建立连接 - 2
+16:19:37.907 [http-nio-0.0.0.0-8088-exec-68] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@5e178f9d
+16:19:37.908 [http-nio-0.0.0.0-8088-exec-68] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+16:19:42.487 [http-nio-0.0.0.0-8088-exec-51] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@5e178f9d
+16:19:42.488 [http-nio-0.0.0.0-8088-exec-51] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 3
+16:19:42.488 [http-nio-0.0.0.0-8088-exec-51] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+16:19:45.259 [http-nio-0.0.0.0-8088-exec-55] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@598fb46c
+16:19:45.260 [http-nio-0.0.0.0-8088-exec-55] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+16:19:48.597 [http-nio-0.0.0.0-8088-exec-58] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@598fb46c
+16:19:48.597 [http-nio-0.0.0.0-8088-exec-58] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 4
+16:19:48.597 [http-nio-0.0.0.0-8088-exec-58] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+16:19:48.616 [http-nio-0.0.0.0-8088-exec-60] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@6434f766
+16:19:48.616 [http-nio-0.0.0.0-8088-exec-60] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+16:19:49.504 [http-nio-0.0.0.0-8088-exec-61] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@6434f766
+16:19:49.504 [http-nio-0.0.0.0-8088-exec-61] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 5
+16:19:49.504 [http-nio-0.0.0.0-8088-exec-61] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+16:20:10.290 [http-nio-0.0.0.0-8088-exec-59] INFO  c.s.s.w.WebSocketAdminServer - [onClose,96] - [管理端WS] 关闭连接 - 2
+16:20:10.586 [http-nio-0.0.0.0-8088-exec-66] INFO  c.s.s.w.WebSocketAdminServer - [onOpen,91] - [管理端WS] 建立连接 - 6
+16:32:32.966 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763363213007 paused.
+16:32:33.030 [SpringApplicationShutdownHook] INFO  c.s.s.w.WebSocketAdminServer - [onClose,96] - [管理端WS] 关闭连接 - 6
+16:32:33.204 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763363213007 shutting down.
+16:32:33.206 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763363213007 paused.
+16:32:33.208 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763363213007 shutdown complete.
+16:32:33.209 [SpringApplicationShutdownHook] INFO  sys-user - [shutdownAsyncManager,31] - ====关闭后台任务任务线程池====
+16:32:33.220 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+16:32:33.250 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+16:36:32.582 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.0.Final
+16:36:32.591 [restartedMain] INFO  c.s.RuoYiApplication - [logStarting,55] - Starting RuoYiApplication using Java 1.8.0_442 on MGMMacBook-Pro.local with PID 28845 (/Users/mgm/Desktop/YoLive-main_Backend/source-vue-master/source-admin/target/classes started by mgm in /Users/mgm/Desktop/YoLive-main_Backend)
+16:36:32.592 [restartedMain] INFO  c.s.RuoYiApplication - [logStartupProfileInfo,674] - The following profiles are active: druid
+16:36:35.697 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-0.0.0.0-8088"]
+16:36:35.698 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+16:36:35.699 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.56]
+16:36:35.767 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+16:36:38.120 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+16:36:39.483 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+16:36:39.495 [restartedMain] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+16:36:39.495 [restartedMain] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+16:36:39.501 [restartedMain] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'RuoyiScheduler' with instanceId 'MGMMacBook-Pro.local1763364999485'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 20 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+16:36:39.501 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'RuoyiScheduler' initialized from an externally provided properties instance.
+16:36:39.502 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+16:36:39.502 [restartedMain] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@36324365
+16:36:42.003 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-0.0.0.0-8088"]
+16:36:42.320 [restartedMain] INFO  c.s.RuoYiApplication - [logStarted,61] - Started RuoYiApplication in 10.22 seconds (JVM running for 11.114)
+16:36:43.372 [Quartz Scheduler [RuoyiScheduler]] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763364999485 started.
+16:36:50.405 [http-nio-0.0.0.0-8088-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:37:12.362 [http-nio-0.0.0.0-8088-exec-66] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@50e698d2
+16:37:12.363 [http-nio-0.0.0.0-8088-exec-66] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+16:37:13.817 [http-nio-0.0.0.0-8088-exec-70] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@50e698d2
+16:37:13.820 [http-nio-0.0.0.0-8088-exec-70] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 0
+16:37:13.822 [http-nio-0.0.0.0-8088-exec-70] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+16:37:14.655 [http-nio-0.0.0.0-8088-exec-19] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@60ad51d2
+16:37:14.656 [http-nio-0.0.0.0-8088-exec-19] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+16:37:16.594 [http-nio-0.0.0.0-8088-exec-62] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@60ad51d2
+16:37:16.597 [http-nio-0.0.0.0-8088-exec-62] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 1
+16:37:16.597 [http-nio-0.0.0.0-8088-exec-62] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+16:38:55.921 [http-nio-0.0.0.0-8088-exec-98] INFO  c.s.s.w.WebSocketAdminServer - [onOpen,91] - [管理端WS] 建立连接 - 2
+16:39:16.817 [http-nio-0.0.0.0-8088-exec-77] INFO  c.s.s.w.WebSocketAdminServer - [onClose,96] - [管理端WS] 关闭连接 - 2
+16:39:17.322 [http-nio-0.0.0.0-8088-exec-82] INFO  c.s.s.w.WebSocketAdminServer - [onOpen,91] - [管理端WS] 建立连接 - 3
+16:39:42.383 [http-nio-0.0.0.0-8088-exec-18] INFO  c.s.s.w.WebSocketAdminServer - [onClose,96] - [管理端WS] 关闭连接 - 3
+16:39:42.707 [http-nio-0.0.0.0-8088-exec-21] INFO  c.s.s.w.WebSocketAdminServer - [onOpen,91] - [管理端WS] 建立连接 - 4
+16:39:52.048 [http-nio-0.0.0.0-8088-exec-50] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@45517453
+16:39:52.049 [http-nio-0.0.0.0-8088-exec-50] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+16:39:58.645 [http-nio-0.0.0.0-8088-exec-34] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=5, message={"sessionId":"13","content":"你好"}
+16:40:05.761 [http-nio-0.0.0.0-8088-exec-10] INFO  c.s.s.w.WebSocketAdminServer - [onClose,96] - [管理端WS] 关闭连接 - 4
+16:40:06.173 [http-nio-0.0.0.0-8088-exec-12] INFO  c.s.s.w.WebSocketAdminServer - [onOpen,91] - [管理端WS] 建立连接 - 6
+16:40:16.120 [http-nio-0.0.0.0-8088-exec-21] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@45517453
+16:40:16.121 [http-nio-0.0.0.0-8088-exec-21] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 5
+16:40:16.121 [http-nio-0.0.0.0-8088-exec-21] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+16:40:16.148 [http-nio-0.0.0.0-8088-exec-22] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@3ac2bbe9
+16:40:16.148 [http-nio-0.0.0.0-8088-exec-22] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+16:40:20.458 [http-nio-0.0.0.0-8088-exec-23] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=7, message={"sessionId":"14","content":"你好 我是mgm"}
+16:40:20.515 [http-nio-0.0.0.0-8088-exec-23] INFO  c.s.s.w.WebSocketServer - [onMessage,300] - [AI客服WS] 已转发人工消息到管理端：sessionId=14
+16:40:37.047 [http-nio-0.0.0.0-8088-exec-32] INFO  c.s.s.w.WebSocketAdminServer - [onMessage,122] - [管理端WS] 收到消息：sessionId=6, message={"event":"adminMessage","sessionId":14,"content":"你好，请问有为什么问题","role":"admin"} 
+16:40:37.081 [http-nio-0.0.0.0-8088-exec-32] INFO  c.s.s.w.WebSocketAdminServer - [onMessage,174] - [管理端WS] 已尝试转发到用户10，成功连接数=1
+16:40:37.126 [http-nio-0.0.0.0-8088-exec-32] INFO  c.s.s.w.WebSocketAdminServer - [onMessage,184] - [管理端WS] 已更新会话处理状态为1 id=14
+16:40:37.134 [http-nio-0.0.0.0-8088-exec-32] INFO  c.s.s.w.WebSocketAdminServer - [onMessage,199] - [管理端WS] 已持久化管理端回复消息 sessionId=14
+16:40:57.165 [http-nio-0.0.0.0-8088-exec-7] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=7, message={"sessionId":"14","content":"我想进入YoLive"}
+16:40:57.198 [http-nio-0.0.0.0-8088-exec-7] INFO  c.s.s.w.WebSocketServer - [onMessage,300] - [AI客服WS] 已转发人工消息到管理端：sessionId=14
+16:41:11.134 [http-nio-0.0.0.0-8088-exec-31] INFO  c.s.s.w.WebSocketAdminServer - [onMessage,122] - [管理端WS] 收到消息：sessionId=6, message={"event":"adminMessage","sessionId":14,"content":"抱歉,目前人满了","role":"admin"} 
+16:41:11.190 [http-nio-0.0.0.0-8088-exec-31] INFO  c.s.s.w.WebSocketAdminServer - [onMessage,174] - [管理端WS] 已尝试转发到用户10，成功连接数=1
+16:41:11.208 [http-nio-0.0.0.0-8088-exec-31] INFO  c.s.s.w.WebSocketAdminServer - [onMessage,184] - [管理端WS] 已更新会话处理状态为1 id=14
+16:41:11.215 [http-nio-0.0.0.0-8088-exec-31] INFO  c.s.s.w.WebSocketAdminServer - [onMessage,199] - [管理端WS] 已持久化管理端回复消息 sessionId=14
+16:41:18.087 [http-nio-0.0.0.0-8088-exec-33] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=7, message={"sessionId":"14","content":"好的谢谢"}
+16:41:18.137 [http-nio-0.0.0.0-8088-exec-33] INFO  c.s.s.w.WebSocketServer - [onMessage,300] - [AI客服WS] 已转发人工消息到管理端：sessionId=14
+16:41:19.847 [http-nio-0.0.0.0-8088-exec-34] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@3ac2bbe9
+16:41:19.848 [http-nio-0.0.0.0-8088-exec-34] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 7
+16:41:19.849 [http-nio-0.0.0.0-8088-exec-34] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+16:41:25.830 [http-nio-0.0.0.0-8088-exec-40] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@58fb7b27
+16:41:25.831 [http-nio-0.0.0.0-8088-exec-40] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+16:41:27.464 [http-nio-0.0.0.0-8088-exec-68] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@58fb7b27
+16:41:27.465 [http-nio-0.0.0.0-8088-exec-68] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 8
+16:41:27.465 [http-nio-0.0.0.0-8088-exec-68] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+16:41:28.276 [http-nio-0.0.0.0-8088-exec-62] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@356c8220
+16:41:28.278 [http-nio-0.0.0.0-8088-exec-62] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+16:41:29.393 [http-nio-0.0.0.0-8088-exec-60] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@356c8220
+16:41:29.394 [http-nio-0.0.0.0-8088-exec-60] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 9
+16:41:29.395 [http-nio-0.0.0.0-8088-exec-60] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+16:43:03.363 [schedule-pool-1] INFO  c.s.c.u.RegionUtil - [<clinit>,48] - bean [org.lionsoul.ip2region.DbConfig@57c3cafa]
+16:43:03.364 [schedule-pool-1] INFO  c.s.c.u.RegionUtil - [<clinit>,49] - bean [org.lionsoul.ip2region.DbSearcher@31824b34]
+16:43:03.373 [schedule-pool-1] INFO  sys-user - [run,55] - [165.229.151.115]0 0[18720989281][Success][登录成功]
+16:43:05.935 [http-nio-0.0.0.0-8088-exec-81] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@587dcedc
+16:43:05.935 [http-nio-0.0.0.0-8088-exec-81] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+16:43:21.606 [http-nio-0.0.0.0-8088-exec-59] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=a, message={"sessionId":"14","content":"你好 我在用手机test"}
+16:43:21.664 [http-nio-0.0.0.0-8088-exec-59] INFO  c.s.s.w.WebSocketServer - [onMessage,300] - [AI客服WS] 已转发人工消息到管理端：sessionId=14
+16:43:31.459 [http-nio-0.0.0.0-8088-exec-16] INFO  c.s.s.w.WebSocketAdminServer - [onMessage,122] - [管理端WS] 收到消息：sessionId=6, message={"event":"adminMessage","sessionId":14,"content":"收到over","role":"admin"} 
+16:43:31.470 [http-nio-0.0.0.0-8088-exec-16] INFO  c.s.s.w.WebSocketAdminServer - [onMessage,174] - [管理端WS] 已尝试转发到用户10，成功连接数=1
+16:43:31.548 [http-nio-0.0.0.0-8088-exec-16] INFO  c.s.s.w.WebSocketAdminServer - [onMessage,184] - [管理端WS] 已更新会话处理状态为1 id=14
+16:43:31.578 [http-nio-0.0.0.0-8088-exec-16] INFO  c.s.s.w.WebSocketAdminServer - [onMessage,199] - [管理端WS] 已持久化管理端回复消息 sessionId=14
+16:43:32.985 [http-nio-0.0.0.0-8088-exec-69] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@587dcedc
+16:43:32.987 [http-nio-0.0.0.0-8088-exec-69] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - a
+16:43:32.988 [http-nio-0.0.0.0-8088-exec-69] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+16:43:34.451 [http-nio-0.0.0.0-8088-exec-49] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@40658ff
+16:43:34.452 [http-nio-0.0.0.0-8088-exec-49] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+16:43:35.581 [http-nio-0.0.0.0-8088-exec-74] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@40658ff
+16:43:35.583 [http-nio-0.0.0.0-8088-exec-74] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - b
+16:43:35.583 [http-nio-0.0.0.0-8088-exec-74] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+16:43:39.544 [http-nio-0.0.0.0-8088-exec-1] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@5ba2d55c
+16:43:39.545 [http-nio-0.0.0.0-8088-exec-1] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+16:43:40.696 [http-nio-0.0.0.0-8088-exec-59] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@5ba2d55c
+16:43:40.697 [http-nio-0.0.0.0-8088-exec-59] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - c
+16:43:40.697 [http-nio-0.0.0.0-8088-exec-59] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+16:43:43.121 [http-nio-0.0.0.0-8088-exec-15] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@5fe25f7d
+16:43:43.121 [http-nio-0.0.0.0-8088-exec-15] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+16:43:44.650 [http-nio-0.0.0.0-8088-exec-81] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@5c33f200
+16:43:44.651 [http-nio-0.0.0.0-8088-exec-81] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 2
+16:43:49.365 [http-nio-0.0.0.0-8088-exec-83] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=e, message={"sessionId":"15","content":"test"}
+16:43:53.561 [http-nio-0.0.0.0-8088-exec-80] INFO  c.s.s.w.WebSocketAdminServer - [onClose,96] - [管理端WS] 关闭连接 - 6
+16:43:54.140 [http-nio-0.0.0.0-8088-exec-39] INFO  c.s.s.w.WebSocketAdminServer - [onOpen,91] - [管理端WS] 建立连接 - f
+16:43:59.887 [http-nio-0.0.0.0-8088-exec-14] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@5c33f200
+16:43:59.891 [http-nio-0.0.0.0-8088-exec-14] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - e
+16:43:59.891 [http-nio-0.0.0.0-8088-exec-14] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+16:44:07.102 [http-nio-0.0.0.0-8088-exec-90] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@21abec7d
+16:44:07.103 [http-nio-0.0.0.0-8088-exec-90] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 2
+16:44:08.242 [http-nio-0.0.0.0-8088-exec-41] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@21abec7d
+16:44:08.242 [http-nio-0.0.0.0-8088-exec-41] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 10
+16:44:08.243 [http-nio-0.0.0.0-8088-exec-41] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+16:44:26.601 [http-nio-0.0.0.0-8088-exec-6] INFO  c.s.s.w.WebSocketAdminServer - [onClose,96] - [管理端WS] 关闭连接 - f
+16:44:26.950 [http-nio-0.0.0.0-8088-exec-11] INFO  c.s.s.w.WebSocketAdminServer - [onOpen,91] - [管理端WS] 建立连接 - 11
+16:44:33.912 [http-nio-0.0.0.0-8088-exec-2] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@1a1b03fb
+16:44:33.913 [http-nio-0.0.0.0-8088-exec-2] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 2
+16:44:35.819 [http-nio-0.0.0.0-8088-exec-7] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@1a1b03fb
+16:44:35.820 [http-nio-0.0.0.0-8088-exec-7] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 12
+16:44:35.820 [http-nio-0.0.0.0-8088-exec-7] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+16:44:35.878 [http-nio-0.0.0.0-8088-exec-16] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@782b8667
+16:44:35.878 [http-nio-0.0.0.0-8088-exec-16] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 2
+16:44:39.174 [http-nio-0.0.0.0-8088-exec-58] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=13, message={"sessionId":"17","content":"test"}
+16:44:39.231 [http-nio-0.0.0.0-8088-exec-58] INFO  c.s.s.w.WebSocketServer - [onMessage,300] - [AI客服WS] 已转发人工消息到管理端：sessionId=17
+16:44:45.143 [http-nio-0.0.0.0-8088-exec-55] INFO  c.s.s.w.WebSocketAdminServer - [onMessage,122] - [管理端WS] 收到消息：sessionId=11, message={"event":"adminMessage","sessionId":17,"content":"over","role":"admin"} 
+16:44:45.154 [http-nio-0.0.0.0-8088-exec-55] INFO  c.s.s.w.WebSocketAdminServer - [onMessage,174] - [管理端WS] 已尝试转发到用户10，成功连接数=2
+16:44:45.176 [http-nio-0.0.0.0-8088-exec-55] INFO  c.s.s.w.WebSocketAdminServer - [onMessage,184] - [管理端WS] 已更新会话处理状态为1 id=17
+16:44:45.195 [http-nio-0.0.0.0-8088-exec-55] INFO  c.s.s.w.WebSocketAdminServer - [onMessage,199] - [管理端WS] 已持久化管理端回复消息 sessionId=17
+16:44:47.728 [http-nio-0.0.0.0-8088-exec-37] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@782b8667
+16:44:47.731 [http-nio-0.0.0.0-8088-exec-37] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 13
+16:44:47.731 [http-nio-0.0.0.0-8088-exec-37] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+16:44:56.842 [http-nio-0.0.0.0-8088-exec-50] INFO  c.s.s.w.WebSocketAdminServer - [onClose,96] - [管理端WS] 关闭连接 - 11
+16:44:57.188 [http-nio-0.0.0.0-8088-exec-48] INFO  c.s.s.w.WebSocketAdminServer - [onOpen,91] - [管理端WS] 建立连接 - 14
+16:45:01.461 [http-nio-0.0.0.0-8088-exec-57] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@6a1f267f
+16:45:01.462 [http-nio-0.0.0.0-8088-exec-57] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 2
+16:45:03.875 [http-nio-0.0.0.0-8088-exec-95] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@6a1f267f
+16:45:03.876 [http-nio-0.0.0.0-8088-exec-95] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 15
+16:45:03.877 [http-nio-0.0.0.0-8088-exec-95] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+16:45:03.924 [http-nio-0.0.0.0-8088-exec-88] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@f9b734f
+16:45:03.924 [http-nio-0.0.0.0-8088-exec-88] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 2
+16:45:17.477 [http-nio-0.0.0.0-8088-exec-46] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=16, message={"sessionId":"19","content":"你好，我想进yolive"}
+16:45:17.542 [http-nio-0.0.0.0-8088-exec-46] INFO  c.s.s.w.WebSocketServer - [onMessage,300] - [AI客服WS] 已转发人工消息到管理端：sessionId=19
+16:45:31.500 [http-nio-0.0.0.0-8088-exec-88] INFO  c.s.s.w.WebSocketAdminServer - [onMessage,122] - [管理端WS] 收到消息：sessionId=14, message={"event":"adminMessage","sessionId":19,"content":"好的over","role":"admin"} 
+16:45:31.533 [http-nio-0.0.0.0-8088-exec-88] INFO  c.s.s.w.WebSocketAdminServer - [onMessage,174] - [管理端WS] 已尝试转发到用户10，成功连接数=2
+16:45:31.541 [http-nio-0.0.0.0-8088-exec-88] INFO  c.s.s.w.WebSocketAdminServer - [onMessage,184] - [管理端WS] 已更新会话处理状态为1 id=19
+16:45:31.562 [http-nio-0.0.0.0-8088-exec-88] INFO  c.s.s.w.WebSocketAdminServer - [onMessage,199] - [管理端WS] 已持久化管理端回复消息 sessionId=19
+16:45:34.389 [http-nio-0.0.0.0-8088-exec-80] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@f9b734f
+16:45:34.392 [http-nio-0.0.0.0-8088-exec-80] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 16
+16:45:34.392 [http-nio-0.0.0.0-8088-exec-80] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+16:47:48.833 [http-nio-0.0.0.0-8088-exec-29] INFO  c.s.s.w.WebSocketServer - [onError,202] - 
+ 连接异常 - d
+16:47:48.840 [http-nio-0.0.0.0-8088-exec-29] INFO  c.s.s.w.WebSocketServer - [onError,203] - 
+ 异常信息 - {}
+java.io.IOException: java.io.IOException: Broken pipe
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:327)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:262)
+	at org.apache.tomcat.websocket.WsSession.sendCloseMessage(WsSession.java:816)
+	at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:704)
+	at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:666)
+	at org.apache.tomcat.websocket.WsSession.close(WsSession.java:653)
+	at org.apache.tomcat.websocket.WsSession.close(WsSession.java:647)
+	at cn.source.system.websocket.WebSocketServer.onError(WebSocketServer.java:199)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.tomcat.websocket.pojo.PojoEndpointBase.onError(PojoEndpointBase.java:134)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.onError(WsHttpUpgradeHandler.java:234)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:161)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:59)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.io.IOException: Broken pipe
+	at sun.nio.ch.FileDispatcherImpl.writev0(Native Method)
+	at sun.nio.ch.SocketDispatcher.writev(SocketDispatcher.java:51)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:148)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:503)
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:147)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper$NioOperationState.run(NioEndpoint.java:1624)
+	at org.apache.tomcat.util.net.SocketWrapperBase$OperationState.start(SocketWrapperBase.java:1061)
+	at org.apache.tomcat.util.net.SocketWrapperBase.vectoredOperation(SocketWrapperBase.java:1480)
+	at org.apache.tomcat.util.net.SocketWrapperBase.write(SocketWrapperBase.java:1406)
+	at org.apache.tomcat.util.net.SocketWrapperBase.write(SocketWrapperBase.java:1377)
+	at org.apache.tomcat.websocket.server.WsRemoteEndpointImplServer.doWrite(WsRemoteEndpointImplServer.java:93)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.writeMessagePart(WsRemoteEndpointImplBase.java:512)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:314)
+	... 23 common frames omitted
+16:47:48.848 [http-nio-0.0.0.0-8088-exec-29] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - d
+16:47:48.848 [http-nio-0.0.0.0-8088-exec-29] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+16:47:48.865 [http-nio-0.0.0.0-8088-exec-29] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@5fe25f7d
+16:47:48.868 [http-nio-0.0.0.0-8088-exec-29] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - d
+16:47:48.876 [http-nio-0.0.0.0-8088-exec-29] INFO  c.s.s.w.WebSocketServer - [onError,202] - 
+ 连接异常 - d
+16:47:48.876 [http-nio-0.0.0.0-8088-exec-29] INFO  c.s.s.w.WebSocketServer - [onError,203] - 
+ 异常信息 - {}
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.apache.tomcat.util.net.NioChannel.read(NioChannel.java:160)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1326)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1215)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:75)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:183)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:162)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:157)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:59)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+16:47:48.877 [http-nio-0.0.0.0-8088-exec-29] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - d
+16:48:08.160 [http-nio-0.0.0.0-8088-exec-40] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@38d48468
+16:48:08.162 [http-nio-0.0.0.0-8088-exec-40] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+16:48:10.332 [http-nio-0.0.0.0-8088-exec-34] INFO  c.s.s.w.WebSocketServer - [onError,202] - 
+ 连接异常 - 17
+16:48:10.336 [http-nio-0.0.0.0-8088-exec-34] INFO  c.s.s.w.WebSocketServer - [onError,203] - 
+ 异常信息 - {}
+java.io.IOException: java.io.IOException: Broken pipe
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:327)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:262)
+	at org.apache.tomcat.websocket.WsSession.sendCloseMessage(WsSession.java:816)
+	at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:704)
+	at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:666)
+	at org.apache.tomcat.websocket.WsSession.close(WsSession.java:653)
+	at org.apache.tomcat.websocket.WsSession.close(WsSession.java:647)
+	at cn.source.system.websocket.WebSocketServer.onError(WebSocketServer.java:199)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.tomcat.websocket.pojo.PojoEndpointBase.onError(PojoEndpointBase.java:134)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.onError(WsHttpUpgradeHandler.java:234)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:161)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:59)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.io.IOException: Broken pipe
+	at sun.nio.ch.FileDispatcherImpl.writev0(Native Method)
+	at sun.nio.ch.SocketDispatcher.writev(SocketDispatcher.java:51)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:148)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:503)
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:147)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper$NioOperationState.run(NioEndpoint.java:1624)
+	at org.apache.tomcat.util.net.SocketWrapperBase$OperationState.start(SocketWrapperBase.java:1061)
+	at org.apache.tomcat.util.net.SocketWrapperBase.vectoredOperation(SocketWrapperBase.java:1480)
+	at org.apache.tomcat.util.net.SocketWrapperBase.write(SocketWrapperBase.java:1406)
+	at org.apache.tomcat.util.net.SocketWrapperBase.write(SocketWrapperBase.java:1377)
+	at org.apache.tomcat.websocket.server.WsRemoteEndpointImplServer.doWrite(WsRemoteEndpointImplServer.java:93)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.writeMessagePart(WsRemoteEndpointImplBase.java:512)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:314)
+	... 23 common frames omitted
+16:48:10.338 [http-nio-0.0.0.0-8088-exec-34] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 17
+16:48:10.338 [http-nio-0.0.0.0-8088-exec-34] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+16:48:10.338 [http-nio-0.0.0.0-8088-exec-34] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@38d48468
+16:48:10.339 [http-nio-0.0.0.0-8088-exec-34] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 17
+16:48:10.341 [http-nio-0.0.0.0-8088-exec-34] INFO  c.s.s.w.WebSocketServer - [onError,202] - 
+ 连接异常 - 17
+16:48:10.342 [http-nio-0.0.0.0-8088-exec-34] INFO  c.s.s.w.WebSocketServer - [onError,203] - 
+ 异常信息 - {}
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.apache.tomcat.util.net.NioChannel.read(NioChannel.java:160)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1326)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1215)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:75)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:183)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:162)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:157)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:59)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+16:48:10.344 [http-nio-0.0.0.0-8088-exec-34] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 17
+16:48:11.719 [http-nio-0.0.0.0-8088-exec-16] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@632f6a3a
+16:48:11.719 [http-nio-0.0.0.0-8088-exec-16] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+16:50:12.026 [http-nio-0.0.0.0-8088-exec-80] INFO  c.s.s.w.WebSocketServer - [onError,202] - 
+ 连接异常 - 18
+16:50:12.035 [http-nio-0.0.0.0-8088-exec-80] INFO  c.s.s.w.WebSocketServer - [onError,203] - 
+ 异常信息 - {}
+java.io.IOException: java.io.IOException: Broken pipe
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:327)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:262)
+	at org.apache.tomcat.websocket.WsSession.sendCloseMessage(WsSession.java:816)
+	at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:704)
+	at org.apache.tomcat.websocket.WsSession.doClose(WsSession.java:666)
+	at org.apache.tomcat.websocket.WsSession.close(WsSession.java:653)
+	at org.apache.tomcat.websocket.WsSession.close(WsSession.java:647)
+	at cn.source.system.websocket.WebSocketServer.onError(WebSocketServer.java:199)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.tomcat.websocket.pojo.PojoEndpointBase.onError(PojoEndpointBase.java:134)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.onError(WsHttpUpgradeHandler.java:234)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:161)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:59)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.io.IOException: Broken pipe
+	at sun.nio.ch.FileDispatcherImpl.writev0(Native Method)
+	at sun.nio.ch.SocketDispatcher.writev(SocketDispatcher.java:51)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:148)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:503)
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:147)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper$NioOperationState.run(NioEndpoint.java:1624)
+	at org.apache.tomcat.util.net.SocketWrapperBase$OperationState.start(SocketWrapperBase.java:1061)
+	at org.apache.tomcat.util.net.SocketWrapperBase.vectoredOperation(SocketWrapperBase.java:1480)
+	at org.apache.tomcat.util.net.SocketWrapperBase.write(SocketWrapperBase.java:1406)
+	at org.apache.tomcat.util.net.SocketWrapperBase.write(SocketWrapperBase.java:1377)
+	at org.apache.tomcat.websocket.server.WsRemoteEndpointImplServer.doWrite(WsRemoteEndpointImplServer.java:93)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.writeMessagePart(WsRemoteEndpointImplBase.java:512)
+	at org.apache.tomcat.websocket.WsRemoteEndpointImplBase.sendMessageBlock(WsRemoteEndpointImplBase.java:314)
+	... 23 common frames omitted
+16:50:12.036 [http-nio-0.0.0.0-8088-exec-80] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 18
+16:50:12.036 [http-nio-0.0.0.0-8088-exec-80] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+16:50:12.036 [http-nio-0.0.0.0-8088-exec-80] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@632f6a3a
+16:50:12.036 [http-nio-0.0.0.0-8088-exec-80] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 18
+16:50:12.037 [http-nio-0.0.0.0-8088-exec-80] INFO  c.s.s.w.WebSocketServer - [onError,202] - 
+ 连接异常 - 18
+16:50:12.037 [http-nio-0.0.0.0-8088-exec-80] INFO  c.s.s.w.WebSocketServer - [onError,203] - 
+ 异常信息 - {}
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.apache.tomcat.util.net.NioChannel.read(NioChannel.java:160)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1326)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1215)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:75)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:183)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:162)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:157)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:59)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+16:50:12.038 [http-nio-0.0.0.0-8088-exec-80] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 18
+17:16:36.407 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763364999485 paused.
+17:16:36.511 [SpringApplicationShutdownHook] INFO  c.s.s.w.WebSocketAdminServer - [onClose,96] - [管理端WS] 关闭连接 - 14
+17:16:36.727 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763364999485 shutting down.
+17:16:36.729 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763364999485 paused.
+17:16:36.731 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763364999485 shutdown complete.
+17:16:36.732 [SpringApplicationShutdownHook] INFO  sys-user - [shutdownAsyncManager,31] - ====关闭后台任务任务线程池====
+17:16:36.745 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+17:16:36.798 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+17:16:46.608 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.0.Final
+17:16:46.624 [restartedMain] INFO  c.s.RuoYiApplication - [logStarting,55] - Starting RuoYiApplication using Java 1.8.0_442 on MGMMacBook-Pro.local with PID 29526 (/Users/mgm/Desktop/YoLive-main_Backend/source-vue-master/source-admin/target/classes started by mgm in /Users/mgm/Desktop/YoLive-main_Backend)
+17:16:46.625 [restartedMain] INFO  c.s.RuoYiApplication - [logStartupProfileInfo,674] - The following profiles are active: druid
+17:16:50.403 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-0.0.0.0-8088"]
+17:16:50.405 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+17:16:50.405 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.56]
+17:16:50.479 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+17:16:53.139 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+17:16:55.023 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+17:16:55.035 [restartedMain] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+17:16:55.036 [restartedMain] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+17:16:55.042 [restartedMain] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'RuoyiScheduler' with instanceId 'MGMMacBook-Pro.local1763367415026'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 20 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+17:16:55.043 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'RuoyiScheduler' initialized from an externally provided properties instance.
+17:16:55.043 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+17:16:55.044 [restartedMain] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@b21d088
+17:16:57.610 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-0.0.0.0-8088"]
+17:16:57.958 [restartedMain] INFO  c.s.RuoYiApplication - [logStarted,61] - Started RuoYiApplication in 12.095 seconds (JVM running for 13.716)
+17:16:59.317 [Quartz Scheduler [RuoyiScheduler]] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763367415026 started.
+17:17:18.726 [http-nio-0.0.0.0-8088-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:17:20.654 [schedule-pool-1] INFO  c.s.c.u.RegionUtil - [<clinit>,48] - bean [org.lionsoul.ip2region.DbConfig@577cf483]
+17:17:20.656 [schedule-pool-1] INFO  c.s.c.u.RegionUtil - [<clinit>,49] - bean [org.lionsoul.ip2region.DbSearcher@6cd53889]
+17:17:20.789 [schedule-pool-1] INFO  sys-user - [run,55] - [165.229.143.135]0 0[18720989281][Success][登录成功]
+17:17:23.348 [http-nio-0.0.0.0-8088-exec-8] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@90e7da3
+17:17:23.349 [http-nio-0.0.0.0-8088-exec-8] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+17:17:25.987 [http-nio-0.0.0.0-8088-exec-9] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=0, message={"sessionId":"19","content":"你好"}
+17:17:26.078 [http-nio-0.0.0.0-8088-exec-9] INFO  c.s.s.w.WebSocketServer - [onMessage,302] - [AI客服WS] 管理端未连接，人工消息不转发：sessionId=19
+17:17:28.781 [http-nio-0.0.0.0-8088-exec-11] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@90e7da3
+17:17:28.782 [http-nio-0.0.0.0-8088-exec-11] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 0
+17:17:28.783 [http-nio-0.0.0.0-8088-exec-11] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+17:17:31.089 [http-nio-0.0.0.0-8088-exec-14] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@2e535ec
+17:17:31.090 [http-nio-0.0.0.0-8088-exec-14] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+17:17:33.575 [http-nio-0.0.0.0-8088-exec-16] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=1, message={"sessionId":"20","content":"你好"}
+17:17:39.479 [http-nio-0.0.0.0-8088-exec-17] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=1, message={"sessionId":"20","content":"你好"}
+17:19:41.105 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763367415026 paused.
+17:19:41.170 [SpringApplicationShutdownHook] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@2e535ec
+17:19:41.171 [SpringApplicationShutdownHook] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 1
+17:19:41.171 [SpringApplicationShutdownHook] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+17:19:41.234 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763367415026 shutting down.
+17:19:41.235 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763367415026 paused.
+17:19:41.238 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763367415026 shutdown complete.
+17:19:41.239 [SpringApplicationShutdownHook] INFO  sys-user - [shutdownAsyncManager,31] - ====关闭后台任务任务线程池====
+17:19:41.281 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+17:19:41.313 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+17:19:46.263 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.0.Final
+17:19:46.272 [restartedMain] INFO  c.s.RuoYiApplication - [logStarting,55] - Starting RuoYiApplication using Java 1.8.0_442 on MGMMacBook-Pro.local with PID 29565 (/Users/mgm/Desktop/YoLive-main_Backend/source-vue-master/source-admin/target/classes started by mgm in /Users/mgm/Desktop/YoLive-main_Backend)
+17:19:46.273 [restartedMain] INFO  c.s.RuoYiApplication - [logStartupProfileInfo,674] - The following profiles are active: druid
+17:19:51.607 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-0.0.0.0-8088"]
+17:19:51.608 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+17:19:51.609 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.56]
+17:19:51.689 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+17:19:54.301 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+17:19:55.800 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+17:19:55.809 [restartedMain] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+17:19:55.809 [restartedMain] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+17:19:55.816 [restartedMain] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'RuoyiScheduler' with instanceId 'MGMMacBook-Pro.local1763367595802'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 20 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+17:19:55.816 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'RuoyiScheduler' initialized from an externally provided properties instance.
+17:19:55.816 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+17:19:55.817 [restartedMain] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@6b117945
+17:19:58.314 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-0.0.0.0-8088"]
+17:19:58.661 [restartedMain] INFO  c.s.RuoYiApplication - [logStarted,61] - Started RuoYiApplication in 13.192 seconds (JVM running for 14.612)
+17:19:59.732 [Quartz Scheduler [RuoyiScheduler]] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763367595802 started.
+17:20:11.150 [http-nio-0.0.0.0-8088-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:20:12.011 [http-nio-0.0.0.0-8088-exec-71] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@503518f7
+17:20:12.012 [http-nio-0.0.0.0-8088-exec-71] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+17:20:14.830 [http-nio-0.0.0.0-8088-exec-41] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@503518f7
+17:20:14.832 [http-nio-0.0.0.0-8088-exec-41] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 0
+17:20:14.834 [http-nio-0.0.0.0-8088-exec-41] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+17:20:15.115 [http-nio-0.0.0.0-8088-exec-59] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@5985c497
+17:20:15.117 [http-nio-0.0.0.0-8088-exec-59] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+17:20:16.317 [http-nio-0.0.0.0-8088-exec-70] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@5985c497
+17:20:16.319 [http-nio-0.0.0.0-8088-exec-70] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 1
+17:20:16.319 [http-nio-0.0.0.0-8088-exec-70] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+17:20:16.493 [http-nio-0.0.0.0-8088-exec-98] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@307eac36
+17:20:16.495 [http-nio-0.0.0.0-8088-exec-98] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+17:20:16.906 [http-nio-0.0.0.0-8088-exec-92] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@307eac36
+17:20:16.911 [http-nio-0.0.0.0-8088-exec-92] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 2
+17:20:16.911 [http-nio-0.0.0.0-8088-exec-92] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+17:20:17.037 [http-nio-0.0.0.0-8088-exec-22] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@7da46487
+17:20:17.037 [http-nio-0.0.0.0-8088-exec-22] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+17:20:17.288 [http-nio-0.0.0.0-8088-exec-46] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@7da46487
+17:20:17.288 [http-nio-0.0.0.0-8088-exec-46] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 3
+17:20:17.288 [http-nio-0.0.0.0-8088-exec-46] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+17:20:17.395 [http-nio-0.0.0.0-8088-exec-61] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@1dcfa66c
+17:20:17.395 [http-nio-0.0.0.0-8088-exec-61] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+17:20:17.606 [http-nio-0.0.0.0-8088-exec-25] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@1dcfa66c
+17:20:17.607 [http-nio-0.0.0.0-8088-exec-25] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 4
+17:20:17.607 [http-nio-0.0.0.0-8088-exec-25] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+17:20:17.706 [http-nio-0.0.0.0-8088-exec-53] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@374b334e
+17:20:17.706 [http-nio-0.0.0.0-8088-exec-53] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+17:20:19.918 [http-nio-0.0.0.0-8088-exec-69] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@4293dfd0
+17:20:19.919 [http-nio-0.0.0.0-8088-exec-69] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 2
+17:20:22.170 [http-nio-0.0.0.0-8088-exec-43] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=6, message={"sessionId":"20","content":"你好"}
+17:20:25.571 [http-nio-0.0.0.0-8088-exec-57] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=6, message={"sessionId":"20","content":"你好"}
+17:23:28.528 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763367595802 paused.
+17:23:28.597 [SpringApplicationShutdownHook] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@4293dfd0
+17:23:28.598 [SpringApplicationShutdownHook] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 6
+17:23:28.599 [SpringApplicationShutdownHook] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+17:23:28.604 [SpringApplicationShutdownHook] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@374b334e
+17:23:28.607 [SpringApplicationShutdownHook] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 5
+17:23:28.608 [SpringApplicationShutdownHook] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+17:23:28.714 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763367595802 shutting down.
+17:23:28.716 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763367595802 paused.
+17:23:28.718 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763367595802 shutdown complete.
+17:23:28.720 [SpringApplicationShutdownHook] INFO  sys-user - [shutdownAsyncManager,31] - ====关闭后台任务任务线程池====
+17:23:28.757 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+17:23:28.798 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+17:23:36.684 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.0.Final
+17:23:36.697 [restartedMain] INFO  c.s.RuoYiApplication - [logStarting,55] - Starting RuoYiApplication using Java 1.8.0_442 on MGMMacBook-Pro.local with PID 29638 (/Users/mgm/Desktop/YoLive-main_Backend/source-vue-master/source-admin/target/classes started by mgm in /Users/mgm/Desktop/YoLive-main_Backend)
+17:23:36.698 [restartedMain] INFO  c.s.RuoYiApplication - [logStartupProfileInfo,674] - The following profiles are active: druid
+17:23:39.697 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-0.0.0.0-8088"]
+17:23:39.698 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+17:23:39.698 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.56]
+17:23:39.763 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+17:23:42.537 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+17:23:44.340 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+17:23:44.350 [restartedMain] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+17:23:44.351 [restartedMain] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+17:23:44.356 [restartedMain] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'RuoyiScheduler' with instanceId 'MGMMacBook-Pro.local1763367824341'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 20 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+17:23:44.356 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'RuoyiScheduler' initialized from an externally provided properties instance.
+17:23:44.356 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+17:23:44.357 [restartedMain] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@5bd18dcd
+17:23:47.236 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-0.0.0.0-8088"]
+17:23:47.629 [restartedMain] INFO  c.s.RuoYiApplication - [logStarted,61] - Started RuoYiApplication in 11.458 seconds (JVM running for 12.32)
+17:23:48.659 [Quartz Scheduler [RuoyiScheduler]] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763367824341 started.
+17:24:00.932 [http-nio-0.0.0.0-8088-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:24:03.237 [http-nio-0.0.0.0-8088-exec-71] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@2dcc4a94
+17:24:03.238 [http-nio-0.0.0.0-8088-exec-71] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+17:24:14.476 [http-nio-0.0.0.0-8088-exec-10] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=0, message={"sessionId":"20","content":"你好"}
+17:24:33.853 [http-nio-0.0.0.0-8088-exec-56] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=0, message={"sessionId":"20","content":"我有问题"}
+17:24:52.118 [http-nio-0.0.0.0-8088-exec-79] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=0, message={"sessionId":"20","content":"韩国的总面积是多少"}
+17:25:33.190 [http-nio-0.0.0.0-8088-exec-96] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=0, message={"sessionId":"20","content":"那中国的面积是多少"}
+17:26:04.950 [http-nio-0.0.0.0-8088-exec-97] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=0, message={"sessionId":"20","content":"在韩国大邱有什么好吃的吗，嫩给我地址吗"}
+17:26:15.178 [http-nio-0.0.0.0-8088-exec-100] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=0, message={"sessionId":"20","content":"用韩文告诉我"}
+17:26:57.294 [http-nio-0.0.0.0-8088-exec-25] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=0, message={"sessionId":"20","content":"你能生成图片吗"}
+17:28:04.962 [http-nio-0.0.0.0-8088-exec-26] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@2dcc4a94
+17:28:04.982 [http-nio-0.0.0.0-8088-exec-26] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 0
+17:28:04.982 [http-nio-0.0.0.0-8088-exec-26] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+17:28:22.560 [http-nio-0.0.0.0-8088-exec-29] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@389fad9e
+17:28:22.561 [http-nio-0.0.0.0-8088-exec-29] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+17:28:39.032 [http-nio-0.0.0.0-8088-exec-32] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=1, message={"sessionId":"27","content":"你是大笨蛋"}
+17:29:03.287 [http-nio-0.0.0.0-8088-exec-2] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=1, message={"sessionId":"27","content":"在学什么"}
+17:29:20.858 [http-nio-0.0.0.0-8088-exec-10] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=1, message={"sessionId":"27","content":"韩国哪里最漂亮"}
+17:29:35.746 [http-nio-0.0.0.0-8088-exec-3] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=1, message={"sessionId":"27","content":"济州岛"}
+17:29:57.019 [http-nio-0.0.0.0-8088-exec-4] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=1, message={"sessionId":"27","content":"需要"}
+17:30:22.722 [http-nio-0.0.0.0-8088-exec-5] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@389fad9e
+17:30:22.725 [http-nio-0.0.0.0-8088-exec-5] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 1
+17:30:22.726 [http-nio-0.0.0.0-8088-exec-5] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+17:30:22.727 [http-nio-0.0.0.0-8088-exec-5] INFO  c.s.s.w.WebSocketServer - [onError,202] - 
+ 连接异常 - 1
+17:30:22.873 [http-nio-0.0.0.0-8088-exec-5] INFO  c.s.s.w.WebSocketServer - [onError,203] - 
+ 异常信息 - {}
+java.io.EOFException: null
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.fillReadBuffer(NioEndpoint.java:1328)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.read(NioEndpoint.java:1215)
+	at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:75)
+	at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:183)
+	at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:162)
+	at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:157)
+	at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:60)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:59)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+17:30:22.881 [http-nio-0.0.0.0-8088-exec-5] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 1
+17:36:38.936 [http-nio-0.0.0.0-8088-exec-6] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@d860fdb
+17:36:38.936 [http-nio-0.0.0.0-8088-exec-6] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 2
+17:37:07.848 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763367824341 paused.
+17:37:08.111 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763367824341 shutting down.
+17:37:08.113 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763367824341 paused.
+17:37:08.118 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763367824341 shutdown complete.
+17:37:08.119 [SpringApplicationShutdownHook] INFO  sys-user - [shutdownAsyncManager,31] - ====关闭后台任务任务线程池====
+17:37:08.168 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+17:37:08.202 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
+17:37:17.278 [background-preinit] INFO  o.h.v.i.util.Version - [<clinit>,21] - HV000001: Hibernate Validator 6.2.0.Final
+17:37:17.348 [restartedMain] INFO  c.s.RuoYiApplication - [logStarting,55] - Starting RuoYiApplication using Java 1.8.0_442 on MGMMacBook-Pro.local with PID 29834 (/Users/mgm/Desktop/YoLive-main_Backend/source-vue-master/source-admin/target/classes started by mgm in /Users/mgm/Desktop/YoLive-main_Backend)
+17:37:17.350 [restartedMain] INFO  c.s.RuoYiApplication - [logStartupProfileInfo,674] - The following profiles are active: druid
+17:37:22.965 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-0.0.0.0-8088"]
+17:37:22.967 [restartedMain] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+17:37:22.968 [restartedMain] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.56]
+17:37:23.056 [restartedMain] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+17:37:26.340 [restartedMain] INFO  c.a.d.p.DruidDataSource - [init,998] - {dataSource-1} inited
+17:37:28.144 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1220] - Using default implementation for ThreadExecutor
+17:37:28.155 [restartedMain] INFO  o.q.c.SchedulerSignalerImpl - [<init>,61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+17:37:28.156 [restartedMain] INFO  o.q.c.QuartzScheduler - [<init>,229] - Quartz Scheduler v.2.3.2 created.
+17:37:28.161 [restartedMain] INFO  o.q.c.QuartzScheduler - [initialize,294] - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'RuoyiScheduler' with instanceId 'MGMMacBook-Pro.local1763368648146'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 20 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+17:37:28.162 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1374] - Quartz scheduler 'RuoyiScheduler' initialized from an externally provided properties instance.
+17:37:28.162 [restartedMain] INFO  o.q.i.StdSchedulerFactory - [instantiate,1378] - Quartz scheduler version: 2.3.2
+17:37:28.163 [restartedMain] INFO  o.q.c.QuartzScheduler - [setJobFactory,2293] - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@73ef9e19
+17:37:31.432 [restartedMain] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-0.0.0.0-8088"]
+17:37:31.836 [restartedMain] INFO  c.s.RuoYiApplication - [logStarted,61] - Started RuoYiApplication in 16.058 seconds (JVM running for 18.724)
+17:37:33.455 [Quartz Scheduler [RuoyiScheduler]] INFO  o.q.c.QuartzScheduler - [start,547] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763368648146 started.
+17:37:45.434 [http-nio-0.0.0.0-8088-exec-2] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+17:37:47.247 [schedule-pool-1] INFO  c.s.c.u.RegionUtil - [<clinit>,48] - bean [org.lionsoul.ip2region.DbConfig@3131ce0f]
+17:37:47.248 [schedule-pool-1] INFO  c.s.c.u.RegionUtil - [<clinit>,49] - bean [org.lionsoul.ip2region.DbSearcher@71a794d]
+17:37:47.261 [schedule-pool-1] INFO  sys-user - [run,55] - [165.229.151.115]0 0[18720989281][Success][登录成功]
+17:37:50.676 [http-nio-0.0.0.0-8088-exec-6] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@22d4e8c2
+17:37:50.677 [http-nio-0.0.0.0-8088-exec-6] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+17:37:54.916 [http-nio-0.0.0.0-8088-exec-7] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=0, message={"sessionId":"27","content":"你好"}
+17:38:22.302 [http-nio-0.0.0.0-8088-exec-8] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=0, message={"sessionId":"27","content":"继续告诉我其他的旅游景点，并用韩文回答我"}
+17:39:42.888 [http-nio-0.0.0.0-8088-exec-11] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=0, message={"sessionId":"27","content":"대구에 살으면 얼마나 필요할까요?"}
+17:40:14.244 [http-nio-0.0.0.0-8088-exec-12] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=0, message={"sessionId":"27","content":"감사합니다"}
+17:40:24.927 [http-nio-0.0.0.0-8088-exec-13] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@22d4e8c2
+17:40:24.931 [http-nio-0.0.0.0-8088-exec-13] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 0
+17:40:24.931 [http-nio-0.0.0.0-8088-exec-13] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+17:40:30.550 [http-nio-0.0.0.0-8088-exec-15] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@47f54671
+17:40:30.551 [http-nio-0.0.0.0-8088-exec-15] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+17:40:32.261 [http-nio-0.0.0.0-8088-exec-17] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@6a45d14e
+17:40:32.262 [http-nio-0.0.0.0-8088-exec-17] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 2
+17:40:34.946 [http-nio-0.0.0.0-8088-exec-18] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@6a45d14e
+17:40:34.947 [http-nio-0.0.0.0-8088-exec-18] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 2
+17:40:34.947 [http-nio-0.0.0.0-8088-exec-18] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+17:40:42.939 [http-nio-0.0.0.0-8088-exec-20] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@6cefcb4a
+17:40:42.941 [http-nio-0.0.0.0-8088-exec-20] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 2
+17:40:45.172 [http-nio-0.0.0.0-8088-exec-21] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@6cefcb4a
+17:40:45.174 [http-nio-0.0.0.0-8088-exec-21] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 3
+17:40:45.174 [http-nio-0.0.0.0-8088-exec-21] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+17:40:52.780 [http-nio-0.0.0.0-8088-exec-23] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@3bf93691
+17:40:52.781 [http-nio-0.0.0.0-8088-exec-23] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 2
+17:40:56.972 [http-nio-0.0.0.0-8088-exec-24] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=4, message={"sessionId":"19","content":"안녕"}
+17:40:57.041 [http-nio-0.0.0.0-8088-exec-24] INFO  c.s.s.w.WebSocketServer - [onMessage,302] - [AI客服WS] 管理端未连接，人工消息不转发：sessionId=19
+17:41:09.851 [http-nio-0.0.0.0-8088-exec-25] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@3bf93691
+17:41:09.858 [http-nio-0.0.0.0-8088-exec-25] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 4
+17:41:09.858 [http-nio-0.0.0.0-8088-exec-25] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+17:45:46.063 [http-nio-0.0.0.0-8088-exec-14] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@47f54671
+17:45:46.067 [http-nio-0.0.0.0-8088-exec-14] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 1
+17:45:46.068 [http-nio-0.0.0.0-8088-exec-14] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+17:46:08.194 [http-nio-0.0.0.0-8088-exec-31] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@4706c8b1
+17:46:08.196 [http-nio-0.0.0.0-8088-exec-31] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+17:46:08.796 [http-nio-0.0.0.0-8088-exec-32] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@4706c8b1
+17:46:08.797 [http-nio-0.0.0.0-8088-exec-32] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 5
+17:46:08.798 [http-nio-0.0.0.0-8088-exec-32] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+17:46:20.871 [http-nio-0.0.0.0-8088-exec-36] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@149b93fa
+17:46:20.872 [http-nio-0.0.0.0-8088-exec-36] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+17:46:22.203 [http-nio-0.0.0.0-8088-exec-37] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@149b93fa
+17:46:22.204 [http-nio-0.0.0.0-8088-exec-37] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 6
+17:46:22.204 [http-nio-0.0.0.0-8088-exec-37] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+17:46:37.010 [http-nio-0.0.0.0-8088-exec-39] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@6eb58db5
+17:46:37.011 [http-nio-0.0.0.0-8088-exec-39] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+17:46:37.984 [http-nio-0.0.0.0-8088-exec-40] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@6eb58db5
+17:46:37.985 [http-nio-0.0.0.0-8088-exec-40] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 7
+17:46:37.985 [http-nio-0.0.0.0-8088-exec-40] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+17:53:04.545 [http-nio-0.0.0.0-8088-exec-72] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@67c5518
+17:53:04.545 [http-nio-0.0.0.0-8088-exec-72] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+17:53:06.491 [http-nio-0.0.0.0-8088-exec-29] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@67c5518
+17:53:06.492 [http-nio-0.0.0.0-8088-exec-29] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 8
+17:53:06.492 [http-nio-0.0.0.0-8088-exec-29] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+17:53:08.199 [http-nio-0.0.0.0-8088-exec-37] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@730d4fa5
+17:53:08.200 [http-nio-0.0.0.0-8088-exec-37] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+17:53:09.409 [http-nio-0.0.0.0-8088-exec-4] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@730d4fa5
+17:53:09.411 [http-nio-0.0.0.0-8088-exec-4] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 9
+17:53:09.417 [http-nio-0.0.0.0-8088-exec-4] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+17:53:50.161 [http-nio-0.0.0.0-8088-exec-44] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@39711af6
+17:53:50.162 [http-nio-0.0.0.0-8088-exec-44] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+17:53:51.048 [http-nio-0.0.0.0-8088-exec-48] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@39711af6
+17:53:51.049 [http-nio-0.0.0.0-8088-exec-48] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - a
+17:53:51.049 [http-nio-0.0.0.0-8088-exec-48] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+17:55:54.722 [http-nio-0.0.0.0-8088-exec-66] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@50a31a34
+17:55:54.723 [http-nio-0.0.0.0-8088-exec-66] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+17:56:02.934 [http-nio-0.0.0.0-8088-exec-68] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=b, message={"sessionId":"29","content":"你好"}
+17:56:20.724 [http-nio-0.0.0.0-8088-exec-65] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=b, message={"sessionId":"29","content":"아녕하세요"}
+17:57:11.174 [http-nio-0.0.0.0-8088-exec-73] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@50a31a34
+17:57:11.176 [http-nio-0.0.0.0-8088-exec-73] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - b
+17:57:11.176 [http-nio-0.0.0.0-8088-exec-73] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+17:57:11.883 [http-nio-0.0.0.0-8088-exec-72] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@ebc0daf
+17:57:11.884 [http-nio-0.0.0.0-8088-exec-72] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+17:57:15.204 [http-nio-0.0.0.0-8088-exec-76] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@ebc0daf
+17:57:15.211 [http-nio-0.0.0.0-8088-exec-76] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - c
+17:57:15.211 [http-nio-0.0.0.0-8088-exec-76] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+17:58:51.843 [http-nio-0.0.0.0-8088-exec-21] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@4c16e70a
+17:58:51.844 [http-nio-0.0.0.0-8088-exec-21] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+17:59:29.664 [http-nio-0.0.0.0-8088-exec-23] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=d, message={"sessionId":"31","content":"你好，请生成一个对联 随机生成"}
+17:59:34.157 [http-nio-0.0.0.0-8088-exec-25] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@4c16e70a
+17:59:34.159 [http-nio-0.0.0.0-8088-exec-25] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - d
+17:59:34.160 [http-nio-0.0.0.0-8088-exec-25] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+17:59:37.782 [http-nio-0.0.0.0-8088-exec-29] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@872e9a2
+17:59:37.783 [http-nio-0.0.0.0-8088-exec-29] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+17:59:39.241 [http-nio-0.0.0.0-8088-exec-27] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@872e9a2
+17:59:39.245 [http-nio-0.0.0.0-8088-exec-27] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - e
+17:59:39.245 [http-nio-0.0.0.0-8088-exec-27] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+17:59:44.587 [http-nio-0.0.0.0-8088-exec-70] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@339199db
+17:59:44.588 [http-nio-0.0.0.0-8088-exec-70] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+17:59:45.048 [http-nio-0.0.0.0-8088-exec-31] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@339199db
+17:59:45.051 [http-nio-0.0.0.0-8088-exec-31] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - f
+17:59:45.051 [http-nio-0.0.0.0-8088-exec-31] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+18:02:23.455 [http-nio-0.0.0.0-8088-exec-7] INFO  c.s.c.u.h.HttpUtils - [sendGet,63] - sendGet - https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=换你自己的&secret=换你自己的
+18:02:24.298 [http-nio-0.0.0.0-8088-exec-7] INFO  c.s.c.u.h.HttpUtils - [sendGet,76] - recv - {"errcode":40013,"errmsg":"invalid appid rid: 691ae4a0-0ab58baa-0671c2a8"}
+18:02:24.379 [http-nio-0.0.0.0-8088-exec-67] INFO  c.s.c.u.h.HttpUtils - [sendGet,63] - sendGet - https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=换你自己的&secret=换你自己的
+18:02:24.492 [http-nio-0.0.0.0-8088-exec-67] INFO  c.s.c.u.h.HttpUtils - [sendGet,76] - recv - {"errcode":40013,"errmsg":"invalid appid rid: 691ae4a0-2dfea39a-0db9b86a"}
+18:02:41.384 [schedule-pool-1] INFO  sys-user - [run,55] - [127.0.0.1]内网IP[admin][Success][登录成功]
+18:02:46.620 [http-nio-0.0.0.0-8088-exec-51] INFO  c.s.s.w.WebSocketAdminServer - [onOpen,91] - [管理端WS] 建立连接 - 10
+18:02:47.487 [http-nio-0.0.0.0-8088-exec-56] INFO  c.s.s.w.WebSocketAdminServer - [onClose,96] - [管理端WS] 关闭连接 - 10
+18:02:49.617 [http-nio-0.0.0.0-8088-exec-61] INFO  c.s.s.w.WebSocketAdminServer - [onOpen,91] - [管理端WS] 建立连接 - 11
+18:02:50.253 [http-nio-0.0.0.0-8088-exec-64] INFO  c.s.s.w.WebSocketAdminServer - [onClose,96] - [管理端WS] 关闭连接 - 11
+18:02:51.332 [http-nio-0.0.0.0-8088-exec-47] INFO  c.s.s.w.WebSocketAdminServer - [onOpen,91] - [管理端WS] 建立连接 - 12
+18:02:57.679 [http-nio-0.0.0.0-8088-exec-42] INFO  c.s.s.w.WebSocketAdminServer - [onClose,96] - [管理端WS] 关闭连接 - 12
+18:02:57.966 [http-nio-0.0.0.0-8088-exec-43] INFO  c.s.s.w.WebSocketAdminServer - [onOpen,91] - [管理端WS] 建立连接 - 13
+18:03:15.754 [http-nio-0.0.0.0-8088-exec-56] INFO  c.s.s.w.WebSocketAdminServer - [onClose,96] - [管理端WS] 关闭连接 - 13
+18:03:16.094 [http-nio-0.0.0.0-8088-exec-59] INFO  c.s.s.w.WebSocketAdminServer - [onOpen,91] - [管理端WS] 建立连接 - 14
+18:03:16.980 [http-nio-0.0.0.0-8088-exec-61] INFO  c.s.s.w.WebSocketAdminServer - [onClose,96] - [管理端WS] 关闭连接 - 14
+18:03:17.205 [http-nio-0.0.0.0-8088-exec-65] INFO  c.s.s.w.WebSocketAdminServer - [onOpen,91] - [管理端WS] 建立连接 - 15
+18:03:44.024 [http-nio-0.0.0.0-8088-exec-58] INFO  c.s.s.w.WebSocketAdminServer - [onClose,96] - [管理端WS] 关闭连接 - 15
+18:04:57.835 [http-nio-0.0.0.0-8088-exec-78] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@301a3bae
+18:04:57.836 [http-nio-0.0.0.0-8088-exec-78] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+18:04:59.618 [http-nio-0.0.0.0-8088-exec-84] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@301a3bae
+18:04:59.618 [http-nio-0.0.0.0-8088-exec-84] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 16
+18:04:59.619 [http-nio-0.0.0.0-8088-exec-84] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+18:05:38.209 [http-nio-0.0.0.0-8088-exec-66] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@34c2b94e
+18:05:38.210 [http-nio-0.0.0.0-8088-exec-66] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+18:05:39.803 [http-nio-0.0.0.0-8088-exec-47] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@34c2b94e
+18:05:39.803 [http-nio-0.0.0.0-8088-exec-47] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 17
+18:05:39.804 [http-nio-0.0.0.0-8088-exec-47] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+18:06:14.216 [http-nio-0.0.0.0-8088-exec-80] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@3d50fb
+18:06:14.217 [http-nio-0.0.0.0-8088-exec-80] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+18:06:18.582 [http-nio-0.0.0.0-8088-exec-89] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@3d50fb
+18:06:18.583 [http-nio-0.0.0.0-8088-exec-89] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 18
+18:06:18.584 [http-nio-0.0.0.0-8088-exec-89] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+18:09:19.601 [http-nio-0.0.0.0-8088-exec-2] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@5c5d8a8d
+18:09:19.603 [http-nio-0.0.0.0-8088-exec-2] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+18:09:21.485 [http-nio-0.0.0.0-8088-exec-1] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@5c5d8a8d
+18:09:21.485 [http-nio-0.0.0.0-8088-exec-1] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 19
+18:09:21.486 [http-nio-0.0.0.0-8088-exec-1] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+18:09:27.880 [http-nio-0.0.0.0-8088-exec-74] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@300de327
+18:09:27.880 [http-nio-0.0.0.0-8088-exec-74] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+18:09:34.511 [http-nio-0.0.0.0-8088-exec-29] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=1a, message={"sessionId":"33","content":"你好"}
+18:09:37.111 [http-nio-0.0.0.0-8088-exec-32] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@300de327
+18:09:37.113 [http-nio-0.0.0.0-8088-exec-32] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 1a
+18:09:37.114 [http-nio-0.0.0.0-8088-exec-32] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+18:09:37.129 [http-nio-0.0.0.0-8088-exec-72] INFO  c.s.s.w.WebSocketServer - [onOpen,151] - 
+ 建立连接 - org.apache.tomcat.websocket.WsSession@4ba53869
+18:09:37.130 [http-nio-0.0.0.0-8088-exec-72] INFO  c.s.s.w.WebSocketServer - [onOpen,152] - 
+ 当前人数 - 1
+18:09:39.849 [http-nio-0.0.0.0-8088-exec-76] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=1b, message={"sessionId":"34","content":"你好"}
+18:09:39.871 [http-nio-0.0.0.0-8088-exec-76] INFO  c.s.s.w.WebSocketServer - [onMessage,302] - [AI客服WS] 管理端未连接，人工消息不转发：sessionId=34
+18:09:48.035 [http-nio-0.0.0.0-8088-exec-32] INFO  c.s.s.w.WebSocketServer - [onMessage,218] - [AI客服WS] 收到消息：sessionId=1b, message={"sessionId":"34","content":"我想加入你们"}
+18:09:48.091 [http-nio-0.0.0.0-8088-exec-32] INFO  c.s.s.w.WebSocketServer - [onMessage,302] - [AI客服WS] 管理端未连接，人工消息不转发：sessionId=34
+18:09:54.784 [http-nio-0.0.0.0-8088-exec-87] INFO  c.s.s.w.WebSocketAdminServer - [onOpen,91] - [管理端WS] 建立连接 - 1c
+18:10:08.925 [http-nio-0.0.0.0-8088-exec-73] INFO  c.s.s.w.WebSocketAdminServer - [onMessage,122] - [管理端WS] 收到消息：sessionId=1c, message={"event":"adminMessage","sessionId":34,"content":"请发来你的简历","role":"admin"} 
+18:10:08.943 [http-nio-0.0.0.0-8088-exec-73] INFO  c.s.s.w.WebSocketAdminServer - [onMessage,174] - [管理端WS] 已尝试转发到用户10，成功连接数=1
+18:10:08.951 [http-nio-0.0.0.0-8088-exec-73] INFO  c.s.s.w.WebSocketAdminServer - [onMessage,184] - [管理端WS] 已更新会话处理状态为1 id=34
+18:10:08.968 [http-nio-0.0.0.0-8088-exec-73] INFO  c.s.s.w.WebSocketAdminServer - [onMessage,199] - [管理端WS] 已持久化管理端回复消息 sessionId=34
+18:10:33.664 [http-nio-0.0.0.0-8088-exec-28] INFO  c.s.s.w.WebSocketAdminServer - [onMessage,122] - [管理端WS] 收到消息：sessionId=1c, message={"event":"adminMessage","sessionId":34,"content":"123456@gmail.com","role":"admin"} 
+18:10:33.974 [http-nio-0.0.0.0-8088-exec-28] INFO  c.s.s.w.WebSocketAdminServer - [onMessage,174] - [管理端WS] 已尝试转发到用户10，成功连接数=1
+18:10:34.011 [http-nio-0.0.0.0-8088-exec-28] INFO  c.s.s.w.WebSocketAdminServer - [onMessage,184] - [管理端WS] 已更新会话处理状态为1 id=34
+18:10:34.019 [http-nio-0.0.0.0-8088-exec-28] INFO  c.s.s.w.WebSocketAdminServer - [onMessage,199] - [管理端WS] 已持久化管理端回复消息 sessionId=34
+18:10:53.402 [http-nio-0.0.0.0-8088-exec-40] INFO  c.s.s.w.WebSocketServer - [onClose,184] - 
+ 关闭连接 - org.apache.tomcat.websocket.WsSession@4ba53869
+18:10:53.395 [http-nio-0.0.0.0-8088-exec-43] INFO  c.s.s.w.WebSocketAdminServer - [onClose,96] - [管理端WS] 关闭连接 - 1c
+18:10:53.408 [http-nio-0.0.0.0-8088-exec-40] INFO  c.s.s.w.WebSocketUsers - [remove,88] - 
+ 正在移出用户 - 1b
+18:10:53.408 [http-nio-0.0.0.0-8088-exec-40] INFO  c.s.s.w.WebSocketUsers - [remove,93] - 
+ 移出结果 - 成功
+18:37:45.833 [schedule-pool-2] INFO  sys-user - [run,55] - [165.229.143.135]0 0[18720989281][Success][登录成功]
+19:18:53.686 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763368648146 paused.
+19:18:53.885 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,666] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763368648146 shutting down.
+19:18:53.888 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [standby,585] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763368648146 paused.
+19:18:53.894 [SpringApplicationShutdownHook] INFO  o.q.c.QuartzScheduler - [shutdown,740] - Scheduler RuoyiScheduler_$_MGMMacBook-Pro.local1763368648146 shutdown complete.
+19:18:53.900 [SpringApplicationShutdownHook] INFO  sys-user - [shutdownAsyncManager,31] - ====关闭后台任务任务线程池====
+19:18:53.918 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2071] - {dataSource-1} closing ...
+19:18:53.943 [SpringApplicationShutdownHook] INFO  c.a.d.p.DruidDataSource - [close,2144] - {dataSource-1} closed
