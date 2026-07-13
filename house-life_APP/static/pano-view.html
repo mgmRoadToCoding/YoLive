@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>全景图查看</title>
+
+		<!-- 本地引入 PSV CSS -->
+		<link rel="stylesheet" href="/static/psv/photo-sphere-viewer.css">
+
+		<style>
+			html,
+			body {
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				height: 100%;
+				background: #000;
+				overflow: hidden;
+			}
+
+			#viewer {
+				width: 100%;
+				height: 100%;
+			}
+
+			.loading {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				color: #fff;
+				font-size: 16px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="viewer"></div>
+		<div class="loading" id="loading">全景图加载中...</div>
+
+		<!-- 本地引入 PSV JS -->
+		<script src="/static/psv/photo-sphere-viewer.min.js" defer></script>
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				const panoUrl = 'https://yolivepanoimages.oss-ap-northeast-2.aliyuncs.com/quanjing.jpg';
+				const container = document.getElementById('viewer');
+				const loadingEl = document.getElementById('loading');
+
+				try {
+					const viewer = new PhotoSphereViewer.Viewer({
+						container: container,
+						panorama: panoUrl,
+						caption: '阿里云全景图',
+						defaultZoomLvl: 60,
+						mousewheel: true,
+						navbar: ['zoom', 'fullscreen'],
+						placeholder: '#000',
+						loadingTimeout: 15000
+					});
+
+					viewer.on('ready', function() {
+						loadingEl.style.display = 'none';
+						console.log('全景图加载完成');
+					});
+
+					viewer.on('error', function(err) {
+						loadingEl.innerText = '加载失败：' + err.message;
+						console.error(err);
+					});
+				} catch (err) {
+					loadingEl.innerText = '初始化失败：' + err.message;
+					console.error(err);
+				}
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+@use 'vars' as psv;
+
+.psv-container {
+    --psv-core-loaded: true;
+
+    container-name: psv-container;
+    container-type: size;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background: psv.$main-background;
+    overflow: hidden;
+
+    * {
+        box-sizing: content-box;
+    }
+}
+
+.psv-canvas-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: psv.$canvas-zindex;
+    transition: opacity linear 100ms;
+}
+
+.psv-fullscreen-emulation {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 9999;
+}

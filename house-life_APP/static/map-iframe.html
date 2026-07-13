@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Map Iframe</title>
+		<meta http-equiv="Content-Security-Policy"
+			content="default-src 'self' https://maps.googleapis.com https://maps.gstatic.com; script-src 'self' https://maps.googleapis.com https://maps.gstatic.com 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://maps.googleapis.com https://maps.gstatic.com;">
+		<style id="map-styles">
+			#map {
+				height: 100%;
+				width: 100%;
+			}
+
+			html,
+			body {
+				height: 100%;
+				margin: 0;
+				padding: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="map"></div>
+		<script>
+			// 定义全局 initMap 函数
+			window.initMap = function() {
+				// 从URL参数获取初始位置
+				const urlParams = new URLSearchParams(window.location.search);
+				const initialLat = parseFloat(urlParams.get('lat')) || 35.83656;
+				const initialLng = parseFloat(urlParams.get('lng')) || 128.7536;
+				const initialZoom = parseInt(urlParams.get('zoom')) || 15;
+
+				const center = {
+					lat: initialLat,
+					lng: initialLng
+				};
+
+				const map = new google.maps.Map(document.getElementById("map"), {
+					zoom: initialZoom,
+					center,
+					gestureHandling: "greedy",
+					disableDefaultUI: true
+				});
+
+				// 监听地图移动或缩放
+				map.addListener("idle", () => {
+					sendMapUpdate(map);
+				});
+
+				// 初始发送一次地图状态
+				sendMapUpdate(map);
+
+				// 监听父页面消息
+				window.addEventListener('message', (event) => {
+					if (event.data.type === 'set_center') {
+						map.setCenter(event.data.center);
+						if (event.data.zoom) {
+							map.setZoom(event.data.zoom);
+						}
+					}
+				});
+			};
+
+			function sendMapUpdate(map) {
+				const bounds = map.getBounds();
+				const center = map.getCenter();
+				const zoom = map.getZoom();
+
+				// 通知父页面当前地图状态
+				window.parent.postMessage({
+						type: "map_update",
+						center: {
+							lat: center.lat(),
+							lng: center.lng()
+						},
+						bounds: {
+							north: bounds.getNorthEast().lat(),
+							east: bounds.getNorthEast().lng(),
+							south: bounds.getSouthWest().lat(),
+							west: bounds.getSouthWest().lng()
+						},
+						zoom
+					},
+					"*"
+				);
+			}
+		</script>
+		<!-- 使用推荐的异步加载方式 -->
+		<script>
+			function loadGoogleMaps() {
+				const script = document.createElement('script');
+				script.src =
+					`https://maps.googleapis.com/maps/api/js?key=AIzaSyA8nCCFuQvMJHagDBqjlxxWJtRqQETZ-nc&callback=initMap&libraries=places`;
+				script.async = true;
+				script.defer = true;
+				document.head.appendChild(script);
+			}
+
+			// 延迟加载以确保 initMap 已定义
+			window.onload = loadGoogleMaps;
+		</script>
+	</body>
+</html>

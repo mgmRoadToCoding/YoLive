@@ -1,0 +1,49 @@
+{
+  "name": "@photo-sphere-viewer/core",
+  "version": "5.14.0",
+  "description": "A JavaScript library to display 360° panoramas",
+  "homepage": "https://photo-sphere-viewer.js.org",
+  "license": "MIT",
+  "main": "index.cjs",
+  "types": "index.d.ts",
+  "dependencies": {
+    "three": "^0.179.0"
+  },
+  "module": "index.module.js",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./index.d.mts",
+        "default": "./index.module.js"
+      },
+      "require": {
+        "types": "./index.d.ts",
+        "default": "./index.cjs"
+      }
+    },
+    "./index.css": "./index.css",
+    "./index.scss": "./styles/index.scss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mistic100/Photo-Sphere-Viewer.git"
+  },
+  "author": {
+    "name": "Damien 'Mistic' Sorel",
+    "email": "contact@git.strangeplanet.fr",
+    "homepage": "https://www.strangeplanet.fr"
+  },
+  "keywords": [
+    "photosphere",
+    "panorama",
+    "threejs"
+  ],
+  "style": "index.css",
+  "sass": "styles/index.scss",
+  "contributors": [
+    {
+      "name": "Jérémy Heleine",
+      "homepage": "http://jeremyheleine.me"
+    }
+  ]
+}

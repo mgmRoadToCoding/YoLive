@@ -1,0 +1,400 @@
+<html>
+	<head>
+		<title> </title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport"
+			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<script type="text/javascript" src="./uni.webview.1.5.6.js"></script>
+		<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+		<script>
+			(g => {
+				var h, a, k, p = "The Google Maps JavaScript API",
+					c = "google",
+					l = "importLibrary",
+					q = "__ib__",
+					m = document,
+					b = window;
+				b = b[c] || (b[c] = {});
+				var d = b.maps || (b.maps = {}),
+					r = new Set,
+					e = new URLSearchParams,
+					u = () => h || (h = new Promise(async (f, n) => {
+						await (a = m.createElement("script"));
+						e.set("libraries", [...r] + "");
+						for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]);
+						e.set("callback", c + ".maps." + q);
+						a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
+						d[q] = f;
+						a.onerror = () => h = n(Error(p + " could not load."));
+						a.nonce = m.querySelector("script[nonce]")?.nonce || "";
+						m.head.append(a)
+					}));
+				d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[
+					l](f, ...n))
+			})({
+				key: "AIzaSyA8nCCFuQvMJHagDBqjlxxWJtRqQETZ-nc",
+				v: "weekly",
+				libraries: "places"
+			});
+		</script>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+
+			input {
+				border: none;
+				outline: none;
+				display: block;
+				font-size: 16px;
+				line-height: 1.4em;
+				height: 1.4em;
+				min-height: 1.4em;
+				overflow: hidden;
+			}
+
+			.nav-bar {
+				height: 60px;
+				background-color: #ffffff;
+				display: flex;
+				align-items: center;
+				padding: 0 15px;
+				box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+				position: relative;
+				z-index: 10;
+			}
+
+			.back-btn {
+				display: flex;
+				align-items: center;
+				margin-right: 15px;
+				font-size: 29px
+			}
+
+			.back-btn .icon {
+				margin-right: 5px;
+				font-size: 20px;
+			}
+
+			.title {
+				font-size: 18px;
+				font-weight: bold;
+				flex: 1;
+				text-align: center;
+			}
+
+			.search-container {
+				position: absolute;
+				top: 70px;
+				left: 15px;
+				right: 15px;
+				z-index: 100;
+			}
+
+			.search-box {
+				display: flex;
+				align-items: center;
+				background: white;
+				border-radius: 20px;
+				padding: 8px 15px;
+				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+			}
+
+			.search-box input {
+				flex: 1;
+				margin: 0 10px;
+				font-size: 14px;
+			}
+
+			.search-results {
+				max-height: 300px;
+				background: white;
+				border-radius: 10px;
+				margin-top: 5px;
+				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+				overflow: auto;
+			}
+
+			.result-item {
+				display: flex;
+				align-items: center;
+				padding: 12px 15px;
+				border-bottom: 1px solid #f0f0f0;
+			}
+
+			.result-item:last-child {
+				border-bottom: none;
+			}
+
+			.result-text {
+				flex: 1;
+				margin-left: 10px;
+			}
+
+			.main-text {
+				display: block;
+				font-size: 14px;
+				color: #333;
+			}
+
+			.secondary-text {
+				display: block;
+				font-size: 12px;
+				color: #999;
+				margin-top: 2px;
+			}
+
+			.map-container {
+				height: calc(100% - 60px);
+				position: relative;
+				overflow: hidden;
+			}
+
+			.house-marker {
+				position: absolute;
+				width: 30px;
+				height: 30px;
+				background-color: #4285F4;
+				border-radius: 50%;
+				opacity: 0.7;
+				transform: translate(-50%, -50%);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				cursor: pointer;
+				z-index: 100;
+			}
+
+			.marker-count {
+				color: white;
+				font-size: 12px;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container" id="app">
+			<div class="nav-bar">
+				<div class="back-btn" @click="goBack">
+					<span class="icon">←</span>
+					<span>Back</span>
+				</div>
+				<span class="title">Map Search</span>
+			</div>
+
+			<!-- 搜索框 -->
+			<div class="search-container">
+				<div class="search-box">
+					<uni-icons type="search" size="18" color="#999"></uni-icons>
+					<input v-model="searchQuery" class="search-ipt" placeholder="Search for a place or address"
+						@focus="showSearchResults = true" @input="handleSearchInput" />
+					<uni-icons v-if="searchQuery" type="clear" size="18" color="#999" @click="clearSearch"></uni-icons>
+				</div>
+
+				<!-- 搜索结果列表 -->
+				<div class="search-results" v-if="showSearchResults && searchResults.length > 0">
+					<div v-for="(result, index) in searchResults" :key="index" class="result-item"
+						@click="selectSearchResult(result)">
+						<uni-icons type="location" size="16" color="#4285F4"></uni-icons>
+						<div class="result-text">
+							<text class="main-text">{{ result.main_text }}</text>
+							<text class="secondary-text">{{ result.secondary_text }}</text>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="map-container"></div>
+
+		</div>
+		<script>
+			const {
+				createApp,
+				toRaw,
+				ref
+			} = Vue
+
+			const app = createApp({
+				data() {
+					return {
+						showSearchResults: false,
+						searchQuery: '',
+						searchResults: [],
+						map: null,
+						currentLat: 35.83656,
+						currentLng: 128.7536,
+						mapZoom: 15,
+						houseMakers: [],
+						// 模拟房源数据
+						housesData: [{
+								id: 1,
+								name: '한빛원룸',
+								type: 'oneRoom',
+								price: 240000,
+								lat: 35.83928,
+								lng: 128.7537,
+								count: 1
+							},
+							{
+								id: 2,
+								name: '城市花园',
+								type: 'oneRoom',
+								price: 5000,
+								lat: 35.84097,
+								lng: 128.7563,
+								count: 1
+							},
+							{
+								id: 3,
+								name: '城市花园',
+								type: 'twoRoom',
+								price: 5000,
+								lat: 35.84256,
+								lng: 128.7543,
+								count: 1
+							}
+						],
+					}
+				},
+				methods: {
+					goBack() {
+						uni.navigateBack();
+					},
+					showHouseDetail(house) {
+						uni.navigateTo({
+							url: `/pages/map/houseDetailTemplate/houseDetail?id=${house.id}`
+						});
+					},
+					clearSearch() {
+						this.searchQuery = '';
+						this.searchResults = [];
+						this.showSearchResults = false;
+					},
+					// 选择搜索结果
+					selectSearchResult(result) {
+						this.showSearchResults = false;
+						this.searchQuery = result.main_text;
+
+						// 获取地点详情并定位
+						this.getPlaceDetails(result.place_id);
+					},
+					// 获取地点详情并定位
+					getPlaceDetails(placeId) {
+						if (!this.placeService) {
+							this.placeService = new google.maps.places.PlacesService(this.map);
+						}
+
+						this.placeService.getDetails({
+								placeId
+							},
+							(place, status) => {
+								if (status === google.maps.places.PlacesServiceStatus.OK) {
+									const location = place.geometry.location;
+									this.map.setCenter(location);
+									this.map.setZoom(16);
+								}
+							}
+						);
+					},
+					handleSearchInput(e) {
+						if (!this.searchQuery.trim()) {
+							this.searchResults = [];
+							return;
+						}
+
+						// 防抖处理
+						clearTimeout(this.debounceTimer);
+						this.debounceTimer = setTimeout(() => {
+							this.searchPlaces();
+						}, 300);
+					},
+					searchPlaces() {
+						if (!this.searchQuery.trim()) return;
+
+						if (!this.autocompleteService) {
+							this.autocompleteService = new google.maps.places.AutocompleteService();
+						}
+
+						this.autocompleteService.getPlacePredictions({
+								input: this.searchQuery,
+								componentRestrictions: {
+									country: "kr"
+								},
+							},
+							(predictions, status) => {
+								if (status !== google.maps.places.PlacesServiceStatus.OK || !predictions) {
+									this.searchResults = [];
+									return;
+								}
+
+								this.searchResults = predictions.map(p => ({
+									main_text: p.structured_formatting.main_text,
+									secondary_text: p.structured_formatting.secondary_text,
+									place_id: p.place_id
+								}));
+							}
+						);
+					},
+					async initMap() {
+						const {
+							Map
+						} = await google.maps.importLibrary("maps");
+
+						this.map = new Map(document.querySelector(".map-container"), {
+							center: {
+								lat: this.currentLat,
+								lng: this.currentLng
+							},
+							mapTypeControl: false,
+							fullscreenControl: false,
+							streetViewControl: false,
+							zoom: this.mapZoom,
+							mapId: "gps_map",
+						});
+					},
+					// 添加地图标记点
+					async createMaker(house) {
+						const {
+							AdvancedMarkerElement
+						} = await google.maps.importLibrary("marker");
+						const tag = document.createElement('div')
+						tag.className = "house-marker"
+						tag.addEventListener('click', () => {
+							this.showHouseDetail(house)
+						})
+						const tagContent = document.createElement('div')
+						tagContent.className = "marker-count"
+						tagContent.innerText = house.count
+						tag.appendChild(tagContent)
+
+						const marker = new AdvancedMarkerElement({
+							map: toRaw(this.map),
+							position: {
+								lat: house.lat,
+								lng: house.lng,
+							},
+							content: tag
+						});
+						return marker
+					},
+					// 根据housesData添加标记点
+					async createHouseMaker() {
+						// 先全部清除后再添加
+						this.houseMakers.forEach(maker => maker.position = null)
+						this.houseMakers = await Promise.all(this.housesData.map(house => this.createMaker(house)))
+					},
+				},
+				async mounted() {
+					document.title = " "
+					await this.initMap()
+					this.createHouseMaker()
+				}
+			})
+			document.addEventListener('UniAppJSBridgeReady', () => {
+				app.mount('#app')
+			});
+		</script>
+	</body>
+</html>
